@@ -1,0 +1,69 @@
+
+partial alphanumeric_keys
+xkb_symbols "graphene" {
+    include "us(basic)"
+    name[Group1]= "English (Graphene)";
+
+    // Define Right Alt as the modifier key to access the symbol layer (Level 3)
+    key <RALT> { [ ISO_Level3_Shift ] };
+    modifier_map Mod5 { <RALT> };
+
+    key <TLDE> { [        grave,   asciitilde ] };
+    key <AE01> { [            1,       exclam ] };
+    key <AE02> { [            2,           at ] };
+    key <AE03> { [            3,   numbersign ] };
+    key <AE04> { [            7,       dollar ] };
+    key <AE05> { [            5,      percent ] };
+    key <AE06> { [            6,  asciicircum ] };
+    key <AE07> { [            4,    ampersand ] };
+    key <AE08> { [            8, bracketright ] };
+    key <AE09> { [            0,    parenleft ] };
+    key <AE10> { [            9,   parenright,   braceright ] };
+    key <AE11> { [     asterisk,   braceright ] };
+    key <AE12> { [  bracketleft,    braceleft ] };
+
+    // Top Row
+    key <AD01> { [            b,            B,       exclam ] };
+    key <AD02> { [            l,            L,    braceleft ] };
+    key <AD03> { [            d,            D,  bracketleft ] };
+    key <AD04> { [            w,            W,   numbersign ] };
+    key <AD05> { [            z,            Z,        equal ] };
+    key <AD06> { [   apostrophe,   underscore,          bar ] };
+    key <AD07> { [            f,            F,           at ] };
+    key <AD08> { [            o,            O,    parenleft ] };
+    key <AD09> { [            u,            U,       dollar ] };
+    key <AD10> { [            j,            J,        grave ] };
+    key <AD11> { [    semicolon,        colon ] };
+    key <AD12> { [        equal,         plus ] };
+
+    // Home Row
+    key <AC01> { [            n,            N,            1 ] };
+    key <AC02> { [            r,            R,   asciitilde ] };
+    key <AC03> { [            t,            T,       Return ] };
+    key <AC04> { [            s,            S,            0 ] };
+    key <AC05> { [            g,            G,    ampersand ] };
+    key <AC06> { [            y,            Y,    backslash ] };
+    key <AC07> { [            h,            H,         Left,        Page_Up ] };
+    key <AC08> { [            a,            A,           Up,           Home ] };
+    key <AC09> { [            e,            E,         Down,            End ] };
+    key <AC10> { [            i,            I,        Right,      Page_Down ] };
+    key <AC11> { [        comma,     question ] };
+    key <BKSL> { [          bar,    backslash ] };
+
+    // Bottom Row
+    key <AB01> { [            x,            X,            2 ] };
+    key <AB02> { [            m,            M,            3,    asciicircum ] };
+    key <AB03> { [            c,            C,            4 ] };
+    key <AB04> { [            q,            Q,            5 ] };
+    key <AB05> { [            v,            V,         plus ] };
+    key <AB06> { [            k,            K,     asterisk ] };
+    key <AB07> { [            p,            P,            6 ] };
+    key <AB08> { [       period,      greater,            7 ] };
+    key <AB09> { [        minus,     quotedbl,            8 ] };
+    key <AB10> { [        slash,         less,            9 ] };
+
+    // Swap Caps Lock and Backspace
+    key <CAPS> { [  BackSpace,         Delete ] };
+    key <BKSP> { [  Caps_Lock                 ] };
+    modifier_map Lock { <BKSP> };
+};
