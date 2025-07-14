@@ -25,10 +25,7 @@ mkdir -p "$LAYOUT_DIR"
 mv "$WORKDIR/graphite" "$LAYOUT_DIR/graphite"
 
 echo "[2/5] Cloning layout installer components from graphite-layout"
-git clone --depth=1 --filter=blob:none --sparse https://github.com/xedrac/graphite-layout.git "$WORKDIR/.tmp-layout"
-git -C "$WORKDIR/.tmp-layout" sparse-checkout init --cone
-git -C "$WORKDIR/.tmp-layout" sparse-checkout set linux/install.sh linux/graphite.xslt
-
+git clone --depth=1 https://github.com/xedrac/graphite-layout.git "$WORKDIR/.tmp-layout"
 mv "$WORKDIR/.tmp-layout/linux/install.sh" "$LAYOUT_DIR/install.sh"
 mv "$WORKDIR/.tmp-layout/linux/graphite.xslt" "$LAYOUT_DIR/graphite.xslt"
 rm -rf "$WORKDIR/.tmp-layout"
