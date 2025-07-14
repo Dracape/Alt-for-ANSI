@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
 set -euo pipefail
 
@@ -14,12 +14,13 @@ LAYOUT_DIR="$WORKDIR/layout"
 
 echo "[0/5] Cleaning workspace"
 rm -rf "$WORKDIR"
-mkdir -p "$LAYOUT_DIR"
 
 echo "[1/5] Cloning 'plugins/' and 'graphite' from graphene repository"
 git clone --depth=1 --filter=blob:none --sparse https://github.com/DestroyerBDT/graphene.git "$WORKDIR"
 git -C "$WORKDIR" sparse-checkout set plugins graphite
 
+# Prepare layout directory
+mkdir -p "$LAYOUT_DIR"
 mv "$WORKDIR/graphite" "$LAYOUT_DIR/graphite"
 
 echo "[2/5] Cloning layout installer components from graphite-layout"
