@@ -2,57 +2,38 @@
 
 set -euo pipefail
 
-echo "[1/4] Verifying required tools (interception-tools, rustc)"
-
-check_missing=()
-
-if ! command -v udevmon &>/dev/null; then
-  check_missing+=("interception-tools")
-fi
-
-if ! command -v rustc &>/dev/null; then
-  check_missing+=("rust")
-fi
-
-if (( ${#check_missing[@]} > 0 )); then
-  echo "Missing dependencies: $check_missing"
-  echo "Attempting to install..."
-
-  if command -v pacman &>/dev/null; then
-    pacman -Sy --noconfirm "${check_missing[@]}"
-  elif command -v apt &>/dev/null; then
-    apt update && apt install -y "${check_missing[@]}"
-  elif command -v dnf &>/dev/null; then
-    dnf install -y "${check_missing[@]}"
+echo "[1/3] Installing dependencies (interception-tools, rustc)"
+if ! command -v interception-tools >/dev/null || ! command -v rustc >/dev/null; then
+  echo "Installing..."
+  if command -v pacman >/dev/null; then
+    pacman -Sy --noconfirm interception-tools rust
+  elif command -v apt >/dev/null; then
+    apt update && apt install -y interception-tools rustc
+  elif command -v dnf >/dev/null; then
+    dnf install -y interception-tools rust
   else
-    echo "Unsupported package manager. Install ${check_missing[*]} manually." >&2
+    echo "Unsupported package manager. Install 'interception-tools' and 'rustc' manually." >&2
     exit 1
   fi
+else
+  echo "Dependencies already installed."
 fi
 
-echo "[2/4] Compiling plugins from ./source/"
+echo "[2/3] Compiling plugins"
+mkdir -p /usr/local/bin
+rustc -C opt-level=2 "source/word-caps.rs" -o /usr/local/bin/wordcaps
+rustc -C opt-level=2 "source/home-row-mods.rs" -o /usr/local/bin/homerowmods
 
-SOURCE_DIR="$(dirname "$0")/source"
-
-for src in "$SOURCE_DIR"/*.rs; do
-  name="$(basename "$src" .rs)"
-  echo " → Compiling $name..."
-  rustc -C opt-level=2 -o "/usr/local/bin/$name" "$src"
-done
-
-echo "[3/4] Writing udevmon configuration"
-
+echo "[3/3] Setting up udevmon"
 mkdir -p /etc/interception
 cat > /etc/interception/udevmon.yaml << 'EOF'
 - JOB: "intercept -g $DEVNODE | homerowmods | wordcaps | uinput -d $DEVNODE"
   DEVICE:
     HAS_PROPS:
-      - "INPUT_PROP_KEYBOARD"
+      - INPUT_PROP_KEYBOARD
 EOF
 
-echo "[4/4] Enabling and restarting udevmon"
-
-systemctl enable udevmon &>/dev/null || true
+systemctl enable udevmon &> /dev/null || true
 systemctl restart udevmon
 
-echo "✔ Plugin installation complete."
+echo "✔ Plugins installed and udevmon configured."
