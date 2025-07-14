@@ -16,13 +16,15 @@ rm -rf "$WORKDIR"
 
 echo "[1/5] Cloning 'plugins/' and 'graphite' from graphene repository"
 git clone --depth=1 --filter=blob:none --sparse https://github.com/DestroyerBDT/graphene.git "$WORKDIR"
-git -C "$WORKDIR" sparse-checkout set --skip-checks plugins graphite
+git -C "$WORKDIR" sparse-checkout init --cone --skip-checks
+git -C "$WORKDIR" sparse-checkout set plugins graphite
 
 mkdir -p "$LAYOUT_DIR"
 mv "$WORKDIR/graphite" "$LAYOUT_DIR/graphite"
 
 echo "[2/5] Cloning layout installer components from graphite-layout"
 git clone --depth=1 --filter=blob:none --sparse https://github.com/xedrac/graphite-layout.git "$WORKDIR/.tmp-layout"
+git -C "$WORKDIR/.tmp-layout" sparse-checkout init --cone
 git -C "$WORKDIR/.tmp-layout" sparse-checkout set linux/install.sh linux/graphite.xslt
 
 mv "$WORKDIR/.tmp-layout/linux/install.sh" "$LAYOUT_DIR/install.sh"
