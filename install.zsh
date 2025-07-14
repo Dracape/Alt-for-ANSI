@@ -8,7 +8,6 @@ if (( EUID != 0 )); then
   exit 1
 fi
 
-# Define working paths
 WORKDIR="/tmp/graphene"
 LAYOUT_DIR="$WORKDIR/layout"
 
@@ -17,9 +16,8 @@ rm -rf "$WORKDIR"
 
 echo "[1/5] Cloning 'plugins/' and 'graphite' from graphene repository"
 git clone --depth=1 --filter=blob:none --sparse https://github.com/DestroyerBDT/graphene.git "$WORKDIR"
-git -C "$WORKDIR" sparse-checkout set plugins graphite
+git -C "$WORKDIR" sparse-checkout set --skip-checks plugins graphite
 
-# Prepare layout directory
 mkdir -p "$LAYOUT_DIR"
 mv "$WORKDIR/graphite" "$LAYOUT_DIR/graphite"
 
