@@ -17,3 +17,8 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
 <img width="1361" height="521" alt="Shift" src="https://github.com/user-attachments/assets/eee2a270-d7f8-4ebb-a700-0384503510df" />
 <img width="1361" height="521" alt="Symbols" src="https://github.com/user-attachments/assets/79472661-d60a-4905-a59e-d6645a753821" />
 <img width="1361" height="521" alt="Advanced-navigation" src="https://github.com/user-attachments/assets/f24352e5-8164-4493-9ace-4766f7091f2d" />
+
+---
+
+# Installation
+Run `sudo zsh -c "$(curl -fsSL https://raw.githubusercontent.com/DestroyerBDT/graphene/main/install.zsh)"`
