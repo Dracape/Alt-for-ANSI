@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-
+cd "$(dirname "$0")"
 set -euo pipefail
 
 echo "[1/3] Installing dependencies (interception-tools, rustc)"
