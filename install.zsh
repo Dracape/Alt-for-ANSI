@@ -14,11 +14,13 @@ LAYOUT_DIR="$WORKDIR/layout"
 echo "[0/5] Cleaning workspace"
 rm -rf "$WORKDIR"
 
-echo "[1/5] Cloning 'plugins/' and 'graphite' from graphene repository"
-git clone --depth=1 --filter=blob:none --sparse https://github.com/DestroyerBDT/graphene.git "$WORKDIR"
-git -C "$WORKDIR" sparse-checkout init --cone --skip-checks
-git -C "$WORKDIR" sparse-checkout set plugins graphite
+echo "[1/5] Cloning graphene repository"
+git clone --depth=1 https://github.com/DestroyerBDT/graphene.git "$WORKDIR"
 
+# Remove top-level files we don't want
+rm -f "$WORKDIR/README.md" "$WORKDIR/LICENSE" "$WORKDIR/install.zsh"
+
+# Prepare layout folder and move layout file into it
 mkdir -p "$LAYOUT_DIR"
 mv "$WORKDIR/graphite" "$LAYOUT_DIR/graphite"
 
