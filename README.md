@@ -1,5 +1,5 @@
 # Introduction
-Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavison/graphite-layout) optimized for traditional ANSI and ISO keyboards
+Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavison/graphite-layout) optimized for traditional ANSI and ISO keyboards available for Linux
 
 # Features added
 - Angle mod
