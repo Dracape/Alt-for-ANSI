@@ -14,17 +14,16 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
 - Minor optimisations in the layout for these improvements
 
 # Preview
-## Primary
-<img width="1365" height="438" alt="Primary" src="https://github.com/user-attachments/assets/88811598-65e8-4b65-b2e6-2e4bd76877f4" />
-
-## Shift
-<img width="1361" height="521" alt="Shift" src="https://github.com/user-attachments/assets/eee2a270-d7f8-4ebb-a700-0384503510df" />
-
-## Symbols
-<img width="1361" height="521" alt="Symbols" src="https://github.com/user-attachments/assets/79472661-d60a-4905-a59e-d6645a753821" />
-
-## Advanced navigation
-<img width="1361" height="521" alt="Advanced-navigation" src="https://github.com/user-attachments/assets/f24352e5-8164-4493-9ace-4766f7091f2d" />
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/88811598-65e8-4b65-b2e6-2e4bd76877f4" alt="Primary" width="100%"/></td>
+    <td><img src="https://github.com/user-attachments/assets/eee2a270-d7f8-4ebb-a700-0384503510df" alt="Shift" width="100%"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/79472661-d60a-4905-a59e-d6645a753821" alt="Symbols" width="100%"/></td>
+    <td><img src="https://github.com/user-attachments/assets/f24352e5-8164-4493-9ace-4766f7091f2d" alt="Advanced-navigation" width="100%"/></td>
+  </tr>
+</table>
 
 ---
 
