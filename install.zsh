@@ -35,6 +35,7 @@ chmod +x "$LAYOUT_DIR/install.sh"
 ( cd "$LAYOUT_DIR" && ./install.sh )
 
 echo "[4/5] Executing plugin installation script"
+chmod +x "$WORKDIR/plugins/install.zsh"
 "$WORKDIR/plugins/install.zsh"
 
 echo "[5/5] Cleaning up temporary installation files"
