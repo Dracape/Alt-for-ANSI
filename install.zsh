@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-# Abort if not running as root
 if (( EUID != 0 )); then
   echo "This script must be run as root." >&2
   exit 1
@@ -17,15 +16,16 @@ rm -rf "$WORKDIR"
 echo "[1/5] Cloning graphene repository"
 git clone --depth=1 https://github.com/DestroyerBDT/graphene.git "$WORKDIR"
 
-# Remove top-level files we don't want
+# Remove unwanted top-level files
 rm -f "$WORKDIR/README.md" "$WORKDIR/LICENSE" "$WORKDIR/install.zsh"
 
-# Prepare layout folder and move layout file into it
+# Create layout directory and move graphite layout file
 mkdir -p "$LAYOUT_DIR"
 mv "$WORKDIR/graphite" "$LAYOUT_DIR/graphite"
 
-echo "[2/5] Cloning layout installer components from graphite-layout"
+echo "[2/5] Cloning layout install files from graphite-layout"
 git clone --depth=1 https://github.com/xedrac/graphite-layout.git "$WORKDIR/.tmp-layout"
+
 mv "$WORKDIR/.tmp-layout/linux/install.sh" "$LAYOUT_DIR/install.sh"
 mv "$WORKDIR/.tmp-layout/linux/graphite.xslt" "$LAYOUT_DIR/graphite.xslt"
 rm -rf "$WORKDIR/.tmp-layout"
