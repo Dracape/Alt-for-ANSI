@@ -13,9 +13,9 @@ xkb_symbols "graphite" {
     key <AE02> { [            2,           at ] };
     key <AE03> { [            3,   numbersign ] };
     key <AE04> { [            7,       dollar ] };
-    key <AE05> { [            5,      percent ] };
-    key <AE06> { [            6,  asciicircum ] };
-    key <AE07> { [            4,    ampersand ] };
+    key <AE05> { [            4,      percent ] };
+    key <AE06> { [            5,  asciicircum ] };
+    key <AE07> { [            6,    ampersand ] };
     key <AE08> { [            8, bracketright ] };
     key <AE09> { [            0,    parenleft ] };
     key <AE10> { [            9,   parenright,   braceright ] };
