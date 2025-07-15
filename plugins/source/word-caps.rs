@@ -6,25 +6,13 @@ struct InputEvent { tv_sec: i64, tv_usec: i64, ev_type: u16, code: u16, value: i
 
 const EV_KEY: u16 = 0x01; const EV_SYN: u16 = 0x00;
 const KEY_LEFTSHIFT: u16 = 42; const KEY_RIGHTSHIFT: u16 = 54;
+const KEY_CAPSLOCK: u16 = 58; // The physical key for the user's backspace
 
-// --- Key Code Definitions ---
-// Keys that should be capitalized
 fn is_letter(code: u16) -> bool {
+    // This defines all the physical keys that produce letters in the Graphite layout.
     matches!(code, 16..=25 | 30..=39 | 44..=50)
 }
 
-// Keys that should NOT terminate Word Caps mode
-fn is_non_terminator(code: u16) -> bool {
-    const KEY_CAPSLOCK: u16 = 58;    // Physical key for user's Backspace
-    const KEY_SLASH: u16 = 53;       // For /
-    const KEY_BACKSLASH: u16 = 43;   // For \
-    const KEY_MINUS: u16 = 12;       // For -
-    const KEY_APOSTROPHE: u16 = 40;  // Physical key for user's _ (via Shift)
-
-    matches!(code, KEY_CAPSLOCK | KEY_SLASH | KEY_BACKSLASH | KEY_MINUS | KEY_APOSTROPHE)
-}
-
-// Helper function to send a full key event
 fn send_event(writer: &mut impl Write, ev_type: u16, code: u16, value: i32) -> io::Result<()> {
     let event = InputEvent { tv_sec: 0, tv_usec: 0, ev_type, code, value };
     let event_bytes: &[u8] = unsafe { mem::transmute::<&InputEvent, &[u8; mem::size_of::<InputEvent>()]>(&event) };
@@ -69,12 +57,11 @@ fn main() -> io::Result<()> {
                 send_event(&mut stdout, EV_SYN, 0, 0)?;
                 stdout.flush()?;
                 continue;
-            } else if is_non_terminator(event.code) {
-                // It's a non-terminating key (like backspace or '/').
-                // Do nothing here. This allows the key to pass through below
-                // without deactivating the mode.
+            } else if event.code == KEY_CAPSLOCK {
+                // It's the backspace key. Do nothing here to allow it to pass
+                // through without deactivating the mode.
             } else {
-                // It's any other key (space, enter, comma, etc.). Terminate the mode.
+                // It's any other non-letter key (space, symbols, enter). Terminate the mode.
                 word_caps_mode = false;
             }
         }
