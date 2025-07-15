@@ -1,39 +1,88 @@
-#!/usr/bin/zsh
-cd "$(dirname "$0")"
-set -euo pipefail
+use std::io::{self, Read, Write};
+use std::mem;
 
-echo "[1/3] Installing dependencies (interception-tools, rustc)"
-if ! command -v interception-tools >/dev/null || ! command -v rustc >/dev/null; then
-  echo "Installing..."
-  if command -v pacman >/dev/null; then
-    pacman -Sy --noconfirm interception-tools rust
-  elif command -v apt >/dev/null; then
-    apt update && apt install -y interception-tools rustc
-  elif command -v dnf >/dev/null; then
-    dnf install -y interception-tools rust
-  else
-    echo "Unsupported package manager. Install 'interception-tools' and 'rustc' manually." >&2
-    exit 1
-  fi
-else
-  echo "Dependencies already installed."
-fi
+#[repr(C)]
+#[derive(Copy, Clone, Debug)]
+struct InputEvent {
+    tv_sec: i64,
+    tv_usec: i64,
+    ev_type: u16,
+    code: u16,
+    value: i32,
+}
 
-echo "[2/3] Compiling plugins"
-mkdir -p /usr/local/bin
-rustc -C opt-level=2 "source/word-caps.rs" -o /usr/local/bin/wordcaps
-rustc -C opt-level=2 "source/home-row-mods.rs" -o /usr/local/bin/homerowmods
+const EV_KEY: u16 = 0x01;
+const EV_SYN: u16 = 0x00;
+const KEY_LEFTSHIFT: u16 = 42;
+const KEY_RIGHTSHIFT: u16 = 54;
+const KEY_CAPSLOCK: u16 = 58;
 
-echo "[3/3] Setting up udevmon"
-mkdir -p /etc/interception
-cat > /etc/interception/udevmon.yaml << 'EOF'
-- JOB: "intercept -g $DEVNODE | homerowmods | wordcaps | uinput -d $DEVNODE"
-  DEVICE:
-    HAS_PROPS:
-      - INPUT_PROP_KEYBOARD
-EOF
+fn is_letter(code: u16) -> bool {
+    matches!(code, 16..=25 | 30..=39 | 44..=50)
+}
 
-systemctl enable udevmon &> /dev/null || true
-systemctl restart udevmon
+fn send_event(writer: &mut impl Write, ev_type: u16, code: u16, value: i32) -> io::Result<()> {
+    let event = InputEvent {
+        tv_sec: 0,
+        tv_usec: 0,
+        ev_type,
+        code,
+        value,
+    };
+    let event_bytes: &[u8] =
+        unsafe { mem::transmute::<&InputEvent, &[u8; mem::size_of::<InputEvent>()]>(&event) };
+    writer.write_all(event_bytes)
+}
 
-echo "✔ Plugins installed and udevmon configured."
+fn main() -> io::Result<()> {
+    let mut stdin = io::stdin().lock();
+    let mut stdout = io::stdout().lock();
+    let mut event_buffer = [0u8; mem::size_of::<InputEvent>()];
+    let mut word_caps_mode = false;
+    let mut lshift_down = false;
+    let mut rshift_down = false;
+
+    while let Ok(()) = stdin.read_exact(&mut event_buffer) {
+        let event: InputEvent = unsafe { mem::transmute(event_buffer) };
+
+        if event.ev_type == EV_KEY {
+            match event.code {
+                KEY_LEFTSHIFT => lshift_down = event.value != 0,
+                KEY_RIGHTSHIFT => rshift_down = event.value != 0,
+                _ => {}
+            }
+
+            if event.value == 1
+                && ((event.code == KEY_LEFTSHIFT && rshift_down)
+                    || (event.code == KEY_RIGHTSHIFT && lshift_down))
+            {
+                word_caps_mode = true;
+                continue;
+            }
+        }
+
+        if word_caps_mode && event.ev_type == EV_KEY && event.value == 1 {
+            if is_letter(event.code) {
+                send_event(&mut stdout, EV_KEY, KEY_LEFTSHIFT, 1)?;
+                send_event(&mut stdout, EV_SYN, 0, 0)?;
+                send_event(&mut stdout, EV_KEY, event.code, 1)?;
+                send_event(&mut stdout, EV_SYN, 0, 0)?;
+                send_event(&mut stdout, EV_KEY, event.code, 0)?;
+                send_event(&mut stdout, EV_SYN, 0, 0)?;
+                send_event(&mut stdout, EV_KEY, KEY_LEFTSHIFT, 0)?;
+                send_event(&mut stdout, EV_SYN, 0, 0)?;
+                stdout.flush()?;
+                continue;
+            } else if event.code == KEY_CAPSLOCK {
+                // do nothing — allow backspace (remapped to caps) to pass through
+            } else {
+                word_caps_mode = false;
+            }
+        }
+
+        stdout.write_all(&event_buffer)?;
+        stdout.flush()?;
+    }
+
+    Ok(())
+}
