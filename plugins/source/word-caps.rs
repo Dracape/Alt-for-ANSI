@@ -18,7 +18,12 @@ const KEY_RIGHTSHIFT: u16 = 54;
 const KEY_CAPSLOCK: u16 = 58;
 
 fn is_letter(code: u16) -> bool {
-    matches!(code, 16..=25 | 30..=39 | 44..=50)
+    matches!(
+        code,
+        16..=25    // Q-W-E-R-T-Y-U-I-O-P
+        | 30..=38  // A-S-D-F-G-H-J-K-L
+        | 44..=50  // Z-X-C-V-B-N-M
+    )
 }
 
 fn send_event(writer: &mut impl Write, ev_type: u16, code: u16, value: i32) -> io::Result<()> {
@@ -74,7 +79,7 @@ fn main() -> io::Result<()> {
                 stdout.flush()?;
                 continue;
             } else if event.code == KEY_CAPSLOCK {
-                // do nothing — allow backspace (remapped to caps) to pass through
+                // Do nothing for backspace (capslock physically)
             } else {
                 word_caps_mode = false;
             }
