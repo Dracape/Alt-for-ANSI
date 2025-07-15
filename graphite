@@ -37,10 +37,10 @@ xkb_symbols "graphite" {
     key <AD12> { [        equal,         plus ] };
 
     // Home Row
-    key <AC01> { [            n,            N,            1 ] };
+    key <AC01> { [            n,            N,            0 ] };
     key <AC02> { [            r,            R,   asciitilde ] };
     key <AC03> { [            t,            T,       Return ] };
-    key <AC04> { [            s,            S,            0 ] };
+    key <AC04> { [            s,            S,            1 ] };
     key <AC05> { [            g,            G,    ampersand ] };
     key <AC06> { [            y,            Y,    backslash ] };
     key <AC07> { [            h,            H,         Left,        Page_Up ] };
