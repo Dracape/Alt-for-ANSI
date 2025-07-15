@@ -20,7 +20,7 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
     <td><img src="https://github.com/user-attachments/assets/eee2a270-d7f8-4ebb-a700-0384503510df" alt="Shift" width="100%"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/79472661-d60a-4905-a59e-d6645a753821" alt="Symbols" width="100%"/></td>
+    <td><img width="1365" height="441" alt="Screenshot From 2025-07-15 20-07-30" src="https://github.com/user-attachments/assets/6d2a299d-1f34-4899-822a-b2756b37e0b6" /></td>
     <td><img src="https://github.com/user-attachments/assets/f24352e5-8164-4493-9ace-4766f7091f2d" alt="Advanced-navigation" width="100%"/></td>
   </tr>
 </table>
