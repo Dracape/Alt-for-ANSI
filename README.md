@@ -28,4 +28,4 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
 ---
 
 # Installation
-Run `sudo zsh -c "$(curl -fsSL https://raw.githubusercontent.com/DestroyerBDT/graphene/main/install.zsh)"`
+Run `sudo zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.zsh)"`
