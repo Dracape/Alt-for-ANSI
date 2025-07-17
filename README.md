@@ -21,7 +21,7 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
   </tr>
   <tr>
     <td>symbods: to be added</td>
-    <td><img src="https://github.com/user-attachments/assets/f24352e5-8164-4493-9ace-4766f7091f2d" alt="Advanced-navigation" width="100%"/></td>
+    <td>Advanced: to be added</td>
   </tr>
 </table>
 
