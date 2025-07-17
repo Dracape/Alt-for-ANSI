@@ -44,9 +44,22 @@ fn main() -> io::Result<()> {
     mod_map.insert(KEY_L, (KEY_LEFTSHIFT, KEY_L));
     mod_map.insert(KEY_SEMICOLON, (KEY_LEFTCTRL, KEY_SEMICOLON));
 
-    // Define which physical keys belong to which hand
-    let left_hand_keys = [1, 2, 3, 4, 5, 16, 17, 18, 19, 20, 30, 31, 32, 33, 34, 44, 45, 46, 47, 48];
-    let right_hand_keys = [6, 7, 8, 9, 10, 11, 12, 21, 22, 23, 24, 25, 35, 36, 37, 38, 39, 49, 50, 51, 52, 53];
+    // --- Comprehensive Hand Mapping ---
+    // This now includes symbol keys, function keys, and special keys like backspace.
+    let left_hand_keys = [
+        1, 2, 3, 4, 5, 6,      // Esc, 1-5
+        15, 16, 17, 18, 19, 20, // Tab, Q, W, E, R, T
+        30, 31, 32, 33, 34,    // A, S, D, F, G
+        42, 44, 45, 46, 47, 48, // LShift, Z, X, C, V, B
+        58, 29, 56, 125, 57    // CapsLock (user's Backspace), LCtrl, LAlt, LMeta, Space
+    ];
+    let right_hand_keys = [
+        7, 8, 9, 10, 11, 12, 13, 14, // 6-0, -, =, Backspace
+        21, 22, 23, 24, 25, 26, 27,   // Y, U, I, O, P, [, ]
+        35, 36, 37, 38, 39, 40, 43,   // H, J, K, L, ;, ', `
+        54, 49, 50, 51, 52, 53,       // RShift, N, M, ,, ., /
+        97, 100, 28                   // RCtrl, RAlt, Enter
+    ];
     for key in left_hand_keys.iter() { key_hand_map.insert(*key, Hand::Left); }
     for key in right_hand_keys.iter() { key_hand_map.insert(*key, Hand::Right); }
 
@@ -54,7 +67,7 @@ fn main() -> io::Result<()> {
         let event: InputEvent = unsafe { mem::transmute(event_buffer) };
         let now = Instant::now();
 
-        // --- Timeout logic for single holds ---
+        // Timeout logic for single holds
         for (keycode, state) in key_states.iter_mut() {
             if state.is_held && !state.modifier_sent && now.duration_since(state.press_time).as_millis() > TAP_TIMEOUT_MS {
                 let (modifier_code, _) = mod_map.get(keycode).unwrap();
