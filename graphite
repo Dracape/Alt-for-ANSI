@@ -60,7 +60,7 @@ xkb_symbols "graphite" {
     key <AB07> { [            p,            P,            6 ] };
     key <AB08> { [       period,      greater,            7 ] };
     key <AB09> { [        minus,     quotedbl,            8 ] };
-    key <AB10> { [        slash,         less,            9 ] };
+    key <AB10> { [        slash,         less,       Escape ] };
 
     // Swap Caps Lock and Backspace
     key <CAPS> { [  BackSpace,         Delete ] };
