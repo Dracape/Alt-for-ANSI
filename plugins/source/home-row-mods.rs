@@ -41,7 +41,6 @@ fn main() -> io::Result<()> {
     const KEY_A: u16 = 30; const KEY_S: u16 = 31;
     const KEY_L: u16 = 38; const KEY_SEMICOLON: u16 = 39;
 
-    // --- Data Maps ---
     mod_map.insert(KEY_A, (KEY_LEFTCTRL, KEY_A, ModType::Ctrl));
     mod_map.insert(KEY_S, (KEY_LEFTSHIFT, KEY_S, ModType::Shift));
     mod_map.insert(KEY_L, (KEY_LEFTSHIFT, KEY_L, ModType::Shift));
@@ -56,7 +55,6 @@ fn main() -> io::Result<()> {
         let event: InputEvent = unsafe { mem::transmute(event_buffer) };
         let now = Instant::now();
 
-        // --- Timeout logic for single holds ---
         for (keycode, state) in key_states.iter_mut() {
             if state.is_held && !state.modifier_sent && now.duration_since(state.press_time).as_millis() > TAP_TIMEOUT_MS {
                 let (modifier_code, _, _) = mod_map.get(keycode).unwrap();
@@ -86,28 +84,25 @@ fn main() -> io::Result<()> {
                     }
                 }
 
-                // --- PRIORITY RULES ---
-                if let Some((_, active_mod_type, _)) = active_mod {
+                if let Some((active_mod_code, active_mod_type, _)) = active_mod {
                     if is_new_key_a_mod {
                         let (_, tap_code, new_mod_type) = mod_map.get(&event.code).unwrap();
                         let new_key_hand = key_hand_map.get(&event.code).unwrap();
 
                         if active_mod_type == ModType::Shift {
-                            // SHIFT PRIORITY: Shift is active, so any new mod key is tapped with shift.
                             send_key_tap(&mut stdout, *tap_code)?;
-                            continue; // Swallow the new mod key press
+                            continue;
                         } else if active_mod_type == ModType::Ctrl {
-                            // CTRL PRIORITY: Ctrl is active. Check for the Shift exception.
-                            let is_opposite_shift = *new_key_hand != key_hand_map.get(&active_mod.unwrap().0).unwrap() && *new_mod_type == ModType::Shift;
+                            // THIS IS THE FIX: The value from the hashmap is now correctly dereferenced with a *.
+                            let is_opposite_shift = *new_key_hand != *key_hand_map.get(&active_mod_code).unwrap() && *new_mod_type == ModType::Shift;
                             if !is_opposite_shift {
                                 send_key_tap(&mut stdout, *tap_code)?;
-                                continue; // Swallow the new mod key press
+                                continue;
                             }
                         }
                     }
                 }
                 
-                // --- Standard Opposite-Hand Logic ---
                 let mut cancelled_keys = Vec::new();
                 if let Some(new_key_hand) = key_hand_map.get(&event.code) {
                     for (mod_keycode, state) in key_states.iter_mut() {
@@ -129,7 +124,6 @@ fn main() -> io::Result<()> {
                 }
                 for key in cancelled_keys { key_states.remove(&key); }
 
-                // --- Process the new key itself ---
                 if is_new_key_a_mod {
                     key_states.insert(event.code, ModKeyState { is_held: true, press_time: now, modifier_sent: false });
                     continue;
