@@ -11,10 +11,12 @@ aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/insta
 aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
 
 # Make the script executable
-chmod +x /tmp/graphene/install.sh
+chmod +x ./install.sh
 
 # Install
 ./install.sh
+
+cd ~
 
 # Clean up
 rm -f /tmp/graphene
