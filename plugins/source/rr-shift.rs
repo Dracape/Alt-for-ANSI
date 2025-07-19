@@ -11,14 +11,12 @@ struct InputEvent { tv_sec: i64, tv_usec: i64, ev_type: u16, code: u16, value: i
 #[derive(Clone, Copy, PartialEq, Debug)]
 enum Hand { Left, Right }
 #[derive(Clone, Copy, PartialEq, Debug)]
-enum ModType { Ctrl, Shift }
+enum ModType { Ctrl, Shift } // Ctrl is no longer used, but enum can remain for structure
 
 const EV_KEY: u16 = 0x01; const EV_SYN: u16 = 0x00;
 
-// --- MODIFIER KEYCODES (UPDATED FOR XKB SWAP) ---
-// These now represent the PHYSICAL keys that the system expects for each modifier state.
-const KEY_LEFTALT: u16 = 56;   // The physical Alt key now acts as SHIFT
-const KEY_LEFTSHIFT: u16 = 42; // The physical Shift key now acts as CTRL
+// The physical Alt key now acts as SHIFT, per the user's XKB swap
+const KEY_LEFTALT: u16 = 56;
 
 #[derive(Clone, Copy)] struct ModKeyState { is_held: bool, press_time: Instant, modifier_sent: bool }
 
@@ -42,16 +40,14 @@ fn main() -> io::Result<()> {
     let mut key_hand_map = HashMap::new();
     let mut key_states: HashMap<u16, ModKeyState> = HashMap::new();
 
-    const KEY_L: u16 = 38; const KEY_SEMICOLON: u16 = 39;
+    const KEY_L: u16 = 38;
 
-    // --- MODIFIER MAP (UPDATED FOR XKB SWAP) ---
-    // The output keycode now matches the new physical key for the desired modifier.
-    // To get a logical SHIFT, we send the keycode for the physical ALT key.
+    // --- MODIFIER MAP (EDITED) ---
+    // The entry for KEY_SEMICOLON (the 'i' key) has been removed.
+    // Only the 'e' key (physical KEY_L) now acts as a home row modifier.
     mod_map.insert(KEY_L, (KEY_LEFTALT, KEY_L, ModType::Shift));
-    // To get a logical CTRL, we send the keycode for the physical SHIFT key.
-    mod_map.insert(KEY_SEMICOLON, (KEY_LEFTSHIFT, KEY_SEMICOLON, ModType::Ctrl));
 
-
+    // Hand mapping is still needed for the remaining right-hand mod.
     let left_hand_keys = [1,2,3,4,5,6,15,16,17,18,19,20,30,31,32,33,34,42,44,45,46,47,48,58,29,56,125,57];
     let right_hand_keys = [7,8,9,10,11,12,13,14,21,22,23,24,25,26,27,35,36,37,38,39,40,43,54,49,50,51,52,53,97,100,28];
     for key in left_hand_keys.iter() { key_hand_map.insert(*key, Hand::Left); }
