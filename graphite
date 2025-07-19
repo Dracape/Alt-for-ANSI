@@ -1,4 +1,3 @@
-
 partial alphanumeric_keys
 xkb_symbols "graphite" {
     include "us(basic)"
@@ -6,7 +5,6 @@ xkb_symbols "graphite" {
 
     // Define Right Alt as the modifier key to access the symbol layer (Level 3)
     key <RALT> { [ ISO_Level3_Shift ] };
-    modifier_map Mod5 { <RALT> };
 
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [            1,       exclam ] };
@@ -65,14 +63,29 @@ xkb_symbols "graphite" {
     // Swap Caps Lock and Backspace
     key <CAPS> { [  BackSpace,         Delete ] };
     key <BKSP> { [  Caps_Lock                 ] };
-    modifier_map Lock { <BKSP> };
 
-    // Swap Left Shift, Left Ctrl, and Left Alt
-    replace key <LCTL> { [ Shift_L ] };
-    replace key <LFSH> { [ Alt_L, Meta_L ] };
-    replace key <LALT> { [ Control_L ] };
+    // --- NEW MODIFIER SWAP: Ctrl -> Alt, Alt -> Shift, Shift -> Ctrl ---
+    
+    // 1. Define what symbol each PHYSICAL key sends.
+    replace key <LCTL> { [ Alt_L, Meta_L ] };      // Physical Ctrl key now sends Alt.
+    replace key <LALT> { [ Shift_L ] };         // Physical Alt key now sends Shift.
+    replace key <LFSH> { [ Control_L ] };       // Physical Shift key now sends Ctrl.
 
-    modifier_map Shift { <LCTL> };
-    modifier_map Control { <LALT> };
-    modifier_map Mod1 { <LFSH> };
+    // 2. Clear all existing modifier maps for a clean state.
+    // THIS IS THE FIX. It prevents old behaviors from leaking through.
+    clear Shift;
+    clear Lock;
+    clear Control;
+    clear Mod1;
+    clear Mod2;
+    clear Mod3;
+    clear Mod4;
+    clear Mod5;
+
+    // 3. Rebuild the modifier maps from scratch.
+    modifier_map Control { <LFSH> };            // The 'Control' state is now triggered by the physical Shift key.
+    modifier_map Shift   { <LALT> };            // The 'Shift' state is now triggered by the physical Alt key.
+    modifier_map Mod1    { <LCTL> };            // The 'Alt' state (Mod1) is now triggered by the physical Ctrl key.
+    modifier_map Lock    { <BKSP> };            // Caps Lock key.
+    modifier_map Mod5    { <RALT> };            // AltGr key.
 };
