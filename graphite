@@ -66,15 +66,23 @@ xkb_symbols "graphite" {
     key <BKSP> { [  Caps_Lock                 ] };
     modifier_map Lock { <BKSP> };
 
-    // --- NEW MODIFIER SWAP: Ctrl -> Alt, Alt -> Shift, Shift -> Ctrl ---
+    // --- Modifier Swaps ---
     
     // 1. Define what symbol each PHYSICAL key sends.
-    replace key <LCTL> { [ Alt_L, Meta_L ] };      // Physical Ctrl key now sends Alt.
-    replace key <LALT> { [ Shift_L ] };         // Physical Alt key now sends Shift.
-    replace key <LFSH> { [ Control_L ] };       // Physical Shift key now sends Ctrl.
+    // Left-hand three-way swap: Ctrl -> Alt, Alt -> Shift, Shift -> Ctrl
+    replace key <LCTL> { [ Alt_L, Meta_L ] };
+    replace key <LALT> { [ Shift_L ] };
+    replace key <LFSH> { [ Control_L ] };
+    
+    // Right-hand two-way swap: R_Shift <-> R_Ctrl
+    replace key <RTSH> { [ Control_R ] };
+    replace key <RCTL> { [ Shift_R ] };
 
     // 2. Map the modifier STATES to the correct PHYSICAL keys.
-    modifier_map Control { <LFSH> };            // The 'Control' state is now triggered by the physical Shift key.
-    modifier_map Shift   { <LALT> };            // The 'Shift' state is now triggered by the physical Alt key.
-    modifier_map Mod1    { <LCTL> };            // The 'Alt' state (Mod1) is now triggered by the physical Ctrl key.
+    // The 'Control' state is now triggered by the physical Left Shift and Right Shift keys.
+    modifier_map Control { <LFSH>, <RTSH> };
+    // The 'Shift' state is now triggered by the physical Left Alt and Right Ctrl keys.
+    modifier_map Shift   { <LALT>, <RCTL> };
+    // The 'Alt' state (Mod1) is now triggered by the physical Left Ctrl key.
+    modifier_map Mod1    { <LCTL> };
 };
