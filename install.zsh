@@ -19,4 +19,4 @@ chmod +x ./install.sh
 cd ~
 
 # Clean up
-rm -f /tmp/graphene
+rm -rf /tmp/graphene/
