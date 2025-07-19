@@ -14,7 +14,11 @@ enum Hand { Left, Right }
 enum ModType { Ctrl, Shift }
 
 const EV_KEY: u16 = 0x01; const EV_SYN: u16 = 0x00;
-const KEY_LEFTCTRL: u16 = 29; const KEY_LEFTSHIFT: u16 = 42;
+
+// --- MODIFIER KEYCODES (UPDATED FOR XKB SWAP) ---
+// These now represent the PHYSICAL keys that the system expects for each modifier state.
+const KEY_LEFTALT: u16 = 56;   // The physical Alt key now acts as SHIFT
+const KEY_LEFTSHIFT: u16 = 42; // The physical Shift key now acts as CTRL
 
 #[derive(Clone, Copy)] struct ModKeyState { is_held: bool, press_time: Instant, modifier_sent: bool }
 
@@ -40,13 +44,14 @@ fn main() -> io::Result<()> {
 
     const KEY_L: u16 = 38; const KEY_SEMICOLON: u16 = 39;
 
-    // --- MODIFIER MAP (EDITED) ---
-    // Left-hand keys have been removed. They will now act as normal keys.
-    // Right-hand keys remain as active home row mods.
-    mod_map.insert(KEY_L, (KEY_LEFTSHIFT, KEY_L, ModType::Shift));
-    mod_map.insert(KEY_SEMICOLON, (KEY_LEFTCTRL, KEY_SEMICOLON, ModType::Ctrl));
+    // --- MODIFIER MAP (UPDATED FOR XKB SWAP) ---
+    // The output keycode now matches the new physical key for the desired modifier.
+    // To get a logical SHIFT, we send the keycode for the physical ALT key.
+    mod_map.insert(KEY_L, (KEY_LEFTALT, KEY_L, ModType::Shift));
+    // To get a logical CTRL, we send the keycode for the physical SHIFT key.
+    mod_map.insert(KEY_SEMICOLON, (KEY_LEFTSHIFT, KEY_SEMICOLON, ModType::Ctrl));
 
-    // Hand mapping is still needed for the remaining right-hand mods.
+
     let left_hand_keys = [1,2,3,4,5,6,15,16,17,18,19,20,30,31,32,33,34,42,44,45,46,47,48,58,29,56,125,57];
     let right_hand_keys = [7,8,9,10,11,12,13,14,21,22,23,24,25,26,27,35,36,37,38,39,40,43,54,49,50,51,52,53,97,100,28];
     for key in left_hand_keys.iter() { key_hand_map.insert(*key, Hand::Left); }
