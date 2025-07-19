@@ -14,7 +14,6 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
     - Navigation support
     - More symbols
   - Advanced navigation layer
-- Safe *Right-ring shift*
 - Minor optimisations in the layout for these improvements
 
 # Preview
