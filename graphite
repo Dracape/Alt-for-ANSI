@@ -66,4 +66,13 @@ xkb_symbols "graphite" {
     key <CAPS> { [  BackSpace,         Delete ] };
     key <BKSP> { [  Caps_Lock                 ] };
     modifier_map Lock { <BKSP> };
+
+    // Swap Left Shift, Left Ctrl, and Left Alt
+    replace key <LCTL> { [ Shift_L ] };
+    replace key <LFSH> { [ Alt_L, Meta_L ] };
+    replace key <LALT> { [ Control_L ] };
+
+    modifier_map Shift { <LCTL> };
+    modifier_map Control { <LALT> };
+    modifier_map Mod1 { <LFSH> };
 };
