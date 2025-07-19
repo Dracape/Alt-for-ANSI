@@ -5,8 +5,12 @@ rm -rf /tmp/graphene/*
 mkdir /tmp/graphene
 cd /tmp/graphene
 
-# Prepare files
-aria2c https://raw.githubusercontent.com/Dracape/graphene/main/graphite https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
+# Download files
+aria2c https://raw.githubusercontent.com/Dracape/graphene/main/graphite
+aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh
+aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
+
+# Make the script executable
 chmod +x /tmp/graphene/install.sh
 
 # Install
