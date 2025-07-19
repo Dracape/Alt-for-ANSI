@@ -5,10 +5,13 @@ Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavis
 - Angle mod
 - **Swapped**
   - *Caps Lock* — *BackSpace*
-  - **Left mods**
-    - *Alt* -> *Shift*
-    - *Shift* -> *Ctrl*
-    - *Ctrl* -> *Alt*
+  - **Mods**
+    - **Left**
+      - *Alt* -> *Shift*
+      - *Shift* -> *Ctrl*
+      - *Ctrl* -> *Alt*
+    - **Right**
+      - *Ctrl* — *Shift*
 - Layers
   - **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard)**: Improved and highly optimised for [*Graphite*](https://github.com/rdavison/graphite-layout) (made possible thanks to the unique symbol placements of [*Graphite*](https://github.com/rdavison/graphite-layout))
     - Navigation support
