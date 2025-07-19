@@ -1,10 +1,14 @@
 # Introduction
-Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavison/graphite-layout) optimized for traditional ANSI and ISO keyboards available for Linux
+Graphene is a fork of the [*Graphite* keyboard layout](https://github.com/rdavison/graphite-layout), optimized for traditional ANSI and ISO keyboards available for Linux
 
 # Features added
 - Angle mod
-- Swapped *Caps Lock* and *BackSpace*
-- *Word Caps*
+- **Swapped**
+  - *Caps Lock* — *BackSpace*
+  - **Left mods**
+    - *Alt* -> *Shift*
+    - *Shift* -> *Ctrl*
+    - *Ctrl* -> *Alt*
 - Layers
   - **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard)**: Improved and highly optimised for [*Graphite*](https://github.com/rdavison/graphite-layout) (made possible thanks to the unique symbol placements of [*Graphite*](https://github.com/rdavison/graphite-layout))
     - Navigation support
