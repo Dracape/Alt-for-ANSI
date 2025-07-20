@@ -37,8 +37,8 @@ xkb_symbols "graphite" {
 
     // Home Row
     key <AC01> { [            n,            N,            1 ] };
-    key <AC02> { [            r,            R,   asciitilde,         percent] };
-    key <AC03> { [            t,            T,       Return,    asciicircum ] };
+    key <AC02> { [            r,            R,   asciitilde ] };
+    key <AC03> { [            t,            T,       Return ] };
     key <AC04> { [            s,            S,            0 ] };
     key <AC05> { [            g,            G,    ampersand ] };
     key <AC06> { [            y,            Y,    backslash ] };
@@ -57,9 +57,9 @@ xkb_symbols "graphite" {
     key <AB05> { [            v,            V,         plus ] };
     key <AB06> { [            k,            K,     asterisk ] };
     key <AB07> { [            p,            P,            6 ] };
-    key <AB08> { [       period,      greater,            7 ] };
-    key <AB09> { [        minus,     quotedbl,            8 ] };
-    key <AB10> { [        slash,         less,       Escape ] };
+    key <AB08> { [       period,      greater,       Escape ] };
+    key <AB09> { [        minus,     quotedbl,  asciicircum ] };
+    key <AB10> { [        slash,         less,      percent ] };
 
     // Swap Caps Lock and Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
