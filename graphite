@@ -62,7 +62,7 @@ xkb_symbols "graphite" {
     key <AB10> { [        slash,         less,       Escape ] };
 
     // Swap Caps Lock and Backspace
-    key <CAPS> { [  BackSpace,         Delete ] };
+    key <CAPS> { [  BackSpace,      Backspace,       Delete ] };
     key <BKSP> { [  Caps_Lock                 ] };
     modifier_map Lock { <BKSP> };
 
