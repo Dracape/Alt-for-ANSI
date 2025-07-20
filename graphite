@@ -33,7 +33,7 @@ xkb_symbols "graphite" {
     key <AD09> { [            u,            U,       dollar ] };
     key <AD10> { [            j,            J,        grave ] };
     key <AD11> { [    semicolon,        colon ] };
-    key <AD12> { [        equal,         plus ] };
+    key <AD12> { [          bar,    backslash ] };
 
     // Home Row
     key <AC01> { [            n,            N,            1 ] };
@@ -47,7 +47,7 @@ xkb_symbols "graphite" {
     key <AC09> { [            e,            E,         Down,            End ] };
     key <AC10> { [            i,            I,        Right,      Page_Down ] };
     key <AC11> { [        comma,     question ] };
-    key <BKSL> { [          bar,    backslash ] };
+    key <BKSL> { [        equal,         plus ] };
 
     // Bottom Row
     key <AB01> { [            x,            X,            2 ] };
