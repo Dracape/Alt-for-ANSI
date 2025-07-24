@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/sh
 
 # Prepare directory
 rm -rf /tmp/graphene/*
