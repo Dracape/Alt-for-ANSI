@@ -36,4 +36,4 @@ Graphene is a fork of the [*Graphite* keyboard layout][graphite], optimized for 
 ---
 
 # Installation
-Run `sudo zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`
+Run `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`
