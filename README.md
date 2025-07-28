@@ -37,10 +37,12 @@ Graphene is a fork of the [*Graphite* keyboard layout][graphite], optimized for 
 
 # Installation
 ## Startup
-The layout for user sessions can be installed by running
+The layout for user sessions can be installed by running  
 `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`
-But keep in mind that this script does the bare minimum entries just to get the layout working in the user session and is not enough to be used as a full installation.
-This script installs the layout for the US keymap as a variant and only makes an entry in `/usr/share/X11/xkb/rules/evdev.xml`.
+
+But keep in mind that this script does the bare minimum entries just to get the layout working in the user session and is not enough to be used as a full installation.  
+This script just installs the layout for the US keymap as a variant and only makes an entry in `/usr/share/X11/xkb/rules/evdev.xml`.  
+
 It's just so that you can get your hands working
 
 ## Further setup
