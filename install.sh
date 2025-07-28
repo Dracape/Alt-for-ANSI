@@ -9,14 +9,12 @@ cd /tmp/graphene
 aria2c https://raw.githubusercontent.com/Dracape/graphene/main/graphite
 aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
 aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh
-aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/activate.sh
 
 # Make the script executable
-chmod +x ./install.sh ./activate.sh
+chmod +x ./install.sh
 
-# Run
+# Install
 ./install.sh
-./activate.sh
 
 cd ~
 
