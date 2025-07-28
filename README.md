@@ -46,6 +46,14 @@ This script just installs the layout for the US keymap as a variant and only mak
 It's just so that you can get your hands working
 
 ## Further setup
-- Make entries for the other files (at `/usr/share/X11/xkb/rules/`)
-  - set the layout as default for outside user sessions (such as a *display manager*) manually (using `localectl`)
-- Set the layout as the default for any new users created (at `/etc/default/keyboard`) (optional)
+**1**. Make entries for the other files  
+> [!TIP]
+> at ``/usr/share/X11/xkb/rules/``
+
+**2**. set the layout as default for outside user sessions (such as a *display manager*)
+> [!TIP]
+> use `localectl`
+  
+**3**. Set the layout as the default for any new users created (optional)
+> [!TIP]
+> in `/etc/default/keyboard`
