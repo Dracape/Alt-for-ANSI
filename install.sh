@@ -16,7 +16,7 @@ chmod +x ./install.sh
 # Install
 ./install.sh
 
-cd ~
+cd -
 
 # Clean up
 rm -rf /tmp/graphene/
