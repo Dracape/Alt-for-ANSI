@@ -24,12 +24,12 @@ Graphene is a fork of the [*Graphite* keyboard layout][graphite], optimized for 
 # Preview
 <table>
   <tr>
-    <td><img width="1365" height="529" alt="Primary" src="https://github.com/user-attachments/assets/34bb52a8-1e2e-4276-bdbc-791fe1d32f5d" /></td>
-    <td><img src="https://github.com/user-attachments/assets/eee2a270-d7f8-4ebb-a700-0384503510df" alt="Shift" width="100%"/></td>
+    <td><img width="1345" height="512" alt="Primary" src="https://github.com/user-attachments/assets/4dea3ea1-c684-4ec5-8133-8c27cdaf558d" /></td>
+    <td><img width="1345" height="512" alt="Shift" src="https://github.com/user-attachments/assets/ae99a72e-e1b4-48f9-893a-a2774b75c7a3" /></td>
   </tr>
   <tr>
-    <td><img width="1366" height="539" alt="Symbols" src="https://github.com/user-attachments/assets/7218f2b7-84b1-4dc8-9d04-64fe05258106" /></td>
-    <td><img width="1348" height="518" alt="Advanced" src="https://github.com/user-attachments/assets/ff0321ba-9773-49ab-a8a5-34d80c22dccc" /></td>
+    <td><img width="1345" height="512" alt="Symbols" src="https://github.com/user-attachments/assets/1870d5c4-e04d-4f37-925f-ac0f5f92d597" /></td>
+    <td><img width="1345" height="512" alt="Navigation" src="https://github.com/user-attachments/assets/80a2bcf7-a77a-49fb-b374-17ca6d91b724" /></td>
   </tr>
 </table>
 
