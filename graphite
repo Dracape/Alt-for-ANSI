@@ -9,18 +9,18 @@ xkb_symbols "graphite" {
     modifier_map Mod5 { <RALT> };
 
     key <TLDE> { [        grave,   asciitilde ] };
-    key <AE01> { [            1,       exclam ] };
-    key <AE02> { [            2,           at ] };
-    key <AE03> { [            3,   numbersign ] };
-    key <AE04> { [            7, 7,              braceright ] };
-    key <AE05> { [            4,      percent ] };
-    key <AE06> { [            5,  asciicircum ] };
-    key <AE07> { [            6,    ampersand ] };
-    key <AE08> { [            8, bracketright ] };
-    key <AE09> { [            0,    parenleft ] };
-    key <AE10> { [            9,   parenright ] };
-    key <AE11> { [     asterisk,   braceright ] };
-    key <AE12> { [  bracketleft,    braceleft ] };
+    key <AE01> { [       exclam,       exclam ] };
+    key <AE02> { [           at,           at ] };
+    key <AE03> { [   numbersign,   numbersign ] };
+    key <AE04> { [            7,            7,   braceright ] };
+    key <AE05> { [      percent,      percent ] };
+    key <AE06> { [  asciicircum,  asciicircum ] };
+    key <AE07> { [     NoSymbol,     NoSymbol ] };
+    key <AE08> { [    ampersand,    ampersand ] };
+    key <AE09> { [            8, bracketright ] };
+    key <AE10> { [    parenleft,    parenleft ] };
+    key <AE11> { [            9,   parenright ] };
+    key <AE12> { [   parenright,   parenright ] };
 
     // Top Row
     key <AD01> { [            b,            B,       exclam ] };
@@ -28,13 +28,13 @@ xkb_symbols "graphite" {
     key <AD03> { [            d,            D,  bracketleft ] };
     key <AD04> { [            w,            W,   numbersign ] };
     key <AD05> { [            z,            Z,        equal ] };
-    key <AD06> { [   apostrophe,   underscore,          bar ] };
-    key <AD07> { [            f,            F,           at ] };
-    key <AD08> { [            o,            O,    parenleft ] };
-    key <AD09> { [            u,            U,       dollar ] };
-    key <AD10> { [            j,            J,        grave ] };
-    key <AD11> { [    semicolon,        colon ] };
-    key <AD12> { [          bar,    backslash ] };
+    key <AD06> { [          bar,          bar,          bar ] };
+    key <AD07> { [   apostrophe,   underscore ] };
+    key <AD08> { [            f,            F,           at ] };
+    key <AD09> { [            o,            O,    parenleft ] };
+    key <AD10> { [            u,            U,       dollar ] };
+    key <AD11> { [            j,            J,        grave ] };
+    key <AD12> { [    semicolon,        colon ] };
 
     // Home Row
     key <AC01> { [            n,            N,            1 ] };
@@ -42,13 +42,13 @@ xkb_symbols "graphite" {
     key <AC03> { [            t,            T,       Return ] };
     key <AC04> { [            s,            S,            0 ] };
     key <AC05> { [            g,            G,    ampersand ] };
-    key <AC06> { [            y,            Y,    backslash ] };
-    key <AC07> { [            h,            H,         Left,        Page_Up ] };
-    key <AC08> { [            a,            A,           Up,           Home ] };
-    key <AC09> { [            e,            E,         Down,            End ] };
-    key <AC10> { [            i,            I,        Right,      Page_Down ] };
-    key <AC11> { [        comma,     question ] };
-    key <BKSL> { [        equal,         plus ] };
+    key <AC06> { [         Home,     NoSymbol,          End ] };
+    key <AC07> { [            y,            Y,    backslash ] };
+    key <AC08> { [            h,            H,         Left,        Page_Up ] };
+    key <AC09> { [            a,            A,           Up,           Home ] };
+    key <AC10> { [            e,            E,         Down,            End ] };
+    key <AC11> { [            i,            I,        Right,      Page_Down ] };
+    key <BKSL> { [        comma,     question ] };
 
     // Bottom Row
     key <AB01> { [            x,            X,            2 ] };
@@ -56,11 +56,11 @@ xkb_symbols "graphite" {
     key <AB03> { [            c,            C,            4 ] };
     key <AB04> { [            q,            Q,            5 ] };
     key <AB05> { [            v,            V,         plus ] };
-    key <AB06> { [            k,            K,     asterisk ] };
-    key <AB07> { [            p,            P,            6 ] };
-    key <AB08> { [       period,      greater,       Escape ] };
-    key <AB09> { [        minus,     quotedbl,  asciicircum ] };
-    key <AB10> { [        slash,         less,      percent ] };
+    key <AB06> { [      Page_Up,    Page_Down ] };
+    key <AB07> { [            k,            K,     asterisk ] };
+    key <AB08> { [            p,            P,            6 ] };
+    key <AB09> { [       period,      greater,       Escape ] };
+    key <AB10> { [        minus,     quotedbl,  asciicircum ] };
 
     // Swap Caps Lock and Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
@@ -75,13 +75,13 @@ xkb_symbols "graphite" {
     replace key <LALT> { [ Shift_L ] };
     replace key <LFSH> { [ Control_L ] };
     
-    // Right-hand two-way swap: R_Shift <-> R_Ctrl
-    replace key <RTSH> { [ Control_R ] };
+    // Right-hand mods
+    replace key <RTSH> { [        slash,         less,      percent ] };
     replace key <RCTL> { [ Shift_R ] };
 
     // 2. Map the modifier STATES to the correct PHYSICAL keys.
     // The 'Control' state is now triggered by the physical Left Shift and Right Shift keys.
-    modifier_map Control { <LFSH>, <RTSH> };
+    modifier_map Control { <LFSH> };
     // The 'Shift' state is now triggered by the physical Left Alt and Right Ctrl keys.
     modifier_map Shift   { <LALT>, <RCTL> };
     // The 'Alt' state (Mod1) is now triggered by the physical Left Ctrl key.
