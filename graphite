@@ -75,15 +75,14 @@ xkb_symbols "graphite" {
     replace key <LALT> { [ Shift_L ] };
     replace key <LFSH> { [ Control_L ] };
     
-    // Right-hand mods
+    // Assign the right shift for Wide-mod
     replace key <RTSH> { [        slash,         less,      percent ] };
-    replace key <RCTL> { [ Shift_R ] };
 
     // 2. Map the modifier STATES to the correct PHYSICAL keys.
-    // The 'Control' state is now triggered by the physical Left Shift and Right Shift keys.
+    // The 'Control' state is now triggered by the physical Left Shift key
     modifier_map Control { <LFSH> };
-    // The 'Shift' state is now triggered by the physical Left Alt and Right Ctrl keys.
-    modifier_map Shift   { <LALT>, <RCTL> };
+    // The 'Shift' state is now triggered by the physical Left Alt key
+    modifier_map Shift   { <LALT> };
     // The 'Alt' state (Mod1) is now triggered by the physical Left Ctrl key.
     modifier_map Mod1    { <LCTL> };
 };
