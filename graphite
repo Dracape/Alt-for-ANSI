@@ -13,10 +13,10 @@ xkb_symbols "graphite" {
     key <AE02> { [           at,           at ] };
     key <AE03> { [   numbersign,   numbersign ] };
     key <AE04> { [            7,            7,   braceright ] };
-    key <AE05> { [      percent,      percent ] };
-    key <AE06> { [  asciicircum,  asciicircum ] };
-    key <AE07> { [     NoSymbol,     NoSymbol ] };
-    key <AE08> { [    ampersand,    ampersand ] };
+    key <AE05> { [       dollar,       dollar ] };
+    key <AE06> { [      percent,      percent ] };
+    key <AE07> { [    ampersand,    ampersand ] };
+    key <AE08> { [  asciicircum,  asciicircum ] };
     key <AE09> { [            8, bracketright ] };
     key <AE10> { [    parenleft,    parenleft ] };
     key <AE11> { [            9,   parenright ] };
