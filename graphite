@@ -29,7 +29,7 @@ xkb_symbols "graphite" {
     key <AD04> { [            w,            W,   numbersign ] };
     key <AD05> { [            z,            Z,        equal ] };
     key <AD06> { [          bar,          bar,          bar ] };
-    key <AD07> { [   apostrophe,   underscore ] };
+    key <AD07> { [   apostrophe,   underscore, asciicircum ] };
     key <AD08> { [            f,            F,           at ] };
     key <AD09> { [            o,            O,    parenleft ] };
     key <AD10> { [            u,            U,       dollar ] };
@@ -60,7 +60,7 @@ xkb_symbols "graphite" {
     key <AB07> { [            k,            K,     asterisk ] };
     key <AB08> { [            p,            P,            6 ] };
     key <AB09> { [       period,      greater,       Escape ] };
-    key <AB10> { [        minus,     quotedbl,  asciicircum ] };
+    key <AB10> { [        minus,     quotedbl,       emdash ] };
 
     // Swap Caps Lock and Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
@@ -68,13 +68,13 @@ xkb_symbols "graphite" {
     modifier_map Lock { <BKSP> };
 
     // --- Modifier Swaps ---
-    
+
     // 1. Define what symbol each PHYSICAL key sends.
     // Left-hand three-way swap: Ctrl -> Alt, Alt -> Shift, Shift -> Ctrl
     replace key <LCTL> { [ Alt_L, Meta_L ] };
     replace key <LALT> { [ Shift_L ] };
     replace key <LFSH> { [ Control_L ] };
-    
+
     // Assign the right shift for Wide-mod
     replace key <RTSH> { [        slash,         less,      percent ] };
 
