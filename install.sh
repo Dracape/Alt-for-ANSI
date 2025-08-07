@@ -6,9 +6,9 @@ mkdir /tmp/graphene
 cd /tmp/graphene
 
 # Download files
-aria2c https://raw.githubusercontent.com/Dracape/graphene/main/graphite
-aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
-aria2c https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh
+wget https://raw.githubusercontent.com/Dracape/graphene/main/graphite
+wget https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
+wget https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh
 
 # Make the script executable
 chmod +x ./install.sh
