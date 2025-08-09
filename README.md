@@ -1,7 +1,7 @@
 [graphite]: https://github.com/rdavison/graphite-layout "Graphite is a highly optimized, well balanced, general purpose keyboard layout designed to accommodate the real world needs of typists looking for a great “out-of-the-box” experience. Its design incorporates many contemporary theories about layouts to find a balance between comfort and speed. In addition to its impressive performance in metrics, Graphite has also been extensively tested and validated through real-world usage."
 
 # Introduction
-Graphene is a fork of the [*Graphite* keyboard layout][graphite], optimized for traditional full ANSI and ISO keyboards available for Linux
+Graphene is a fork of the [*Graphite* keyboard layout][graphite]—optimized for traditional full ANSI and ISO keyboards—available for Linux
 
 # Features added
 - **Mods**
@@ -42,9 +42,8 @@ Graphene is a fork of the [*Graphite* keyboard layout][graphite], optimized for 
 ## Startup
 The layout for user sessions can be installed by running  
 `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`
-
-But keep in mind that this script does the bare minimum entries just to get the layout working in the user session and is not enough to be used as a full installation.  
-This script just installs the layout for the US keymap as a variant and only makes an entry in `/usr/share/X11/xkb/rules/evdev.xml`.  
+Keep in mind that this script only provides the bare minimum configuration to get the layout working in the user session; it is not sufficient for a full installation.
+This script installs the layout as a US keymap variant—making an entry only in `/usr/share/X11/xkb/rules/evdev.xml`.
 
 It's just so that you can get your hands working
 
