@@ -25,8 +25,28 @@
 - Minor optimisations in the layout for these improvements
 
 # Preview
-(to be added)
+### Base
+| | ! | @ | # | 7 | * | $ | % | & | 8 | ( | 9 | ) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Tab | b | l | d | w | z | Esc | ' | f | o | u | j | ; |
+| BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
+| Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
+| Alt | Super | Shift | | | Space | | | | AltGr | | | |
+### Shift
+| | ! | @ | # | 7 | * | $ | % | & | ] | ( | ) | |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Tab | B | L | D | W | Z | | _ | F | O | U | J | : |
+| BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? |
+| Ctrl | X | M | C | Q | V | Page Down | K | P | > | " | < | |
+| Alt | Super | **Shift** | | | Space | | | | AltGr | | | |
 
+### Symbol (AltGr)
+| | | | } | | | | | | | | | |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Tab | ! | { | [ | # | = | Insert | | @ | ( | $ | ` | |
+| Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
+| Ctrl | 2 | 3 | 4 | 5 | + | | * | 6 | \| | — | |
+| Alt | Super | Shift | | | Space | | | | **AltGr** | | | |
 ---
 
 # Installation
