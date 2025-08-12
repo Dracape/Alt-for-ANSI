@@ -28,7 +28,7 @@ xkb_symbols "graphite" {
     key <AD03> { [            d,            D,  bracketleft ] };
     key <AD04> { [            w,            W,   numbersign ] };
     key <AD05> { [            z,            Z,        equal ] };
-    key <AD06> { [          bar,          bar,          bar ] };
+    key <AD06> { [       Escape,     NoSymbol,       Insert ] };
     key <AD07> { [   apostrophe,   underscore, asciicircum ] };
     key <AD08> { [            f,            F,           at ] };
     key <AD09> { [            o,            O,    parenleft ] };
@@ -59,7 +59,7 @@ xkb_symbols "graphite" {
     key <AB06> { [          End,    Page_Down ] };
     key <AB07> { [            k,            K,     asterisk ] };
     key <AB08> { [            p,            P,            6 ] };
-    key <AB09> { [       period,      greater,       Escape ] };
+    key <AB09> { [       period,      greater,          bar ] };
     key <AB10> { [        minus,     quotedbl,       emdash ] };
 
     // Swap Caps Lock and Backspace
