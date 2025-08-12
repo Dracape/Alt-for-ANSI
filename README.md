@@ -15,8 +15,8 @@ Graphene is a fork of the [*Graphite* keyboard layout][graphite]—optimized for
       - *Shift* -> *Ctrl*
       - *Ctrl* -> *Alt*
     - **Right**
-      - *Ctrl* —> *Shift*
-      - *Shift* —> Used in wide mod
+      - *Ctrl* -> *Shift*
+      - *Shift* -> Used in wide mod
 - Layers
   - **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout")**: Improved and highly optimised for [*Graphite*][graphite] (made possible thanks to the unique symbol placements of [*Graphite*][graphite])
     - Navigation support
