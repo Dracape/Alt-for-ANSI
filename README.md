@@ -7,7 +7,7 @@ Graphene is a fork of the [*Graphite* keyboard layout][graphite]—optimized for
 - **Mods**
   - Angle
   - Wide
-- **Swapped**
+- **Swaps**
   - *Caps Lock* <—> *BackSpace*
   - **Mods**
     - **Left**
