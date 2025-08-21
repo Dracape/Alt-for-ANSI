@@ -25,6 +25,7 @@
 - Minor optimisations in the layout for these improvements
 
 # Preview
+(Only the keys that are expected to be used are shown)
 ### Base
 | | ! | @ | # | % | * | $ | % | & | — | ( | \| | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
