@@ -37,6 +37,10 @@
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
+#### Top row usage
+The first row is made keeping stretches in mind
+- normally, you are only expected to use the keys here not available in the symbols layer
+- The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
 | | | | | | | | | | | ] | | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -52,6 +56,9 @@
 | Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
 | Ctrl | 2 | 3 | 4 | 5 | + | | * | 6 | 7 | 8 | 9 | |
 | | Super | Shift | | | | | Space | **AltGr** | | | | |
+#### Unusual brackets
+It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
+
 ---
 
 # Installation  
