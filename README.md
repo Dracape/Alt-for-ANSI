@@ -27,7 +27,7 @@
 # Preview
 (Only the keys that are expected to be used are shown)
 ### Base
-| | ! | @ | # | % | * | $ | % | & | — | ( | \| | ) |
+| | ! | @ | Alt | % | * | $ | % | # | — | ( | \| | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | l | d | w | z | Esc | ' | f | o | u | j | ; |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
