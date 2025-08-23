@@ -42,7 +42,7 @@ The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| | | | | | | | | | | ] | | ) |
+| | | | Alt | | | | | | | ] | | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | L | D | W | Z | | _ | F | O | U | J | : |
 | BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? |
@@ -50,7 +50,7 @@ The top row is made keeping stretches in mind
 | Alt | Super | **Shift** | | | | | Space | AltGr | | | | |
 
 ### Symbol (AltGr)
-| | | | } | | | | | | | | | |
+| | | | Alt | } | | | | | | | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | |
 | Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
