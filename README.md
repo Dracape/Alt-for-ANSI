@@ -75,7 +75,7 @@ It's just so that you can get your hands working
 > [!TIP]
 > at ``/usr/share/xkeyboard-config-2/rules/``
 
-**2**. set the layout as default for outside user sessions (such as a *Display Manager*)
+**2**. set the layout as default for outside user sessions (such as *Display Manager*)
 > [!TIP]
 > use `localectl`
   
