@@ -1,7 +1,7 @@
 [graphite]: https://github.com/rdavison/graphite-layout "Graphite is a highly optimized, well balanced, general purpose keyboard layout designed to accommodate the real world needs of typists looking for a great “out-of-the-box” experience. Its design incorporates many contemporary theories about layouts to find a balance between comfort and speed. In addition to its impressive performance in metrics, Graphite has also been extensively tested and validated through real-world usage."
 
 # Introduction
-*Graphene* is a fork of the [*Graphite* keyboard layout][graphite]—optimized for traditional full ANSI and ISO keyboards—available for Linux
+*Graphene* is a fork of the [*Graphite* keyboard layout][graphite]—optimized for traditional full ANSI and ISO keyboards
 
 # Features added
 - **Mods**
@@ -61,7 +61,7 @@ It is assumed that your typing program automatically paires the brackets; if it 
 
 ---
 
-# Installation  
+# Installation (Linux)
 ## Startup
 The layout for user sessions can be installed by running  
 `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`  
