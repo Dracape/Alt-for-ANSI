@@ -26,9 +26,9 @@
 
 # Preview
 > [!NOTE]
-> Only the keys that are expected to be used are shown
+> Only the keys that are expected to be used are shown  
 > [!NOTE]
-> Empty space in the upper layers mean—keys from the base layer are used
+> Empty space in the upper layers mean—keys from the base layer are used  
 ### Base
 | | ! | @ | Alt | % | * | $ | % | # | — | ( | \| | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
