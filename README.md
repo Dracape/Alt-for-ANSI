@@ -29,7 +29,7 @@
 > Only the keys that are expected to be used are shown  
 
 > [!NOTE]
-> Empty space in the upper layers generally[^unpreserved-layer-keys] mean—keys from the *Base* layer are used  
+> Empty space in the upper layers generally[^unpreserved-layer-keys/weird-layer-distro] mean—keys from the *Base* layer are used  
 ### Base
 | | ! | @ | Alt | % | * | $ | % | # | — | ( | \| | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -58,7 +58,7 @@ The top row is made keeping stretches in mind
 | Alt | Super | Shift | | | | | Space | **AltGr** | | | | |
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
-
+#### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
 ---
 
 # Installation (*Linux*)
@@ -83,5 +83,5 @@ It's just so that you can get your hands working
 > [!TIP]
 > in `/etc/default/keyboard`
 
-[^unpreserved-layer-keys]: This layout treats *Shift* and *AltGr* as modifiers that are assigned to a thumb on each hand instead of layer switchers; Sometimes some keys are at unconfortable positions and thus, don't have a third key assigned to them.  
+[^unpreserved-layer-keys/weird-layer-distro]: This layout treats *Shift* and *AltGr* as modifiers that are assigned to a thumb on each hand instead of layer switchers; Sometimes some keys are at unconfortable positions and thus, don't have a third key assigned to them.  
   In a typical layout, the 2nd keys would go to the 2nd layer; while in *Graphene*, if they are in the left side, they are put in the *Symbol* layer so that the alternate hand can be used so press it (for ergonomics)
