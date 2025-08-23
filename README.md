@@ -38,7 +38,7 @@
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
 #### Top row usage
-The first row is made keeping stretches in mind
+The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
