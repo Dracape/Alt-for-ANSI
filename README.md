@@ -29,7 +29,7 @@
 > Only the keys that are expected to be used are shown  
 
 > [!NOTE]
-> Empty space in the upper layers mean—keys from the *Base* layer are used  
+> Empty space in the upper layers generally[^unpreserved-layer-keys] mean—keys from the *Base* layer are used  
 ### Base
 | | ! | @ | Alt | % | * | $ | % | # | — | ( | \| | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -75,3 +75,6 @@ It's just so that you can get your hands working
 **3**. Set the layout as the default for any new users created (optional)
 > [!TIP]
 > in `/etc/default/keyboard`
+
+[^unpreserved-layer-keys]: This layout treats *Shift* and *AltGr* as modifiers that are assigned to a thumb on each hand instead of layer switchers; Sometimes some keys are at unconfortable positions and thus, don't have a third key assigned to them.  
+  In a typical layout, the 2nd keys would go to the 2nd layer; while in *Graphene*, if they are in the left side, they are put in the *Symbol* layer so that the alternate hand can be used so press it (for ergonomics)
