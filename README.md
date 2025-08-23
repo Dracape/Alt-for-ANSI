@@ -25,7 +25,10 @@
 - Minor optimisations in the layout for these improvements
 
 # Preview
-(Only the keys that are expected to be used are shown)
+> [!NOTE]
+> Only the keys that are expected to be used are shown
+> [!NOTE]
+> Empty space in the upper layers mean—keys from the base layer are used
 ### Base
 | | ! | @ | Alt | % | * | $ | % | # | — | ( | \| | ) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -50,7 +53,7 @@
 | Alt | Super | Shift | | | | | | Space | **AltGr** | | | |
 ---
 
-# Installation
+# Installation  
 ## Startup
 The layout for user sessions can be installed by running  
 `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`  
