@@ -1,7 +1,6 @@
 
 partial alphanumeric_keys
 xkb_symbols "graphite" {
-    include "us(basic)"
     name[Group1]= "English (Graphite)";
 
     // Define Right Alt as the modifier key to access the symbol layer (Level 3)
@@ -11,12 +10,12 @@ xkb_symbols "graphite" {
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [       exclam,       exclam ] };
     key <AE02> { [           at,           at ] };
-    key <AE03> { [   numbersign,   numbersign ] };
+
     key <AE04> { [      percent,      percent,   braceright ] };
     key <AE05> { [     asterisk,     asterisk ] };
     key <AE06> { [       dollar,       dollar ] };
     key <AE07> { [      percent,      percent ] };
-    key <AE08> { [    ampersand,    ampersand ] };
+    key <AE08> { [   numbersign,    ampersand ] };
     key <AE09> { [       emdash, bracketright ] };
     key <AE10> { [    parenleft,    parenleft ] };
     key <AE11> { [          bar,   parenright ] };
@@ -48,7 +47,11 @@ xkb_symbols "graphite" {
     key <AC09> { [            a,            A,           Up,           Home ] };
     key <AC10> { [            e,            E,         Down,            End ] };
     key <AC11> { [            i,            I,        Right,      Page_Down ] };
-    key <BKSL> { [        comma,     question ] };
+    key <BKSL> { [        comma,     question ] };   
+    // Swap Caps Lock and Backspace
+    key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
+    key <BKSP> { [  Caps_Lock ] };
+    modifier_map Lock { <BKSP> };
 
     // Bottom Row
     key <AB01> { [            x,            X,            2 ] };
@@ -61,28 +64,26 @@ xkb_symbols "graphite" {
     key <AB08> { [            p,            P,            6 ] };
     key <AB09> { [       period,      greater,            7 ] };
     key <AB10> { [        minus,     quotedbl,            8 ] };
+    replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
 
-    // Swap Caps Lock and Backspace
-    key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
-    key <BKSP> { [  Caps_Lock                 ] };
-    modifier_map Lock { <BKSP> };
 
     // --- Modifier Swaps ---
 
-    // 1. Define what symbol each PHYSICAL key sends.
-    // Left-hand three-way swap: Ctrl -> Alt, Alt -> Shift, Shift -> Ctrl
-    replace key <LCTL> { [ Alt_L, Meta_L ] };
-    replace key <LALT> { [ Shift_L ] };
-    replace key <LFSH> { [ Control_L ] };
+    // -- Physical → Alt --
+    replace key <AE03> { [ Alt_L ] };
 
-    // Assign the right shift for Wide-mod
-    replace key <RTSH> { [        slash,         less,     9 ] };
-
-    // 2. Map the modifier STATES to the correct PHYSICAL keys.
-    // The 'Control' state is now triggered by the physical Left Shift key
-    modifier_map Control { <LFSH> };
-    // The 'Shift' state is now triggered by the physical Left Alt key
-    modifier_map Shift   { <LALT> };
-    // The 'Alt' state (Mod1) is now triggered by the physical Left Ctrl key.
+    // -- Left-hand three-way swap --
+    
+    // Control → Alt
+    replace key <LCTL> { [         Alt_L,          Meta_L ] };
     modifier_map Mod1    { <LCTL> };
+
+    // Shift → Control
+    replace key <LFSH> { [     Control_L ] };
+    modifier_map Control { <LFSH> };
+
+    // Alt → Shift
+    replace key <LALT> { [       Shift_L ] };
+    modifier_map Shift   { <LALT> };
+
 };
