@@ -61,7 +61,7 @@ It is assumed that your typing program automatically paires the brackets; if it 
 
 ---
 
-# Installation (Linux)
+# Installation (*Linux*)
 ## Startup
 The layout for user sessions can be installed by running  
 `sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/graphene/main/install.sh)"`  
@@ -75,7 +75,7 @@ It's just so that you can get your hands working
 > [!TIP]
 > at ``/usr/share/xkeyboard-config-2/rules/``
 
-**2**. set the layout as default for outside user sessions (such as a *display manager*)
+**2**. set the layout as default for outside user sessions (such as a *Display Manager*)
 > [!TIP]
 > use `localectl`
   
