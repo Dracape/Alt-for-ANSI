@@ -10,16 +10,16 @@ xkb_symbols "graphite" {
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [       exclam,       exclam ] };
     key <AE02> { [           at,           at ] };
-
+    // Left Alt - AE03
     key <AE04> { [      percent,      percent,   braceright ] };
     key <AE05> { [     asterisk,     asterisk ] };
     key <AE06> { [       dollar,       dollar ] };
     key <AE07> { [      percent,      percent ] };
-    key <AE08> { [   numbersign,    ampersand ] };
+    key <AE08> { [   numbersign,   numbersign ] };
     key <AE09> { [       emdash, bracketright ] };
-    key <AE10> { [    parenleft,    parenleft ] };
+    // Right Alt - AE10
     key <AE11> { [          bar,   parenright ] };
-    key <AE12> { [   parenright,   parenright ] };
+    key <AE12> { [    ampersand,    ampersand ] };
 
     // Top Row
     key <AD01> { [            b,            B,       exclam ] };
@@ -68,15 +68,15 @@ xkb_symbols "graphite" {
 
 
     // --- Modifier Swaps ---
-
     // -- Physical → Alt --
     replace key <AE03> { [         Alt_L,          Meta_L ] };
+    replace key <AE10> { [         Alt_R,          Meta_R ] };
 
     // -- Left-hand three-way swap --
-    
+
     // Control → Alt
     replace key <LCTL> { [         Alt_L,          Meta_L ] };
-    modifier_map Mod1  { <LCTL>, <AE03> };
+    modifier_map Mod1  { <LCTL>, <AE03>, <AE10> };
 
     // Shift → Control
     replace key <LFSH> { [     Control_L ] };
