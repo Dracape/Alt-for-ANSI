@@ -38,7 +38,7 @@ xkb_symbols "graphite" {
     // Home Row
     key <AC01> { [            n,            N,            1 ] };
     key <AC02> { [            r,            R,   asciitilde ] };
-    key <AC03> { [            t,            T,       Return ] };
+    key <AC03> { [            t,            T,        comma ] };
     key <AC04> { [            s,            S,            0 ] };
     key <AC05> { [            g,            G,    ampersand ] };
     key <AC06> { [         Home,         Home,      Page_Up ] };
@@ -47,7 +47,7 @@ xkb_symbols "graphite" {
     key <AC09> { [            a,            A,           Up,           Home ] };
     key <AC10> { [            e,            E,         Down,            End ] };
     key <AC11> { [            i,            I,        Right,      Page_Down ] };
-    key <BKSL> { [        comma,     question ] };   
+    key <BKSL> { [       Return,     question ] };   
     // Swap Caps Lock and Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [  Caps_Lock ] };
