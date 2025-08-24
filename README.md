@@ -31,31 +31,31 @@
 > [!NOTE]
 > Empty space in the upper layers generally[^unpreserved-layer-keys/weird-layer-distro] mean—keys from the *Base* layer are used  
 ### Base
-| | ! | @ | Alt | % | * | $ | % | # | — | ( | \| | ) |
+| | ! | @ | Alt | % | * | $ | % | # | — | Alt | \| | & |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | l | d | w | z | Esc | ' | f | o | u | j | ; |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
-| Alt | Super | Shift | | | | | Space | AltGr | | | | |
+| | Super | Shift | | | | | Space | AltGr | | | | |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| | | | Alt | | | | | | | ] | | ) |
+| | | | Alt | | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | L | D | W | Z | | _ | F | O | U | J | : |
 | BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? |
 | Ctrl | X | M | C | Q | V | Page Down | K | P | > | " | < | |
-| Alt | Super | **Shift** | | | | | Space | AltGr | | | | |
+| | Super | **Shift** | | | | | Space | AltGr | | | | |
 
 ### Symbol (AltGr)
-| | | | Alt | } | | | | | | | | |
+| | | | Alt | } | | | | | | ALt | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | |
 | Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
 | Ctrl | 2 | 3 | 4 | 5 | + | | * | 6 | 7 | 8 | 9 | |
-| Alt | Super | Shift | | | | | Space | **AltGr** | | | | |
+| | Super | Shift | | | | | Space | **AltGr** | | | | |
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
 #### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
