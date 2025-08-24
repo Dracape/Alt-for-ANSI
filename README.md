@@ -38,7 +38,7 @@
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
 
-(I would have swapped *Ctrl* and *Alt*; but looks like only *Alt* is supported outside the modifier-cluster in applications on *GNOME*)
+(I would have swapped *Ctrl* and *Alt*; but looks like [only *Alt* is supported outside the modifier-cluster in applications on *GNOME*](https://gitlab.gnome.org/GNOME/mutter/-/issues/4270))
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
