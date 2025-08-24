@@ -37,6 +37,7 @@
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
+
 (I would have swapped *Ctrl* and *Alt*; but looks like only *Alt* is supported outside the modifier-cluster in applications on *GNOME*)
 #### Top row usage
 The top row is made keeping stretches in mind
