@@ -68,7 +68,7 @@ xkb_symbols "graphite" {
 
 
     // --- Modifier Swaps ---
-    // -- Physical → Alt --
+    // -- Physical 3 & 10 → Alt --
     replace key <AE03> { [         Alt_L,          Meta_L ] };
     replace key <AE10> { [         Alt_R,          Meta_R ] };
 
