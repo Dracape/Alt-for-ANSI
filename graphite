@@ -70,13 +70,13 @@ xkb_symbols "graphite" {
     // --- Modifier Swaps ---
 
     // -- Physical → Alt --
-    replace key <AE03> { [ Alt_L ] };
+    replace key <AE03> { [         Alt_L,          Meta_L ] };
 
     // -- Left-hand three-way swap --
     
     // Control → Alt
     replace key <LCTL> { [         Alt_L,          Meta_L ] };
-    modifier_map Mod1    { <LCTL> };
+    modifier_map Mod1  { <LCTL>, <AE03> };
 
     // Shift → Control
     replace key <LFSH> { [     Control_L ] };
