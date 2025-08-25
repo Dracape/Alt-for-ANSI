@@ -33,7 +33,7 @@
 ### Base
 | | ! | @ | Alt | % | * | $ | % | # | — | Alt | \| | & |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | l | d | w | z | Esc | ' | f | o | u | j | ; |
+| Tab | b | l | d | w | z | Esc | " | f | o | u | j | ; |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | Return |
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
@@ -46,9 +46,9 @@ The top row is made keeping stretches in mind
 ### Shift
 | | | | Alt | | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | B | L | D | W | Z | | _ | F | O | U | J | : |
+| Tab | B | L | D | W | Z | | ' | F | O | U | J | : |
 | BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? | |
-| Ctrl | X | M | C | Q | V | Page Down | K | P | > | " | < | |
+| Ctrl | X | M | C | Q | V | Page Down | K | P | > | _ | < | |
 | | Super | **Shift** | | | | | Space | AltGr | | | | |
 
 ### Symbol (AltGr)
