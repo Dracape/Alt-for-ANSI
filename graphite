@@ -28,7 +28,7 @@ xkb_symbols "graphite" {
     key <AD04> { [            w,            W,   numbersign ] };
     key <AD05> { [            z,            Z,        equal ] };
     key <AD06> { [       Escape,       Escape,       Insert ] };
-    key <AD07> { [   apostrophe,   underscore, asciicircum ] };
+    key <AD07> { [     quotedbl,   apostrophe, asciicircum ] };
     key <AD08> { [            f,            F,           at ] };
     key <AD09> { [            o,            O,    parenleft ] };
     key <AD10> { [            u,            U,       dollar ] };
@@ -63,7 +63,7 @@ xkb_symbols "graphite" {
     key <AB07> { [            k,            K,     asterisk ] };
     key <AB08> { [            p,            P,            6 ] };
     key <AB09> { [       period,      greater,            7 ] };
-    key <AB10> { [        minus,     quotedbl,            8 ] };
+    key <AB10> { [        minus,   underscore,            8 ] };
     replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
 
 
