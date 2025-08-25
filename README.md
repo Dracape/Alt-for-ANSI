@@ -60,6 +60,9 @@ The top row is made keeping stretches in mind
 | | Super | Shift | | | | | Space | **AltGr** | | | | |
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
+##### Closing bracket layer usage
+- **Symbols**: When used together; roll the pair with the same modifier
+- **Shift**: When used dispersed; alterate the pair with different modifiers 
 #### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
 #### 4th layer/Keys in the middle
 I would put those keys in the 4th layer (where the arrow keys are in the 3rd layer); in fact that was how it was before *Shift* was remapped, but apparently [the *Shift* key—when remapped, doesn't switch to the 4th layer (*GNOME*)](https://gitlab.gnome.org/GNOME/mutter/-/issues/4273). For systems that are supported, this is already implemented and you may use the keys in the middle for something else
