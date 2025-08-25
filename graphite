@@ -3,10 +3,6 @@ partial alphanumeric_keys
 xkb_symbols "graphite" {
     name[Group1]= "English (Graphite)";
 
-    // Define Right Alt as the modifier key to access the symbol layer (Level 3)
-    key <RALT> { [ ISO_Level3_Shift ] };
-    modifier_map Mod5 { <RALT> };
-
     // -- Top Row --
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [       exclam,       exclam ] };
@@ -67,7 +63,10 @@ xkb_symbols "graphite" {
     key <AB10> { [        minus,   underscore,            8 ] };
     replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
 
-    // -- Left-hand modifier-cluster three-way swap --
+
+    // -- Modifier Cluster --
+    // — Left Hand —
+    // - three-way swap -
 
     // Control → Alt
     replace key <LCTL> { [         Alt_L,          Meta_L ] };
@@ -80,5 +79,10 @@ xkb_symbols "graphite" {
     // Alt → Shift
     replace key <LALT> { [       Shift_L ] };
     modifier_map Shift   { <LALT> };
-
+    
+    // — Right Hand —
+    
+    // Map Right Alt as AltGr
+    key <RALT> { [ ISO_Level3_Shift ] };
+    modifier_map Mod5 { <RALT> };
 };
