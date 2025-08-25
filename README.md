@@ -52,7 +52,7 @@ The top row is made keeping stretches in mind
 | | Super | **Shift** | | | | | Space | AltGr | | | | |
 
 ### Symbol (AltGr)
-| | | | Alt | } | | | | | | Alt | | |
+| | | | Alt | } | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | |
 | Delete | 1 | ~ | , | 0 | & | Page Up | \ | Left | Up | Down | Right | |
