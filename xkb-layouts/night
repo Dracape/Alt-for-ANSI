@@ -1,0 +1,86 @@
+
+partial alphanumeric_keys
+xkb_symbols "night" {
+    name[Group1]= "English (Night)";
+
+    // -- Top row --
+    key <TLDE> { [        grave,   asciitilde ] };
+    key <AE01> { [       exclam,       exclam ] };
+    key <AE02> { [           at,           at ] };
+    replace key <AE03> { [ Shift_L ] };
+    key <AE04> { [      percent,      percent,   braceright ] };
+    key <AE05> { [     asterisk,     asterisk ] };
+    key <AE06> { [       dollar,       dollar ] };
+    key <AE07> { [      percent,      percent ] };
+    key <AE08> { [   numbersign,   numbersign ] };
+    key <AE09> { [       emdash, bracketright ] };
+    replace key <AE10> { [ Shift_R ] };
+    key <AE11> { [          bar,   parenright ] };
+    key <AE12> { [    ampersand,    ampersand ] };
+
+    // -- First Row --
+    key <AD01> { [            b,            B,       exclam ] };
+    key <AD02> { [            f,            F,    braceleft ] };
+    key <AD03> { [            l,            L,  bracketleft ] };
+    key <AD04> { [            k,            K,   numbersign ] };
+    key <AD05> { [            q,            Q,        equal ] };
+    key <AD06> { [       Escape,       Escape,       Insert ] };
+    key <AD07> { [            p,            P,  asciicircum ] };
+    key <AD08> { [            g,            G,           at ] };
+    key <AD09> { [            o,            O,    parenleft ] };
+    key <AD10> { [            u,            U,       dollar ] };
+    key <AD11> { [       period,      greater,        grave ] };
+    key <AD12> { [        minus,   underscore ] };
+
+    // -- Home Row --
+    key <AC01> { [            n,            N,            1 ] };
+    key <AC02> { [            s,            S,   asciitilde ] };
+    key <AC03> { [            h,            H,       Return ] };
+    key <AC04> { [            t,            T,            0 ] };
+    key <AC05> { [            m,            M,    ampersand ] };
+    key <AC06> { [         Home,         Home ] };
+    key <AC07> { [            y,            Y,    backslash ] };
+    key <AC08> { [            c,            C,         Left,        Page_Up ] };
+    key <AC09> { [            a,            A,           Up,           Home ] };
+    key <AC10> { [            e,            E,         Down,            End ] };
+    key <AC11> { [            i,            I,        Right,      Page_Down ] };
+    key <BKSL> { [        comma,         less,            9 ] };
+    // BackSpace ↔ Caps Lock
+    key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
+    key <BKSP> { [  Caps_Lock ] };
+    modifier_map Lock    { <BKSP> };
+    
+    // -- Bottom Row --
+    key <AB01> { [            v,            V,            2 ] };
+    key <AB02> { [            j,            J,            3 ] };
+    key <AB03> { [            d,            D,            4 ] };
+    key <AB04> { [            z,            Z,            5 ] };
+    key <AB05> { [            x,            X,         plus ] };
+    key <AB06> { [          End,    Page_Down,          End ] };
+    key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
+    key <AB08> { [            w,            W,            6 ] };
+    key <AB09> { [        slash,     question,            7 ] };
+    key <AB10> { [    semicolon,        colon,            8 ] };
+
+    modifier_map Shift { <AE03>, <AE10> }; // Map Shift to ring-stretches 
+
+    // -- Bottom-Cluster --
+
+    replace key <LALT> { [ r, R ] }; // Define R on left thumb
+
+    // — Modifiers —
+    // - Left -
+    // Shift → Control
+    replace key <LFSH> { [ Control_L ] };
+    modifier_map Control { <LFSH> };
+    
+    //  Control → Alt
+    replace key <LCTL> { [ Alt_L, Meta_L ] };
+    modifier_map Mod1 { [ <LCTL> ] };
+
+    // - Right -
+
+    // Right Alt → AltGr
+    key <RALT> { [ ISO_Level3_Shift ] };
+    modifier_map Mod5 { <RALT> };
+};

@@ -6,7 +6,7 @@ mkdir /tmp/graphene
 cd /tmp/graphene
 
 # Download files
-wget https://raw.githubusercontent.com/Dracape/graphene/main/graphite
+wget https://raw.githubusercontent.com/Dracape/graphene/main/xkb-layouts/graphite
 wget https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
 wget https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh
 
