@@ -10,14 +10,14 @@ xkb_symbols "graphite" {
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [       exclam,       exclam ] };
     key <AE02> { [           at,           at ] };
-    // Left Alt - AE03
+    replace key <AE03> { [         Alt_L,          Meta_L ] };
     key <AE04> { [      percent,      percent,   braceright ] };
     key <AE05> { [     asterisk,     asterisk ] };
     key <AE06> { [       dollar,       dollar ] };
     key <AE07> { [      percent,      percent ] };
     key <AE08> { [   numbersign,   numbersign ] };
     key <AE09> { [       emdash, bracketright ] };
-    // Right Alt - AE10
+    replace key <AE10> { [         Alt_R,          Meta_R ] };
     key <AE11> { [          bar,   parenright ] };
     key <AE12> { [    ampersand,    ampersand ] };
 
@@ -28,7 +28,7 @@ xkb_symbols "graphite" {
     key <AD04> { [            w,            W,   numbersign ] };
     key <AD05> { [            z,            Z,        equal ] };
     key <AD06> { [       Escape,       Escape,       Insert ] };
-    key <AD07> { [   apostrophe,     quotedbl,  asciicircum ] };
+    key <AD07> { [   apostrophe,     quotedbl, asciicircum ] };
     key <AD08> { [            f,            F,           at ] };
     key <AD09> { [            o,            O,    parenleft ] };
     key <AD10> { [            u,            U,       dollar ] };
@@ -48,7 +48,7 @@ xkb_symbols "graphite" {
     key <AC10> { [            e,            E,         Down,            End ] };
     key <AC11> { [            i,            I,        Right,      Page_Down ] };
     key <BKSL> { [        comma,     question ] };   
-    // Caps-Lock ↔  Backspace
+    // Caps-Lock ↔ Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [  Caps_Lock ] };
     modifier_map Lock { <BKSP> };
@@ -65,12 +65,6 @@ xkb_symbols "graphite" {
     key <AB09> { [       period,      greater,            7 ] };
     key <AB10> { [        minus,   underscore,            8 ] };
     replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
-
-
-    // --- Modifier Swaps ---
-    // -- Physical 3 & 10 → Alt --
-    replace key <AE03> { [         Alt_L,          Meta_L ] };
-    replace key <AE10> { [         Alt_R,          Meta_R ] };
 
     // -- Left-hand three-way swap --
 
