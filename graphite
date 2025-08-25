@@ -28,7 +28,7 @@ xkb_symbols "graphite" {
     key <AD04> { [            w,            W,   numbersign ] };
     key <AD05> { [            z,            Z,        equal ] };
     key <AD06> { [       Escape,       Escape,       Insert ] };
-    key <AD07> { [     quotedbl,   apostrophe, asciicircum ] };
+    key <AD07> { [   apostrophe,     quotedbl,  asciicircum ] };
     key <AD08> { [            f,            F,           at ] };
     key <AD09> { [            o,            O,    parenleft ] };
     key <AD10> { [            u,            U,       dollar ] };
