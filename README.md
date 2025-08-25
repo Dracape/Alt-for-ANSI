@@ -63,6 +63,7 @@ It is assumed that your typing program automatically paires the brackets; if it 
 #### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
 #### 4th layer/Keys in the middle
 I would put those keys in the 4th layer (where the arrow keys are in the 3rd layer); in fact that was how it was before *Shift* was remapped, but apparently [the *Shift* key—when remapped, doesn't switch to the 4th layer (*GNOME*)](https://gitlab.gnome.org/GNOME/mutter/-/issues/4273). For systems that are supported, this is already implemented and you may use the keys in the middle for something else
+
 ---
 
 # Installation (*Linux*)
