@@ -65,7 +65,7 @@ xkb_symbols "graphite" {
 
 
     // -- Modifier Cluster --
-    // — Left Hand —
+    // — Left —
     // - three-way swap -
 
     // Control → Alt
@@ -80,7 +80,7 @@ xkb_symbols "graphite" {
     replace key <LALT> { [ Shift_L ] };
     modifier_map Shift   { <LALT> };
     
-    // — Right Hand —
+    // — Right —
     
     // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
