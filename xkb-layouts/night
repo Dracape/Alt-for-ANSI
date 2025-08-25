@@ -3,33 +3,33 @@ partial alphanumeric_keys
 xkb_symbols "night" {
     name[Group1]= "English (Night)";
 
-    // -- Top row --
-    key <TLDE> { [        grave,   asciitilde ] };
-    key <AE01> { [       exclam,       exclam ] };
-    key <AE02> { [           at,           at ] };
-    replace key <AE03> { [ Shift_L ] };
-    key <AE04> { [      percent,      percent,   braceright ] };
-    key <AE05> { [     asterisk,     asterisk ] };
-    key <AE06> { [       dollar,       dollar ] };
-    key <AE07> { [      percent,      percent ] };
-    key <AE08> { [   numbersign,   numbersign ] };
-    key <AE09> { [       emdash, bracketright, bracketright ] };
-    replace key <AE10> { [ Shift_R ] };
-    key <AE11> { [          bar,   parenright,   parenright ] };
-    key <AE12> { [    ampersand,    ampersand ] };
+    // -- Top Row --
+    key <TLDE> { [          grave,     asciitilde ] };
+    key <AE01> { [         exclam,         exclam ] };
+    key <AE02> { [             at,             at ] };
+    replace key <AE03> { [  Shift_L ] };
+    key <AE04> { [        percent,        percent,      braceright ] };
+    key <AE05> { [       asterisk,       asterisk ] };
+    key <AE06> { [         dollar,         dollar ] };
+    key <AE07> { [        percent,        percent ] };
+    key <AE08> { [     numbersign,     numbersign ] };
+    key <AE09> { [         emdash,   bracketright,     bracketright ] };
+    replace key <AE10> { [  Shift_R ] };
+    key <AE11> { [            bar,     parenright,       parenright ] };
+    key <AE12> { [      ampersand,      ampersand ] };
 
     // -- First Row --
-    key <AD01> { [            b,            B,       exclam ] };
-    key <AD02> { [            f,            F,    braceleft ] };
-    key <AD03> { [            l,            L,  bracketleft ] };
-    key <AD04> { [            k,            K,   numbersign ] };
-    key <AD05> { [            q,            Q,        equal ] };
-    key <AD06> { [       Escape,       Escape,       Insert ] };
-    key <AD07> { [            p,            P,  asciicircum ] };
-    key <AD08> { [            g,            G,           at ] };
-    key <AD09> { [            o,            O,    parenleft ] };
-    key <AD10> { [            u,            U,       dollar ] };
-    key <AD11> { [       period,      greater,        grave ] };
+    key <AD01> { [            b,            B,           exclam ] };
+    key <AD02> { [            f,            F,        braceleft ] };
+    key <AD03> { [            l,            L,      bracketleft ] };
+    key <AD04> { [            k,            K,       numbersign ] };
+    key <AD05> { [            q,            Q,            equal ] };
+    key <AD06> { [       Escape,       Escape,           Insert ] };
+    key <AD07> { [            p,            P,      asciicircum ] };
+    key <AD08> { [            g,            G,               at ] };
+    key <AD09> { [            o,            O,        parenleft ] };
+    key <AD10> { [            u,            U,           dollar ] };
+    key <AD11> { [       period,      greater,            grave ] };
     key <AD12> { [        minus,   underscore ] };
 
     // -- Home Row --
