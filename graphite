@@ -66,7 +66,7 @@ xkb_symbols "graphite" {
     key <AB10> { [        minus,   underscore,            8 ] };
     replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
 
-    // -- Left-hand three-way swap --
+    // -- Left-hand modifier cluster three-way swap --
 
     // Control → Alt
     replace key <LCTL> { [         Alt_L,          Meta_L ] };
