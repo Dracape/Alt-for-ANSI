@@ -48,7 +48,7 @@ xkb_symbols "graphite" {
     key <AC10> { [            e,            E,         Down,            End ] };
     key <AC11> { [            i,            I,        Right,      Page_Down ] };
     key <BKSL> { [        comma,     question ] };   
-    // Swap Caps Lock and Backspace
+    // Caps-Lock ↔  Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [  Caps_Lock ] };
     modifier_map Lock { <BKSP> };
