@@ -61,7 +61,7 @@ The top row is made keeping stretches in mind
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
 ##### Closing bracket layer usage
-- **Symbols**: When used together; roll the pair with the same modifier
+- **Symbol**: When used together; roll the pair with the same modifier
 - **Shift**: When used dispersed; alterate the pair with different modifiers 
 #### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
 #### 4th layer/Keys in the middle
