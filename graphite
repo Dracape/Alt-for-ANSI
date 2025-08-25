@@ -82,7 +82,7 @@ xkb_symbols "graphite" {
     
     // — Right Hand —
     
-    // Map Right Alt as AltGr
+    // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
 };
