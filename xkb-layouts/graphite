@@ -7,15 +7,15 @@ xkb_symbols "graphite" {
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [       exclam,       exclam ] };
     key <AE02> { [           at,           at ] };
-    replace key <AE03> { [         Alt_L,          Meta_L ] };
+    replace key <AE03> { [         Alt_L,            Meta_L ] };
     key <AE04> { [      percent,      percent,   braceright ] };
     key <AE05> { [     asterisk,     asterisk ] };
     key <AE06> { [       dollar,       dollar ] };
     key <AE07> { [      percent,      percent ] };
     key <AE08> { [   numbersign,   numbersign ] };
-    key <AE09> { [       emdash, bracketright ] };
-    replace key <AE10> { [         Alt_R,          Meta_R ] };
-    key <AE11> { [          bar,   parenright ] };
+    key <AE09> { [       emdash, bracketright, bracketright ] };
+    replace key <AE10> { [         Alt_R,            Meta_R ] };
+    key <AE11> { [          bar,   parenright,   parenright ] };
     key <AE12> { [    ampersand,    ampersand ] };
 
     // -- First Row --
