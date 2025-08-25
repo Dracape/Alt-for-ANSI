@@ -7,6 +7,7 @@ xkb_symbols "graphite" {
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
 
+    // -- Top Row --
     key <TLDE> { [        grave,   asciitilde ] };
     key <AE01> { [       exclam,       exclam ] };
     key <AE02> { [           at,           at ] };
@@ -21,7 +22,7 @@ xkb_symbols "graphite" {
     key <AE11> { [          bar,   parenright ] };
     key <AE12> { [    ampersand,    ampersand ] };
 
-    // Top Row
+    // -- First Row --
     key <AD01> { [            b,            B,       exclam ] };
     key <AD02> { [            l,            L,    braceleft ] };
     key <AD03> { [            d,            D,  bracketleft ] };
@@ -35,7 +36,7 @@ xkb_symbols "graphite" {
     key <AD11> { [            j,            J,        grave ] };
     key <AD12> { [    semicolon,        colon ] };
 
-    // Home Row
+    // -- Home Row --
     key <AC01> { [            n,            N,            1 ] };
     key <AC02> { [            r,            R,   asciitilde ] };
     key <AC03> { [            t,            T,       Return ] };
@@ -53,7 +54,7 @@ xkb_symbols "graphite" {
     key <BKSP> { [  Caps_Lock ] };
     modifier_map Lock { <BKSP> };
 
-    // Bottom Row
+    // -- Bottom Row --
     key <AB01> { [            x,            X,            2 ] };
     key <AB02> { [            m,            M,            3 ] };
     key <AB03> { [            c,            C,            4 ] };
@@ -66,7 +67,7 @@ xkb_symbols "graphite" {
     key <AB10> { [        minus,   underscore,            8 ] };
     replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
 
-    // -- Left-hand modifier cluster three-way swap --
+    // -- Left-hand modifier-cluster three-way swap --
 
     // Control → Alt
     replace key <LCTL> { [         Alt_L,          Meta_L ] };
