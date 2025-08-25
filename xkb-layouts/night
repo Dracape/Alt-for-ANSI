@@ -13,9 +13,9 @@ xkb_symbols "night" {
     key <AE06> { [       dollar,       dollar ] };
     key <AE07> { [      percent,      percent ] };
     key <AE08> { [   numbersign,   numbersign ] };
-    key <AE09> { [       emdash, bracketright ] };
+    key <AE09> { [       emdash, bracketright, bracketright ] };
     replace key <AE10> { [ Shift_R ] };
-    key <AE11> { [          bar,   parenright ] };
+    key <AE11> { [          bar,   parenright,   parenright ] };
     key <AE12> { [    ampersand,    ampersand ] };
 
     // -- First Row --
