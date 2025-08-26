@@ -71,7 +71,7 @@ xkb_symbols "night" {
     // — Modifiers —
     
     // Control
-    replace key <LCTL> { [ Super_L ] }
+    replace key <LCTL> { [ Super_L ] };
     replace key <RCTL> { [ Super_R ] };
     modifier_map Mod4 { <AD06>, <RCTL> };
     
