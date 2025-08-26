@@ -1,87 +1,85 @@
 
 partial alphanumeric_keys
-xkb_symbols "graphite" {
-    name[Group1]= "English (Graphite)";
+xkb_symbols "night" {
+    name[Group1]= "English (Night)";
 
     // -- Top Row --
     key <TLDE> { [          grave,     asciitilde ] };
     key <AE01> { [         exclam,         exclam ] };
     key <AE02> { [             at,             at ] };
-    replace key <AE03> { [  Alt_L,         Meta_L ] };
+    replace key <AE03> { [ Control_L ] };
     key <AE04> { [        percent,        percent,      braceright ] };
     key <AE05> { [       asterisk,       asterisk ] };
     key <AE06> { [         dollar,         dollar ] };
     key <AE07> { [        percent,        percent ] };
     key <AE08> { [     numbersign,     numbersign ] };
     key <AE09> { [         emdash,   bracketright,     bracketright ] };
-    replace key <AE10> { [  Alt_R,         Meta_R ] };
+    replace key <AE10> { [ Control_R ] };
     key <AE11> { [            bar,     parenright,       parenright ] };
     key <AE12> { [      ampersand,      ampersand ] };
 
     // -- First Row --
     key <AD01> { [            b,            B,           exclam ] };
-    key <AD02> { [            l,            L,        braceleft ] };
-    key <AD03> { [            d,            D,      bracketleft ] };
-    key <AD04> { [            w,            W,       numbersign ] };
-    key <AD05> { [            z,            Z,            equal ] };
-    key <AD06> { [       Escape,       Escape,           Insert ] };
-    key <AD07> { [   apostrophe,     quotedbl,      asciicircum ] };
-    key <AD08> { [            f,            F,               at ] };
+    key <AD02> { [            f,            F,        braceleft ] };
+    key <AD03> { [            l,            L,      bracketleft ] };
+    key <AD04> { [            k,            K,       numbersign ] };
+    key <AD05> { [            q,            Q,            equal ] };
+    key <AD06> { [ Super_L ] };
+    key <AD07> { [            p,            P,      asciicircum ] };
+    key <AD08> { [            g,            G,               at ] };
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
-    key <AD11> { [            j,            J,            grave ] };
-    key <AD12> { [    semicolon,        colon ] };
+    key <AD11> { [       period,     question,            grave ] };
+    key <AD12> { [        minus,   underscore ] };
 
     // -- Home Row --
-    key <AC01> { [            n,            N,                1 ] };
-    key <AC02> { [            r,            R,       asciitilde ] };
-    key <AC03> { [            t,            T,           Return ] };
-    key <AC04> { [            s,            S,                0 ] };
-    key <AC05> { [            g,            G,        ampersand ] };
-    key <AC06> { [         Home,         Home,      Page_Up ] };
-    key <AC07> { [            y,            Y,        backslash ] };
-    key <AC08> { [            h,            H,             Left,        Page_Up ] };
-    key <AC09> { [            a,            A,               Up,           Home ] };
-    key <AC10> { [            e,            E,             Down,            End ] };
-    key <AC11> { [            i,            I,            Right,      Page_Down ] };
-    key <BKSL> { [        comma,     question ] };
-    // Caps-Lock ↔ Backspace
+    key <AC01> { [            n,            N,            1 ] };
+    key <AC02> { [            s,            S,   asciitilde ] };
+    key <AC03> { [            h,            H,       Return ] };
+    key <AC04> { [            t,            T,            0 ] };
+    key <AC05> { [            m,            M,    ampersand ] };
+    key <AC06> { [     XF86Back ] };
+    key <AC07> { [            y,            Y,    backslash ] };
+    key <AC08> { [            c,            C,         Left,        Page_Up ] };
+    key <AC09> { [            a,            A,           Up,           Home ] };
+    key <AC10> { [            e,            E,         Down,            End ] };
+    key <AC11> { [            i,            I,        Right,      Page_Down ] };
+    key <BKSL> { [        comma,         less,            9 ] };
+    // BackSpace ↔ Caps Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [  Caps_Lock ] };
-    modifier_map Lock { <BKSP> };
-
+    modifier_map Lock    { <BKSP> };
+    
     // -- Bottom Row --
     key <AB01> { [            x,            X,            2 ] };
-    key <AB02> { [            m,            M,            3 ] };
-    key <AB03> { [            c,            C,            4 ] };
-    key <AB04> { [            q,            Q,            5 ] };
+    key <AB02> { [            j,            J,            3 ] };
+    key <AB03> { [            d,            D,            4 ] };
+    key <AB04> { [            z,            Z,            5 ] };
     key <AB05> { [            v,            V,         plus ] };
-    key <AB06> { [          End,    Page_Down,          End ] };
-    key <AB07> { [            k,            K,     asterisk ] };
-    key <AB08> { [            p,            P,            6 ] };
-    key <AB09> { [       period,      greater,            7 ] };
-    key <AB10> { [        minus,   underscore,            8 ] };
-    replace key <RTSH> { [ slash,        less,            9 ] }; // Assign the right shift for Wide-mod
+    key <AB06> { [  XF86Forward ] };
+    key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
+    key <AB08> { [            w,            W,            6 ] };
+    key <AB09> { [        slash,      greater,            7 ] };
+    key <AB10> { [    semicolon,        colon,            8 ] };
 
+    modifier_map Control { <AE03>, <AE10> }; // Map Control to ring-stretches
 
-    // -- Modifier Cluster --
-    // — Left —
-    // - three-way swap -
+    // -- Bottom-Cluster --
 
-    // Control → Alt
-    replace key <LCTL> { [ Alt_L, Meta_L ] };
-    modifier_map Mod1  { <LCTL>, <AE03>, <AE10> };
+    replace key <LALT> { [ r, R ] }; // Define R on left thumb
 
-    // Shift → Control
-    replace key <LFSH> { [ Control_L ] };
-    modifier_map Control { <LFSH> };
-
-    // Alt → Shift
-    replace key <LALT> { [ Shift_L ] };
-    modifier_map Shift   { <LALT> };
+    // — Modifiers —
     
-    // — Right —
+    // Control
+    replace key <LCTL> { [       Escape,           Insert ] };
+    replace key <RCTL> { [ Super_R ] };
+    modifier_map Mod4 { <AD06>, <RCTL> };
     
+    // Super → Alt
+    replace key <LWIN> { [ Alt_L, Meta_L ] };
+    replace key <RWIN> { [ Alt_R, Meta_R ] };
+    modifier_map Mod1 { <LWIN>, <RWIN> };
+
     // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
