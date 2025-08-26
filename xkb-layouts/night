@@ -73,12 +73,12 @@ xkb_symbols "night" {
     // Control → Super
     replace key <LCTL> { [ Super_L ] };
     replace key <RCTL> { [ Super_R ] };
-    modifier_map mod4 { [ <LCTL> ] };
+    modifier_map Mod4 { [ <LCTL>, <RCTL> ] };
     
     // Super → Alt
     replace key <LWIN> { [ Alt_L, Meta_L ] };
     replace key <RWIN> { [ Alt_R, Meta_R ] };
-    modifier_map mod1 { [ <LWIN>, <RWIN> ] };
+    modifier_map Mod1 { [ <LWIN>, <RWIN> ] };
 
     // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
