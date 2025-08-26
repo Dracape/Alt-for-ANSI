@@ -37,8 +37,6 @@
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | Return |
 | Ctrl | x | m | c | q | v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
-
-(I would have swapped *Ctrl* and *Alt*, but apperently [only *Alt* is supported outside the modifier-cluster in applications (*GNOME*)](https://gitlab.gnome.org/GNOME/mutter/-/issues/4270). You may make the change manually on supported systems)
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
@@ -64,9 +62,6 @@ It is assumed that your typing program automatically paires the brackets; if it 
 - **Symbol**: When used together; close pair with the same modifier
 - **Shift**: When used dispersed; alterate the pair with different modifiers 
 #### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
-#### 4th layer/Keys in the middle
-I would put those keys in the 4th layer (where the arrow keys are in the 3rd layer); in fact that was how it was before *Shift* was remapped, but apparently [the *Shift* key—when remapped, doesn't switch to the 4th layer (*GNOME*)](https://gitlab.gnome.org/GNOME/mutter/-/issues/4273). For systems that are supported, this is already implemented and you may use the keys in the middle for something else
-
 ---
 
 # Installation (*Linux*)
