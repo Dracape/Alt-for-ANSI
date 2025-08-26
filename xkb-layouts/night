@@ -29,7 +29,7 @@ xkb_symbols "night" {
     key <AD08> { [            g,            G,               at ] };
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
-    key <AD11> { [       period,      greater,            grave ] };
+    key <AD11> { [       period,     question,            grave ] };
     key <AD12> { [        minus,   underscore ] };
 
     // -- Home Row --
@@ -59,7 +59,7 @@ xkb_symbols "night" {
     key <AB06> { [          End,    Page_Down,          End ] };
     key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
     key <AB08> { [            w,            W,            6 ] };
-    key <AB09> { [        slash,     question,            7 ] };
+    key <AB09> { [        slash,      greater,            7 ] };
     key <AB10> { [    semicolon,        colon,            8 ] };
 
     modifier_map Control { <AE03>, <AE10> }; // Map Control to ring-stretches
