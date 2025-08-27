@@ -1,3 +1,4 @@
+// Swap Control and Alt if they work well with the symbol layer keys
 
 partial alphanumeric_keys
 xkb_symbols "night" {
@@ -38,12 +39,12 @@ xkb_symbols "night" {
     key <AC03> { [            h,            H,       Return ] };
     key <AC04> { [            t,            T,            0 ] };
     key <AC05> { [            m,            M,    ampersand ] };
-    key <AC06> { [       Escape,       Insert ] };
+    key <AC06> { [         Home,         Home,      Page_Up ] };
     key <AC07> { [            y,            Y,    backslash ] };
-    key <AC08> { [            c,            C,         Left,        Page_Up ] };
-    key <AC09> { [            a,            A,           Up,           Home ] };
-    key <AC10> { [            e,            E,         Down,            End ] };
-    key <AC11> { [            i,            I,        Right,      Page_Down ] };
+    key <AC08> { [            c,            C,         Left,         Left ] };
+    key <AC09> { [            a,            A,           Up,           Up ] };
+    key <AC10> { [            e,            E,         Down,         Down ] };
+    key <AC11> { [            i,            I,        Right,        Right ] };
     key <BKSL> { [        comma,         less,            9 ] };
     // BackSpace ↔ Caps Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
@@ -56,7 +57,7 @@ xkb_symbols "night" {
     key <AB03> { [            d,            D,            4 ] };
     key <AB04> { [            z,            Z,            5 ] };
     key <AB05> { [            v,            V,         plus ] };
-    key <AB06> { [     XF86Back,  XF86Forward ] };
+    key <AB06> { [          End,          End,    Page_Down ] };
     key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
     key <AB08> { [            w,            W,            6 ] };
     key <AB09> { [        slash,      greater,            7 ] };
@@ -73,9 +74,8 @@ xkb_symbols "night" {
     modifier_map Mod4 { <AD06> }; // Super in top-middle
 
     // Control
-    replace key <LCTL> { [ Super_L ] };
-    replace key <RCTL> { [ Super_R ] };
-    modifier_map Mod4 { <AD06>, <LCTL>, <RCTL> };
+    replace key <LCTL> { [   Escape,        XF86Back ] };
+    replace key <RCTL> { [   Insert,     XF86Forward ] };
     
     // Super → Alt
     replace key <LWIN> { [ Alt_L, Meta_L ] };
