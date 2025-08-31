@@ -81,7 +81,7 @@ It's just so that you can get your hands working
 **2**. set the layout as default for outside user sessions (such as *Display Manager*)
 > [!TIP]
 > use `localectl`
-> **Example**: localectl set-x11-keymap us pc105 graphite
+> **Example**: `localectl set-x11-keymap us pc105 graphite`
   
 **3**. Set the layout as the default for any new users created (optional)
 > [!TIP]
