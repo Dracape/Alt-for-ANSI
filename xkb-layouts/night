@@ -52,11 +52,11 @@ xkb_symbols "night" {
     modifier_map Lock    { <BKSP> };
     
     // -- Bottom Row --
-    key <AB01> { [            v,            V,            2 ] };
-    key <AB02> { [            m,            M,            3 ] };
-    key <AB03> { [            c,            C,            4 ] };
-    key <AB04> { [            q,            Q,            5 ] };
-    key <AB05> { [            x,            X,         plus ] };
+    key <AB01> { [            v,            X,            2 ] };
+    key <AB02> { [            j,            J,            3 ] };
+    key <AB03> { [            d,            D,            4 ] };
+    key <AB04> { [            z,            Z,            5 ] };
+    key <AB05> { [            x,            V,         plus ] };
     key <AB06> { [          End,          End,    Page_Down ] };
     key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
     key <AB08> { [            w,            W,            6 ] };
