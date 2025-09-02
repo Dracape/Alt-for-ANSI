@@ -76,10 +76,15 @@ xkb_symbols "night" {
     replace key <LCTL> { [   Escape,        XF86Back ] };
     replace key <RCTL> { [   Insert,     XF86Forward ] };
     
-    // Super → Control
-    replace key <LWIN> { [ Control_L ] };
-    replace key <RWIN> { [ Control_R ] };
-    modifier_map Control { <LWIN>, <RWIN> };
+    // Super → Shift
+    replace key <LWIN> { [ Shift_L ] };
+    replace key <RWIN> { [ Shift_R ] };
+    modifier_map Shift { <LWIN>, <RWIN> };
+    
+    // Shift → Control
+    replace key <LFSH> { [ Control_L ] };
+    replace key <RTSH> { [ Control_R ] };
+    modifier_map Control { <LFSH>, <RTSH> };
 
     // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
