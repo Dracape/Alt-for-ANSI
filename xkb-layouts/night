@@ -1,4 +1,3 @@
-// Swap Control and Alt if they work well with the symbol layer keys
 
 partial alphanumeric_keys
 xkb_symbols "night" {
@@ -8,14 +7,14 @@ xkb_symbols "night" {
     key <TLDE> { [          grave,     asciitilde ] };
     key <AE01> { [         exclam,         exclam ] };
     key <AE02> { [             at,             at ] };
-    replace key <AE03> { [ Control_L ] };
+    replace key <AE03> { [ Alt_L, Meta_L ] };
     key <AE04> { [        percent,        percent,      braceright ] };
     key <AE05> { [       asterisk,       asterisk ] };
     key <AE06> { [         dollar,         dollar ] };
     key <AE07> { [        percent,        percent ] };
     key <AE08> { [     numbersign,     numbersign ] };
     key <AE09> { [         emdash,   bracketright,     bracketright ] };
-    replace key <AE10> { [ Control_R ] };
+    replace key <AE10> { [ Alt_R, Meta_R ] };
     key <AE11> { [            bar,     parenright,       parenright ] };
     key <AE12> { [      ampersand,      ampersand ] };
 
@@ -63,7 +62,7 @@ xkb_symbols "night" {
     key <AB09> { [        slash,      greater,            7 ] };
     key <AB10> { [    semicolon,        colon,            8 ] };
 
-    modifier_map Control { <AE03>, <AE10> }; // Map Control to ring-stretches
+    modifier_map Mod1 { <AE03>, <AE10> }; // Map Alt to ring-stretches
 
     // -- Bottom-Cluster --
 
@@ -77,10 +76,10 @@ xkb_symbols "night" {
     replace key <LCTL> { [   Escape,        XF86Back ] };
     replace key <RCTL> { [   Insert,     XF86Forward ] };
     
-    // Super → Alt
-    replace key <LWIN> { [ Alt_L, Meta_L ] };
-    replace key <RWIN> { [ Alt_R, Meta_R ] };
-    modifier_map Mod1 { <LWIN>, <RWIN> };
+    // Super → Control
+    replace key <LWIN> { [ Control_L ] };
+    replace key <RWIN> { [ Control_R ] };
+    modifier_map Control { <LWIN>, <RWIN> };
 
     // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
