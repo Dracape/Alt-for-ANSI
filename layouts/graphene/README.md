@@ -1,7 +1,7 @@
 [graphite]: https://github.com/rdavison/graphite-layout "Graphite is a highly optimized, well balanced, general purpose keyboard layout designed to accommodate the real world needs of typists looking for a great “out-of-the-box” experience. Its design incorporates many contemporary theories about layouts to find a balance between comfort and speed. In addition to its impressive performance in metrics, Graphite has also been extensively tested and validated through real-world usage."
 
 # Introduction
-*Graphene* is a implementation of the [*Graphite* keyboard layout][graphite]—optimized for traditional full ANSI and ISO keyboards
+*Graphene* is a implementation of the [*Graphite* keyboard layout][graphite]—optimized for traditional full ANSI keyboards
 
 # Features added
 - **Mods**
