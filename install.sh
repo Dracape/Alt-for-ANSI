@@ -1,22 +1,28 @@
 #!/usr/bin/sh
 
-# Prepare directory
-rm -rf /tmp/graphene/*
-mkdir /tmp/graphene
-cd /tmp/graphene
+PREV_DIR=$(pwd)
+REPONAME='modANSI'
+GRAPHENE_INSTALL_SCRIPT_DIR=layouts/graphene/install
+MIDNIGHT_INSTALL_SCRIPT_DIR=layouts/midnight/install
 
-# Download files
-wget https://raw.githubusercontent.com/Dracape/graphene/main/xkb-layouts/graphite
-wget https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/graphite.xslt
-wget https://raw.githubusercontent.com/xedrac/graphite-layout/main/linux/install.sh
+cd /tmp
 
-# Make the script executable
-chmod +x ./install.sh
+rm -rf "$REPONAME"
+git clone https://github.com/Dracape/"$REPONAME".git
+cd "$REPONAME"
+
+# Make the scripts executable
+chmod +x "$GRAPHENE_INSTALL_SCRIPT_DIR"/install.sh "$MIDNIGHT_INSTALL_SCRIPT_DIR"/install.sh
 
 # Install
+cd "$GRAPHENE_INSTALL_SCRIPT_DIR"
 ./install.sh
 
-cd -
+cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
+./install.sh
+
+
+cd "$PREV_DIR"
 
 # Clean up
-rm -rf /tmp/graphene/
+rm -rf /tmp/"$REPONAME"
