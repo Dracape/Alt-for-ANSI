@@ -1,7 +1,7 @@
 [night]: https://www.valorance.org/night/ "*Night* is an efficiency focused layout with specific targets for comfort. It differs from traditional layouts in using the letter R on the left thumb."
 
 # Introduction
-*Mid-Night* is an implementation of the [*Night* keyboard layout][night]—optimized for traditional full ANSI and ISO keyboards
+*Mid-Night* is an implementation of the [*Night* keyboard layout][night]—optimized for traditional full ANSI keyboards
 
 # Features added
 - **Mods**
