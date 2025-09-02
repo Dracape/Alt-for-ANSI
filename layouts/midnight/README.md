@@ -26,7 +26,7 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Super | p | g | o | u | . | - |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
-| Shift (Left) | | v | j | d | z\|x | End | ' | w | / | ; | Shift (Right) | |
+| | Shift (Left) | v | j | d | z\|x | End | ' | w | / | ; | Shift (Right) | |
 | Escape | Alt | r | | | | | Space | AltGr | Alt | | | Insert |
 #### Top row usage
 The top row is made keeping stretches in mind
@@ -37,7 +37,7 @@ The top row is made keeping stretches in mind
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | F | L | K | Q | | P | G | O | U | ? | _ |
 | BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | < | |
-| **Shift** (Left) | | V | J | D | Z\|X | End | " | W | > | : | **Shift** (Right) | |
+| | **Shift** (Left) | V | J | D | Z\|X | End | " | W | > | : | **Shift** (Right) | |
 | Back | Alt | R | | | | | Space | AltGr | Alt | | | Forward |
 
 ### Symbol (AltGr)
@@ -45,7 +45,7 @@ The top row is made keeping stretches in mind
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = |Q | ^ | @ | ( | $ | ` | |
 | Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 |
-| Shift (Left) | | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | Shift (Right) | |
+| | Shift (Left) | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | Shift (Right) | |
 | | Alt | | | | | | Space | **AltGr** | Alt | | | |
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
