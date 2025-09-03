@@ -47,8 +47,8 @@ TYPE_DEFINITION='''
 
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
-  sed '/^};/i'"$TYPE_DEFINITION"'' "$EXTRA_PATH" > "$TMP_FILE"
-  tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
+  sed '/^};/i'$TYPE_DEFINITION'' $EXTRA_PATH > $TMP_FILE
+  tee "$EXTRA_PATH" < "$TMP_FILE" > "/dev/null"
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
 else
@@ -74,7 +74,7 @@ TYPE_DEFINITION='''
 
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
-  sed '/^};/i'"$TYPE_DEFINITION"'' "$EXTRA_PATH" > "$TMP_FILE"
+  sed '/^};/i'$TYPE_DEFINITION'' $EXTRA_PATH > "$TMP_FILE"
   tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
