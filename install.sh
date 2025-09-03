@@ -30,7 +30,7 @@ cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
 EXTRA_PATH="/usr/share/X11/xkb/types/extra"
 TYPE_NAME="FOUR_LEVEL_SHIFT_PRESERVE"
 ## Symbols layer
-TYPE_DEFINITION='''
+TYPE_DEFINITION='
     type "FOUR_LEVEL_SHIFT_PRESERVE" {
 	modifiers = Shift + LevelThree;
 	map[None] = Level1;
@@ -43,11 +43,11 @@ TYPE_DEFINITION='''
 	level_name[Level3] = "AltGr";
 	level_name[Level4] = "Shift AltGr";
     };
-'''
+'
 
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
-  sed '/^};/i'$TYPE_DEFINITION'' $EXTRA_PATH > $TMP_FILE
+  awk -v def="$TYPE_DEFINITION" '/^};/ {print def} {print}' "$EXTRA_PATH" > "$TMP_FILE"
   tee "$EXTRA_PATH" < "$TMP_FILE" > "/dev/null"
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
@@ -57,7 +57,7 @@ fi
 
 ## Base layer
 TYPE_NAME="SHIFT_PRESERVES_LEVEL1"
-TYPE_DEFINITION='''
+TYPE_DEFINITION='
     type "SHIFT_PRESERVES_LEVEL1" {
 	modifiers = Shift + LevelThree;
 	map[None] = Level1;
@@ -70,11 +70,11 @@ TYPE_DEFINITION='''
 	level_name[Level3] = "AltGr";
 	level_name[Level4] = "Shift AltGr";
     };
-'''
+'
 
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
-  sed '/^};/i'$TYPE_DEFINITION'' $EXTRA_PATH > "$TMP_FILE"
+  awk -v def="$TYPE_DEFINITION" '/^};/ {print def} {print}' "$EXTRA_PATH" > "$TMP_FILE"
   tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
