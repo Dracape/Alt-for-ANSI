@@ -38,7 +38,7 @@ xkb_symbols "night" {
     key <AC03> { [            h,            H,       Return ] };
     key <AC04> { [            t,            T,            0 ] };
     key <AC05> { [            m,            M,    ampersand ] };
-    key <AC06> { [         Home,         Home,      Page_Up ] };
+    key <AC06> { type= "SHIFT_PRESERVES_LEVEL1", [         Home,         Home,      Page_Up ] };
     key <AC07> { [            y,            Y,    backslash ] };
     key <AC08> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            c,            C,         Left,         Left ] };
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,           Up,           Up ] };
@@ -56,7 +56,7 @@ xkb_symbols "night" {
     key <AB03> { [            d,            D,            4 ] };
     key <AB04> { [            z,            Z,            5 ] };
     key <AB05> { [            x,            X,         plus ] };
-    key <AB06> { [          End,          End,    Page_Down ] };
+    key <AB06> { type= "SHIFT_PRESERVES_LEVEL1", [          End,          End,    Page_Down ] };
     key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
     key <AB08> { [            w,            W,            6 ] };
     key <AB09> { [        slash,      greater,            7 ] };

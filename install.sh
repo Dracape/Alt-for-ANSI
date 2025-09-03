@@ -25,7 +25,8 @@ cd "$GRAPHENE_INSTALL_SCRIPT_DIR"
 cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
 ./install.sh
 
-# Shift Preservation type
+# Shift Preservation types
+## Symbols layer
 EXTRA_PATH="/usr/share/xkeyboard-config-2/types/extra"
 TYPE_NAME="FOUR_LEVEL_SHIFT_PRESERVE"
 TYPE_DEFINITION='''
@@ -45,7 +46,7 @@ TYPE_DEFINITION='''
 
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
-  sed '/^};/i'"$TYPE_DEFINITION"'' "$FILE_PATH" > "$TMP_FILE"
+  sed '/^};/i'"$TYPE_DEFINITION"'' "$EXTRA_PATH" > "$TMP_FILE"
   tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
@@ -53,6 +54,32 @@ else
   echo "The $TYPE_NAME type already exists. No changes made."
 fi
 
+## Base layer
+TYPE_NAME="SHIFT_PRESERVES_LEVEL1"
+TYPE_DEFINITION='''
+    type "SHIFT_PRESERVES_LEVEL1" {
+	modifiers = Shift + LevelThree;
+	map[None] = Level1;
+	map[Shift] = Level1;
+	map[LevelThree] = Level3;
+	map[Shift+LevelThree] = Level4;
+	preserve[Shift] = Shift;
+	level_name[Level1] = "Base";
+	level_name[Level2] = "Shift";
+	level_name[Level3] = "AltGr";
+	level_name[Level4] = "Shift AltGr";
+    };
+'''
+
+if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
+  TMP_FILE=$(mktemp)
+  sed '/^};/i'"$TYPE_DEFINITION"'' "$EXTRA_PATH" > "$TMP_FILE"
+  tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
+  rm "$TMP_FILE"
+  echo "Successfully added the $TYPE_NAME type."
+else
+  echo "The $TYPE_NAME type already exists. No changes made."
+fi
 
 
 # Clean up
