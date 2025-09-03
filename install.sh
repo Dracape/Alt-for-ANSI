@@ -1,7 +1,11 @@
 #!/usr/bin/sh
 
+set -e
+
 PREV_DIR=$(pwd)
 REPONAME='modANSI'
+MAIN_DIR=/tmp/"$REPONAME"
+
 GRAPHENE_INSTALL_SCRIPT_DIR=graphene/install
 MIDNIGHT_INSTALL_SCRIPT_DIR=midnight/install
 
@@ -11,18 +15,47 @@ rm -rf "$REPONAME"
 git clone https://github.com/Dracape/"$REPONAME".git
 cd "$REPONAME"/layouts
 
-# Make the scripts executable
+
+# Layouts
 chmod +x "$GRAPHENE_INSTALL_SCRIPT_DIR"/install.sh "$MIDNIGHT_INSTALL_SCRIPT_DIR"/install.sh
 
-# Install
 cd "$GRAPHENE_INSTALL_SCRIPT_DIR"
 ./install.sh
 
 cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
 ./install.sh
 
+# Shift Preservation type
+EXTRA_PATH="/usr/share/xkeyboard-config-2/types/extra"
+TYPE_NAME="FOUR_LEVEL_SHIFT_PRESERVE"
+TYPE_DEFINITION='''
+    type "FOUR_LEVEL_SHIFT_PRESERVE" {
+	modifiers = Shift + LevelThree;
+	map[None] = Level1;
+	map[Shift] = Level2;
+	map[LevelThree] = Level3;
+	map[Shift+LevelThree] = Level3;
+	preserve[Shift+LevelThree] = Shift;
+	level_name[Level1] = "Base";
+	level_name[Level2] = "Shift";
+	level_name[Level3] = "AltGr";
+	level_name[Level4] = "Shift AltGr";
+    };
+'''
 
-cd "$PREV_DIR"
+if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
+  TMP_FILE=$(mktemp)
+  sed '/^};/i'"$TYPE_DEFINITION"'' "$FILE_PATH" > "$TMP_FILE"
+  tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
+  rm "$TMP_FILE"
+  echo "Successfully added the $TYPE_NAME type."
+else
+  echo "The $TYPE_NAME type already exists. No changes made."
+fi
+
+
 
 # Clean up
-rm -rf /tmp/"$REPONAME"
+echo ''
+rm -rf "$MAIN_DIR"
+cd "$PREV_DIR"
