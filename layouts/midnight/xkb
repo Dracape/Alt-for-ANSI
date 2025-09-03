@@ -40,10 +40,10 @@ xkb_symbols "night" {
     key <AC05> { [            m,            M,    ampersand ] };
     key <AC06> { type= "SHIFT_PRESERVES_LEVEL1", [         Home,         Home,      Page_Up ] };
     key <AC07> { [            y,            Y,    backslash ] };
-    key <AC08> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            c,            C,         Left,         Left ] };
-    key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,           Up,           Up ] };
-    key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,         Down,         Down ] };
-    key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,        Right,        Right ] };
+    key <AC08> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            c,            C,         Left ] };
+    key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,           Up ] };
+    key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,         Down ] };
+    key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,        Right ] };
     key <BKSL> { [        comma,         less,            9 ] };
     // BackSpace ↔ Caps Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
@@ -85,3 +85,4 @@ xkb_symbols "night" {
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
 };
+
