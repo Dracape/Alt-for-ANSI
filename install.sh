@@ -6,8 +6,8 @@ PREV_DIR=$(pwd)
 REPONAME='modANSI'
 MAIN_DIR=/tmp/"$REPONAME"
 
-GRAPHENE_INSTALL_SCRIPT_DIR="MAIN_DIR"/layouts/graphene/install
-MIDNIGHT_INSTALL_SCRIPT_DIR="MAIN_DIR"/layouts/midnight/install
+GRAPHENE_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/graphene/install
+MIDNIGHT_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/midnight/install
 
 cd /tmp
 
