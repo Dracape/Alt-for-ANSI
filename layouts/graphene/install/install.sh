@@ -6,7 +6,7 @@ set -e
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 LAYOUT_FILE=${SCRIPT_DIR}/../xkb
 XSLT_FILE=${SCRIPT_DIR}/xml.xslt
-XKB_DIR=/usr/share/xkeyboard-config-2
+XKB_DIR=/usr/share/X11/xkb
 SYMBOLS_DIR=${XKB_DIR}/symbols
 RULES_DIR=${XKB_DIR}/rules
 EVDEV_XML=${RULES_DIR}/evdev.xml
