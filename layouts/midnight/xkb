@@ -1,4 +1,6 @@
 
+// Swap Alt and Control if it works well with the Right arrow in the Symbol layer and other navigation keys with your Window Manager
+
 partial alphanumeric_keys
 xkb_symbols "night" {
     name[Group1]= "English (Night)";
@@ -73,10 +75,10 @@ xkb_symbols "night" {
     modifier_map Mod4 { <AD06> }; // Super in top-middle
 
     // Control
-    replace key <LCTL> { [   Escape,        XF86Back ] };
-    replace key <RCTL> { [   Insert,     XF86Forward ] };
+    replace key <LCTL> { [ XF86Back ] };
+    replace key <RCTL> { [ XF86Forward ] };
     
-    // Super → Alt
+    // Super → Control
     replace key <LWIN> { [ Alt_L, Meta_L ] };
     replace key <RWIN> { [ Alt_R, Meta_R ] };
     modifier_map Mod1 { <LWIN>, <RWIN> };
