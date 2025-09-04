@@ -27,7 +27,7 @@
 | Tab | b | f | l | k | q | Super | p | g | o | u | . | - |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
 | | Shift (Left) | v | j | d | z\|x | End | ' | w | / | ; | Shift (Right) | |
-| Escape | Alt | r | | | | | Space | AltGr | Alt | | | Insert |
+| Back | Alt | r | | | | | Space | AltGr | Alt | | | Forward |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
@@ -38,7 +38,7 @@ The top row is made keeping stretches in mind
 | Tab | B | F | L | K | Q | | P | G | O | U | ? | _ |
 | BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | < | |
 | | **Shift** (Left) | V | J | D | Z\|X | End | " | W | > | : | **Shift** (Right) | |
-| Back | Alt | R | | | | | Space | AltGr | Alt | | | Forward |
+| | Alt | R | | | | | Space | AltGr | Alt | | | |
 
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | |
