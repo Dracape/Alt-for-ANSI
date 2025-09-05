@@ -34,19 +34,21 @@ add_layout_to_registry() {
     cp ${TMP_FILE} ${EVDEV_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry"
-        if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
+    if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
         sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/X11/xkb/rules/evdev.lst
     fi
 }
 
 
 add_layout_symbols() {
-    # Append the layout to the end of the 'us' symbols file
-    #echo "Appending contents of ${LAYOUT_FILE} to ${SYMBOLS_DIR}/us"
-    echo "//---GRAPHENE BEGIN---" >> ${SYMBOLS_DIR}/us
-    cat ${LAYOUT_FILE} >> ${SYMBOLS_DIR}/us
-    echo "//---GRAPHENE END---" >> ${SYMBOLS_DIR}/us
-    echo "Added Graphene as US layout variant"
+    if ! grep -q "//---GRAPHENE BEGIN---" "${SYMBOLS_DIR}/us"; then
+        # Append the layout to the end of the 'us' symbols file
+        #echo "Appending contents of ${LAYOUT_FILE} to ${SYMBOLS_DIR}/us"
+        echo "//---GRAPHENE BEGIN---" >> ${SYMBOLS_DIR}/us
+        cat ${LAYOUT_FILE} >> ${SYMBOLS_DIR}/us
+        echo "//---GRAPHENE END---" >> ${SYMBOLS_DIR}/us
+        echo "Added Graphene as US layout variant"
+    fi
 }
 
 install_layout() {
@@ -55,9 +57,15 @@ install_layout() {
 }
 
 uninstall_layout() {
-	sed -i '/^\/\/---GRAPHENE BEGIN---/,/^\/\/---GRAPHENE END---/d' ${SYMBOLS_DIR}/us
-	sed -i '/GRAPHENE BEGIN/,/GRAPHENE END/d' ${EVDEV_XML}
-	sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/evdev.lst
+	if grep -q "//---GRAPHENE BEGIN---" "${SYMBOLS_DIR}/us"; then
+		sed -i '/^\/\/---GRAPHENE BEGIN---/,/^\/\/---GRAPHENE END---/d' "${SYMBOLS_DIR}/us"
+	fi
+	if grep -q "GRAPHENE BEGIN" "${EVDEV_XML}"; then
+		sed -i '/GRAPHENE BEGIN/,/GRAPHENE END/d' "${EVDEV_XML}"
+	fi
+	if grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
+		sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/evdev.lst
+	fi
 }
 
 verify_user_is_root() {
@@ -75,10 +83,28 @@ verify_tools_available() {
 }
 
 
+usage() {
+    echo "Usage: $0 [install|uninstall]"
+    exit 1
+}
+
 verify_tools_available
 verify_user_is_root
-uninstall_layout
-install_layout
+
+case "${1:-install}" in
+    install)
+        uninstall_layout
+        install_layout
+        ;;
+    uninstall)
+        uninstall_layout
+        ;; 
+    *)
+		echo "error: unknown argument \"$1\""
+        usage
+        ;;
+esac
+
 
 
 echo ""

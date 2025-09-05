@@ -40,12 +40,14 @@ add_layout_to_registry() {
 }
 
 add_layout_symbols() {
-    # Append the layout to the end of the 'us' symbols file
-    #echo "Appending contents of ${LAYOUT_FILE} to ${SYMBOLS_DIR}/us"
-    echo "//---MIDNIGHT BEGIN---" >> ${SYMBOLS_DIR}/us
-    cat ${LAYOUT_FILE} >> ${SYMBOLS_DIR}/us
-    echo "//---MIDNIGHT END---" >> ${SYMBOLS_DIR}/us
-    echo "Added Mid-Night as US layout variant"
+    if ! grep -q "//---MIDNIGHT BEGIN---" "${SYMBOLS_DIR}/us"; then
+        # Append the layout to the end of the 'us' symbols file
+        #echo "Appending contents of ${LAYOUT_FILE} to ${SYMBOLS_DIR}/us"
+        echo "//---MIDNIGHT BEGIN---" >> ${SYMBOLS_DIR}/us
+        cat ${LAYOUT_FILE} >> ${SYMBOLS_DIR}/us
+        echo "//---MIDNIGHT END---" >> ${SYMBOLS_DIR}/us
+        echo "Added Mid-Night as US layout variant"
+    fi
 }
 
 install_layout() {
@@ -54,9 +56,15 @@ install_layout() {
 }
 
 uninstall_layout() {
-	sed -i '/^\/\/---MIDNIGHT BEGIN---/,/^\/\/---MIDNIGHT END---/d' ${SYMBOLS_DIR}/us
-	sed -i '/MIDNIGHT BEGIN/,/MIDNIGHT END/d' ${EVDEV_XML}
-	sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/X11/xkb/rules/evdev.lst
+	if grep -q "//---MIDNIGHT BEGIN---" "${SYMBOLS_DIR}/us"; then
+		sed -i '/^\/\/---MIDNIGHT BEGIN---/,/^\/\/---MIDNIGHT END---/d' "${SYMBOLS_DIR}/us"
+	fi
+	if grep -q "MIDNIGHT BEGIN" "${EVDEV_XML}"; then
+		sed -i '/MIDNIGHT BEGIN/,/MIDNIGHT END/d' "${EVDEV_XML}"
+	fi
+	if grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/evdev.lst; then
+		sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/X11/xkb/rules/evdev.lst
+	fi
 }
 
 verify_user_is_root() {
@@ -74,9 +82,26 @@ verify_tools_available() {
 }
 
 
+usage() {
+    echo "Usage: $0 [install|uninstall]"
+    exit 1
+}
+
 verify_tools_available
 verify_user_is_root
-uninstall_layout
-install_layout
+
+case "${1:-install}" in
+    install)
+        uninstall_layout
+        install_layout
+        ;;
+    uninstall)
+        uninstall_layout
+        ;;    *)
+		echo "error: unknown argument \"$1\""
+        usage
+        ;;
+esac
+
 
 echo ""
