@@ -76,6 +76,3 @@ uninstall_layout
 install_layout
 
 echo ""
-echo "Successfully installed!"
-echo "You may need to logout or reboot before the layout will become available."
-echo ""
