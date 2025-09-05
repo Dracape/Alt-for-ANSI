@@ -2,8 +2,8 @@
 // Swap Alt and Control if it works well with the Right arrow in the Symbol layer and other navigation keys with your Window Manager
 
 partial alphanumeric_keys
-xkb_symbols "night" {
-    name[Group1]= "English (Night)";
+xkb_symbols "midnight" {
+    name[Group1]= "English (Mid-Night)";
 
     // -- Top Row --
     key <TLDE> { [          grave,     asciitilde ] };
