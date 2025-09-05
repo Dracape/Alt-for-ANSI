@@ -82,6 +82,9 @@ else
   echo "The $TYPE_NAME type already exists. No changes made."
 fi
 
+echo ""
+echo "Successfully installed!"
+echo "You may need to logout or reboot before the layout will become available."
 
 # Clean up
 echo ''
