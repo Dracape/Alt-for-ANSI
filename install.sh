@@ -20,11 +20,11 @@ cd "$REPONAME"/layouts
 chmod +x "$GRAPHENE_INSTALL_SCRIPT_DIR"/install.sh "$MIDNIGHT_INSTALL_SCRIPT_DIR"/install.sh
 
 cd "$GRAPHENE_INSTALL_SCRIPT_DIR"
-./install.sh
+sudo ./install.sh
 
 
 cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
-./install.sh
+sudo ./install.sh
 
 # Shift Preservation types
 EXTRA_PATH="/usr/share/X11/xkb/types/extra"
@@ -48,7 +48,7 @@ TYPE_DEFINITION='
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
   awk -v def="$TYPE_DEFINITION" '/^};/ {print def} {print}' "$EXTRA_PATH" > "$TMP_FILE"
-  tee "$EXTRA_PATH" < "$TMP_FILE" > "/dev/null"
+  sudo tee "$EXTRA_PATH" < "$TMP_FILE" > "/dev/null"
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
 else
@@ -75,7 +75,7 @@ TYPE_DEFINITION='
 if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
   TMP_FILE=$(mktemp)
   awk -v def="$TYPE_DEFINITION" '/^};/ {print def} {print}' "$EXTRA_PATH" > "$TMP_FILE"
-  tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
+  sudo tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
   rm "$TMP_FILE"
   echo "Successfully added the $TYPE_NAME type."
 else
@@ -84,6 +84,31 @@ fi
 
 echo ""
 echo "Successfully installed!"
+
+# Choose layout
+echo "Select a layout to activate:"
+echo "1) Mid-Night"
+echo "2) Graphene"
+
+read -p "Enter your choice (1 or 2): " choice
+
+case $choice in
+    1)
+        localectl set-x11-keymap us pc105 midnight
+        sudo localectl set-x11-keymap us pc105 midnight
+        gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+midnight')]"
+        echo "Mid-Night layout activated."
+        ;;
+    2)
+        localectl set-x11-keymap us pc105 graphene
+        sudo localectl set-x11-keymap us pc105 graphene
+        gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+graphene')]"
+        echo "Graphene layout activated."
+        ;;
+    *)
+        echo "Invalid choice. Please run the script again and select 1 or 2."
+        ;;
+esac
 
 # Clean up
 echo ''
