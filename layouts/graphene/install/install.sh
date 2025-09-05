@@ -34,7 +34,11 @@ add_layout_to_registry() {
     cp ${TMP_FILE} ${EVDEV_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry"
+        if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
+        sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/X11/xkb/rules/evdev.lst
+    fi
 }
+
 
 add_layout_symbols() {
     # Append the layout to the end of the 'us' symbols file
@@ -51,8 +55,9 @@ install_layout() {
 }
 
 uninstall_layout() {
-	sed -i '/^\/\/---GRAPHITE BEGIN---/,/^\/\/---GRAPHITE END---/d' ${SYMBOLS_DIR}/us
+	sed -i '/^\/\/---GRAPHENE BEGIN---/,/^\/\/---GRAPHENE END---/d' ${SYMBOLS_DIR}/us
 	sed -i '/GRAPHENE BEGIN/,/GRAPHENE END/d' ${EVDEV_XML}
+	sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/evdev.lst
 }
 
 verify_user_is_root() {

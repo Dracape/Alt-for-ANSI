@@ -34,6 +34,9 @@ add_layout_to_registry() {
     cp ${TMP_FILE} ${EVDEV_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry"
+            if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/evdev.lst; then
+        sed -i '/^! variant/a \  midnight        us: English (Mid-Night)' /usr/share/X11/xkb/rules/evdev.lst
+    fi
 }
 
 add_layout_symbols() {
@@ -53,6 +56,7 @@ install_layout() {
 uninstall_layout() {
 	sed -i '/^\/\/---MIDNIGHT BEGIN---/,/^\/\/---MIDNIGHT END---/d' ${SYMBOLS_DIR}/us
 	sed -i '/MIDNIGHT BEGIN/,/MIDNIGHT END/d' ${EVDEV_XML}
+	sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/X11/xkb/rules/evdev.lst
 }
 
 verify_user_is_root() {
