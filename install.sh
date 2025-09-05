@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -94,19 +94,58 @@ read -p "Enter your choice (1 or 2): " choice
 
 case $choice in
     1)
-        localectl set-x11-keymap us pc105 midnight
-        sudo localectl set-x11-keymap us pc105 midnight
-        gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+midnight')]"
+        if [ "$(localectl status | grep 'X11 Variant: ' | cut -f 5 -d ' ')" != "midnight" ]; then
+        	localectl set-x11-keymap us pc105 midnight
+        	sudo localectl set-x11-keymap us pc105 midnight
+        fi
+	# Set for Compositor
+	if [ "$XDG_CURRENT_DESKTOP" == "GNOME" ]; then
+    		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+midnight')]"
+
+	elif [ "$XDG_CURRENT_DESKTOP" == "KDE" ]; then
+    		kwriteconfig6 --file kxkbrc --group Layout --key LayoutList us
+    		kwriteconfig6 --file kxkbrc --group Layout --key VariantList midnight
+    		dbus-send --session --type=signal --reply-timeout=100 --dest=org.kde.keyboard /Layouts org.kde.keyboard.reloadConfig
+
+	else
+    		if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+        		echo "You're running Wayland with a compositor other than GNOME or KDE"
+        		echo "I don't know how to enable the layout for your compositor."
+        		echo "You will need to manually enable it in your window manager."
+        		exit 1
+    		else
+        		setxkbmap us -variant midnight
+    		fi
+	fi
         echo "Mid-Night layout activated."
         ;;
     2)
-        localectl set-x11-keymap us pc105 graphene
-        sudo localectl set-x11-keymap us pc105 graphene
-        gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+graphene')]"
+        if [ "$(localectl status | grep 'X11 Variant: ' | cut -f 5 -d ' ')" != "graphene" ]; then
+        	localectl set-x11-keymap us pc105 graphene
+        	sudo localectl set-x11-keymap us pc105 graphene
+        fi
+        # Set for Compositor
+	if [ "$XDG_CURRENT_DESKTOP" == "GNOME" ]; then
+    		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+graphene')]"
+
+	elif [ "$XDG_CURRENT_DESKTOP" == "KDE" ]; then
+    		kwriteconfig6 --file kxkbrc --group Layout --key LayoutList us
+    		kwriteconfig6 --file kxkbrc --group Layout --key VariantList graphene
+    		dbus-send --session --type=signal --reply-timeout=100 --dest=org.kde.keyboard /Layouts org.kde.keyboard.reloadConfig
+
+	else
+    		if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+        		echo "You're running Wayland with a compositor other than GNOME or KDE"
+        		echo "You will need to manually enable it in your window manager."
+        		exit 1
+    		else
+        		setxkbmap us -variant graphene
+    		fi
+	fi
         echo "Graphene layout activated."
         ;;
     *)
-        echo "Invalid choice. Please run the script again and select 1 or 2."
+        echo "Invalid choice. No layout activated"
         ;;
 esac
 
