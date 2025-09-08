@@ -6,19 +6,19 @@ xkb_symbols "midnight" {
     name[Group1]= "English (Mid-Night)";
 
     // -- Top Row --
-    key <TLDE> { [          grave,     asciitilde ] };
-    key <AE01> { [         exclam,         exclam ] };
-    key <AE02> { [             at,             at ] };
+    key <TLDE> { [ NoSymbol ] };
+    key <AE01> { [ NoSymbol ] };
+    key <AE02> { [ NoSymbol ] };
     replace key <AE03> { [ Control_L ] };
     key <AE04> { [        percent,        percent,      braceright ] };
-    key <AE05> { [       asterisk,       asterisk ] };
-    key <AE06> { [         dollar,         dollar ] };
-    key <AE07> { [        percent,        percent ] };
-    key <AE08> { [     numbersign,     numbersign ] };
+    key <AE05> { [ enfilledcircbullet ] };
+    key <AE06> { [ NoSymbol ] };
+    key <AE07> { [ NoSymbol ] };
+    key <AE08> { [ ellipsis ] };
     key <AE09> { [         emdash,   bracketright,     bracketright ] };
     replace key <AE10> { [ Control_R ] };
     key <AE11> { [            bar,     parenright,       parenright ] };
-    key <AE12> { [      ampersand,      ampersand ] };
+    key <AE12> { [ endash ] };
 
     // -- First Row --
     key <AD01> { [            b,            B,           exclam ] };
