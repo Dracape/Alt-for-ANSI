@@ -38,12 +38,12 @@ xkb_symbols "graphene" {
     key <AC03> { [            t,            T,           Return ] };
     key <AC04> { [            s,            S,                0 ] };
     key <AC05> { [            g,            G,        ampersand ] };
-    key <AC06> { [         Home,         Home,          Page_Up ] };
+    key <AC06> { type= "SHIFT_PRESERVES_LEVEL1", [         Home,         Home,          Page_Up ] };
     key <AC07> { [            y,            Y,        backslash ] };
-    key <AC08> { [            h,            H,             Left,        Page_Up ] };
-    key <AC09> { [            a,            A,               Up,           Home ] };
-    key <AC10> { [            e,            E,             Down,            End ] };
-    key <AC11> { [            i,            I,            Right,      Page_Down ] };
+    key <AC08> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            h,            H,             Left ] };
+    key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,               Up ] };
+    key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,             Down ] };
+    key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,            Right ] };
     key <BKSL> { [        comma,     question ] };
     // Caps-Lock ↔ Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
@@ -56,7 +56,7 @@ xkb_symbols "graphene" {
     key <AB03> { [            c,            C,            4 ] };
     key <AB04> { [            q,            Q,            5 ] };
     key <AB05> { [            v,            V,         plus ] };
-    key <AB06> { [          End,    Page_Down,          End ] };
+    key <AB06> { type= "SHIFT_PRESERVES_LEVEL1", [          End,    Page_Down,          End ] };
     key <AB07> { [            k,            K,     asterisk ] };
     key <AB08> { [            p,            P,            6 ] };
     key <AB09> { [       period,      greater,            7 ] };
