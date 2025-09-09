@@ -9,14 +9,14 @@ xkb_symbols "graphene" {
     key <AE02> { [ NoSymbol ] };
     replace key <AE03> { [  Alt_L,         Meta_L ] };
     key <AE04> { [        percent,        percent,      braceright ] };
-    key <AE05> { [ enfilledcircbullet ] };
+    key <AE05> { [ endash ] };
     key <AE06> { [ NoSymbol ] };
     key <AE07> { [ NoSymbol ] };
     key <AE08> { [ ellipsis ] };
     key <AE09> { [         emdash,   bracketright,     bracketright ] };
     replace key <AE10> { [  Alt_R,         Meta_R ] };
     key <AE11> { [            bar,     parenright,       parenright ] };
-    key <AE12> { [ endash ] };
+    key <AE12> { [ enfilledcircbullet ] }; // For where formatting isn't supported
 
     // -- First Row --
     key <AD01> { [            b,            B,           exclam ] };
