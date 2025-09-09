@@ -22,7 +22,7 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| | ! | @ | Alt | % | * | $ | % | # | — | Alt | \| | & |
+| | | | Alt | % | • | | | | — | Alt | \| – | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Super | p | g | o | u | . | - |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
