@@ -25,7 +25,7 @@
 > [!NOTE]
 > Empty space in the upper layers generally[^unpreserved-layer-keys/weird-layer-distro] mean—keys from the *Base* layer are used  
 ### Base
-| | | | Alt | % | • | | | | — | Alt | \| – | |
+| | | | Alt | % | • | | | | — | Alt | \| | – |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | l | d | w | z | Esc | ' | f | o | u | j | ; |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
