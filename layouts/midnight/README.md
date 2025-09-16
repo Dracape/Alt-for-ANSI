@@ -43,7 +43,7 @@ The top row is made keeping stretches in mind
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | ! | { | [ | # | = |Q | ^ | @ | ( | $ | ` | |
+| Tab | ! | { | [ | # | = | | ^ | @ | ( | $ | ` | |
 | Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 |
 | | Shift (Left) | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | Shift (Right) | |
 | | Alt | | | | | | Space | **AltGr** | Alt | | | |
