@@ -4,16 +4,13 @@ set -e
 
 PREV_DIR=$(pwd)
 REPONAME='modANSI'
-MAIN_DIR=/tmp/"$REPONAME"
+MAIN_DIR=$(mktemp --directory "$REPONAME"-XXXXXXXXXXX)
 
 GRAPHENE_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/graphene/install
 MIDNIGHT_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/midnight/install
 
-cd /tmp
-
-rm -rf "$REPONAME"
-git clone https://github.com/Dracape/"$REPONAME".git
-cd "$REPONAME"/layouts
+git clone https://github.com/Dracape/"$REPONAME".git "$MAIN_DIR"
+cd "$MAIN_DIR"/layouts
 
 
 # Layouts
