@@ -12,6 +12,7 @@ MIDNIGHT_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/midnight/install
 git clone https://github.com/Dracape/"$REPONAME".git "$MAIN_DIR"
 cd "$MAIN_DIR"/layouts
 
+trap "rm -rf "$MAIN_DIR; exit 1"" INT TERM
 
 # Layouts
 chmod +x "$GRAPHENE_INSTALL_SCRIPT_DIR"/install.sh "$MIDNIGHT_INSTALL_SCRIPT_DIR"/install.sh
