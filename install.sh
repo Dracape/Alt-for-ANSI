@@ -2,7 +2,6 @@
 
 set -e
 
-PREV_DIR=$(pwd)
 REPONAME='modANSI'
 MAIN_DIR=$(mktemp --directory "$REPONAME"-XXXXXXXXXXX)
 
@@ -150,4 +149,3 @@ esac
 # Clean up
 echo ''
 rm -rf "$MAIN_DIR"
-cd "$PREV_DIR"
