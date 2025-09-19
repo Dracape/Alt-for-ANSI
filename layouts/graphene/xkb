@@ -5,8 +5,8 @@ xkb_symbols "graphene" {
 
     // -- Top Row --
     key <TLDE> { [ NoSymbol ] };
-    key <AE01> { [ NoSymbol ] };
-    key <AE02> { [ NoSymbol ] };
+    key <AE01> { [ leftarrow  ] };
+    key <AE02> { [ rightarrow ] };
     replace key <AE03> { [  Alt_L,         Meta_L ] };
     key <AE04> { [        percent,        percent,      braceright ] };
     key <AE05> { [ endash ] };
