@@ -3,7 +3,7 @@ This repository contains
 - [Graphene](./layouts/graphene/README.md)
 - [Mid-Night](./layouts/midnight/README.md)
 
-keyboard layouts, that are implementation of the 2 highest rated keyboard layouts—known for their own quirks
+keyboard layouts, that are implementations of the 2 highest rated keyboard layouts—known for their own quirks
 
 # **Common** Features added
 - **Mods**
