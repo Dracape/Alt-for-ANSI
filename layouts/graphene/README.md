@@ -27,7 +27,7 @@
 ### Base
 | | ← | → | Alt | % | – | | | | — | Alt | \| | • |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | l | d | w | z | Esc | ' | f | o | u | j | ; |
+| Tab | b | l | d | w | z | Esc | ' | f | o | u | j | : |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
 | | Ctrl | x | m | c | q\|v | End | k | p | . | - | / | |
 | | Super | Shift | | | | | Space | AltGr | | | | |
@@ -38,7 +38,7 @@ The top row is made keeping stretches in mind
 ### Shift
 | | | | Alt | | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | B | L | D | W | Z | | " | F | O | U | J | : |
+| Tab | B | L | D | W | Z | | " | F | O | U | J | ~ |
 | BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? | |
 | | Ctrl | X | M | C | Q\|V | Page Down | K | P | > | _ | < | |
 | | Super | **Shift** | | | | | Space | AltGr | | | | |
@@ -47,7 +47,7 @@ The top row is made keeping stretches in mind
 | | | | Alt | } | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | |
-| Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
+| Delete | 1 | ; | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
 | | Ctrl | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | 9 | |
 | | Super | Shift | | | | | Space | **AltGr** | | | | |
 #### Unusual brackets
