@@ -30,11 +30,11 @@ xkb_symbols "graphene" {
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [            j,            J,            grave ] };
-    key <AD12> { [    semicolon,        colon ] };
+    key <AD12> { [    colon,       asciitilde ] };
 
     // -- Home Row --
     key <AC01> { [            n,            N,                1 ] };
-    key <AC02> { [            r,            R,       asciitilde ] };
+    key <AC02> { [            r,            R,        semicolon ] };
     key <AC03> { [            t,            T,           Return ] };
     key <AC04> { [            s,            S,                0 ] };
     key <AC05> { [            g,            G,        ampersand ] };
