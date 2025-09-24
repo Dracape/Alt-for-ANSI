@@ -4,9 +4,8 @@
 partial alphanumeric_keys
 xkb_symbols "midnight" {
     name[Group1]= "English (Mid-Night)";
-
     // -- Top Row --
-    key <TLDE> { [ NoSymbol ] };
+    key <TLDE> { [ NoSymbol   ] };
     key <AE01> { [ leftarrow  ] };
     key <AE02> { [ rightarrow ] };
     replace key <AE03> { [ Control_L ] };
@@ -26,7 +25,7 @@ xkb_symbols "midnight" {
     key <AD03> { [            l,            L,      bracketleft ] };
     key <AD04> { [            k,            K,       numbersign ] };
     key <AD05> { [            q,            Q,            equal ] };
-    key <AD06> { [ Super_L ] };
+    key <AD06> { [       Escape,       Insert,           Insert ] };
     key <AD07> { [            p,            P,      asciicircum ] };
     key <AD08> { [            g,            G,               at ] };
     key <AD09> { [            o,            O,        parenleft ] };
@@ -77,14 +76,19 @@ xkb_symbols "midnight" {
     // Control
     replace key <LCTL> { [ XF86Back ] };
     replace key <RCTL> { [ XF86Forward ] };
-    
-    // Super → Control
-    replace key <LWIN> { [ Alt_L, Meta_L ] };
-    replace key <RWIN> { [ Alt_R, Meta_R ] };
-    modifier_map Mod1 { <LWIN>, <RWIN> };
 
-    // Right Alt → AltGr
+    // Right Alt → AltGr   (For Display Manager)
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
+
+    // - Super -
+    // Left Super → Control
+    replace key <LWIN> { [ Alt_L,    Meta_L ] };
+    modifier_map Mod1 { <LWIN> };
+
+    // Right Super → Left Super
+    replace key <RWIN> { [ Super_L,  Hyper_L ] };
+    modifier_map Super { <RWIN> };
+
 };
 
