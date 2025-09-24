@@ -71,8 +71,6 @@ xkb_symbols "midnight" {
 
     // — Modifiers —
 
-    modifier_map Mod4 { <AD06> }; // Super in top-middle
-
     // Control
     replace key <LCTL> { [ XF86Back ] };
     replace key <RCTL> { [ XF86Forward ] };
@@ -88,7 +86,7 @@ xkb_symbols "midnight" {
 
     // Right Super → Left Super
     replace key <RWIN> { [ Super_L,  Hyper_L ] };
-    modifier_map Super { <RWIN> };
+    modifier_map Mod4 { <RWIN> };
 
 };
 
