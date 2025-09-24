@@ -31,7 +31,7 @@ xkb_symbols "midnight" {
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [       period,     question,            grave ] };
-    key <AD12> { [        minus,   underscore ] };
+    key <AD12> { [    semicolon,        colon ] };
 
     // -- Home Row --
     key <AC01> { [            n,            N,            1 ] };
@@ -61,7 +61,7 @@ xkb_symbols "midnight" {
     key <AB07> { [   apostrophe,     quotedbl,     asterisk ] };
     key <AB08> { [            w,            W,            6 ] };
     key <AB09> { [        slash,      greater,            7 ] };
-    key <AB10> { [    semicolon,        colon,            8 ] };
+    key <AB10> { [        minus,   underscore,            8 ] };
 
     modifier_map Control { <AE03>, <AE10> }; // Map Control to ring-stretches
 
