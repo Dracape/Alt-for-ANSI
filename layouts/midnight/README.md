@@ -24,10 +24,10 @@
 ### Base
 | | ← | → | Alt | % | – | | | | — | Alt | \| | • |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | f | l | k | q | Super | p | g | o | u | . | - |
+| Tab | b | f | l | k | q | Escape | p | g | o | u | . | - |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
 | | Shift (Left) | v | j | d | z\|x | End | ' | w | / | ; | Shift (Right) | |
-| Back | Alt | r | | | | | Space | AltGr | Alt | | | Forward |
+| Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
@@ -35,7 +35,7 @@ The top row is made keeping stretches in mind
 ### Shift
 | | | | Alt | | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | B | F | L | K | Q | | P | G | O | U | ? | _ |
+| Tab | B | F | L | K | Q | Insert | P | G | O | U | ? | _ |
 | BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | < | |
 | | **Shift** (Left) | V | J | D | Z\|X | End | " | W | > | : | **Shift** (Right) | |
 | | Alt | R | | | | | Space | AltGr | Alt | | | |
@@ -43,7 +43,7 @@ The top row is made keeping stretches in mind
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | ! | { | [ | # | = | | ^ | @ | ( | $ | ` | |
+| Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | |
 | Delete | 1 | ~ | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 |
 | | Shift (Left) | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | Shift (Right) | |
 | | Alt | | | | | | Space | **AltGr** | Alt | | | |
