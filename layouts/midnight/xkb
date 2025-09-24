@@ -4,6 +4,7 @@
 partial alphanumeric_keys
 xkb_symbols "midnight" {
     name[Group1]= "English (Mid-Night)";
+
     // -- Top Row --
     key <TLDE> { [ NoSymbol   ] };
     key <AE01> { [ leftarrow  ] };
@@ -31,11 +32,11 @@ xkb_symbols "midnight" {
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [       period,     question,            grave ] };
-    key <AD12> { [    semicolon,        colon ] };
+    key <AD12> { [        colon,   asciitilde ] };
 
     // -- Home Row --
     key <AC01> { [            n,            N,            1 ] };
-    key <AC02> { [            s,            S,   asciitilde ] };
+    key <AC02> { [            s,            S,    semicolon ] };
     key <AC03> { [            h,            H,       Return ] };
     key <AC04> { [            t,            T,            0 ] };
     key <AC05> { [            m,            M,    ampersand ] };
