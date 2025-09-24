@@ -24,9 +24,9 @@
 ### Base
 | | ← | → | Alt | % | – | | | | — | Alt | \| | • |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | f | l | k | q | Escape | p | g | o | u | . | - |
+| Tab | b | f | l | k | q | Escape | p | g | o | u | . | ; |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
-| | Shift (Left) | v | j | d | z\|x | End | ' | w | / | ; | Shift (Right) | |
+| | Shift (Left) | v | j | d | z\|x | End | ' | w | / | - | Shift (Right) | |
 | Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward |
 #### Top row usage
 The top row is made keeping stretches in mind
