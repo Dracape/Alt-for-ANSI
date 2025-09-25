@@ -10,7 +10,7 @@ keyboard layouts, that are implementations of the 2 highest rated keyboard layou
   - Angle
   - Wide
 - **Swap**
-  - *Caps Lock* <—> *BackSpace*
+  - *Caps Lock* ↔ *BackSpace*
 
 - Layers
   - **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout")**: Improved and highly optimised for the implementations
