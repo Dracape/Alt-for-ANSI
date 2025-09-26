@@ -20,14 +20,11 @@ keyboard layouts, that are implementations of the 2 highest rated keyboard layou
 ---
 
 # Installation (*Linux*)
-## Startup
-The layout for user sessions can be installed by running  
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/Alt-for-ANSI/main/install.sh)"`  
-Keep in mind that this script only provides the bare minimum configuration—to get the layout working in the user session; it is not sufficient for a full installation.  
-This script installs the layout as a US keymap variant—making an entry only in `/usr/share/xkeyboard-config-2/rules/evdev.xml`.
+## Initial
+The layouts for user sessions can be installed by running  
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/Alt-for-ANSI/main/install.sh)"`
 
-
-## Further setup
+## Further
 ##### Set the layout as the default for any new users created (optional)
 Edit `/etc/default/keyboard`
 > [!TIP]
