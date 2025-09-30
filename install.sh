@@ -3,7 +3,7 @@
 set -e
 
 REPONAME='modANSI'
-MAIN_DIR="$(mktemp --directory "${$TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
+MAIN_DIR="$(mktemp --directory "${TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
 
 GRAPHENE_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/graphene/install
 MIDNIGHT_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/midnight/install
