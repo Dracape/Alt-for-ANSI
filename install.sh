@@ -77,15 +77,15 @@ else
   echo "The $TYPE_NAME type already exists. No changes made."
 fi
 
-echo ""
-echo "Successfully installed!"
+echo ''
+echo 'Successfully installed!'
 
 # Choose layout
-echo "Select a layout to activate:"
+echo 'Select a layout to activate:'
 echo '1) Mid-Night'
 echo '2) Graphene'
 
-read -p "Enter your choice (1 or 2): " choice
+read -p 'Enter your choice (1 or 2): ' choice
 
 case $choice in
     1)
