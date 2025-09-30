@@ -3,7 +3,7 @@
 set -e
 
 REPONAME='modANSI'
-MAIN_DIR=""$(mktemp --directory "${$TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
+MAIN_DIR="$(mktemp --directory "${$TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
 
 GRAPHENE_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/graphene/install
 MIDNIGHT_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/midnight/install
@@ -82,8 +82,8 @@ echo "Successfully installed!"
 
 # Choose layout
 echo "Select a layout to activate:"
-echo "1) Mid-Night"
-echo "2) Graphene"
+echo '1) Mid-Night'
+echo '2) Graphene'
 
 read -p "Enter your choice (1 or 2): " choice
 
