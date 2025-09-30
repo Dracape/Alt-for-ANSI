@@ -2,17 +2,24 @@
 
 set -e
 
-REPONAME='Alt-for-ANSI'
-MAIN_DIR="$(mktemp --directory "${TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
+case $1 in
+	-l)
+		MAIN_DIR=$PWD
+		;;
+	*)
+		REPONAME='Alt-for-ANSI'
+		MAIN_DIR="$(mktemp --directory "${TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
+		git clone https://github.com/Dracape/"$REPONAME".git "$MAIN_DIR"
+		;;
+esac
 
-GRAPHENE_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/graphene/install
 MIDNIGHT_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/midnight/install
+GRAPHENE_INSTALL_SCRIPT_DIR="$MAIN_DIR"/layouts/graphene/install
 
-git clone https://github.com/Dracape/"$REPONAME".git "$MAIN_DIR"
 cd "$MAIN_DIR"/layouts
 
 # Layouts
-chmod +x "$GRAPHENE_INSTALL_SCRIPT_DIR"/install.sh "$MIDNIGHT_INSTALL_SCRIPT_DIR"/install.sh
+chmod +x {"$GRAPHENE_INSTALL_SCRIPT_DIR","$MIDNIGHT_INSTALL_SCRIPT_DIR"}/install.sh
 
 cd "$GRAPHENE_INSTALL_SCRIPT_DIR"
 sudo ./install.sh
