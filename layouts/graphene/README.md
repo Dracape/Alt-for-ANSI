@@ -8,7 +8,7 @@
   - Angle
   - Wide
 - **Swaps**
-  - *Caps Lock* <—> *BackSpace*
+  - *Caps Lock* ⟷ *BackSpace*
   - **Mods**: The position of mods are significantly changed, which can be reviewed better using the [preview](#preview)
 - 3rd Layer
   - **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout")**: Improved and highly optimised for [*Graphite*][graphite]
