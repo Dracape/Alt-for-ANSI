@@ -31,7 +31,6 @@ xkb_symbols "graphene" {
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [            j,            J,            grave ] };
     key <AD12> { [    semicolon,        colon ] };
-    key <BKSL> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [ Return ] }
 
     // -- Home Row --
     key <AC01> { [            n,            N,                1 ] };
@@ -45,7 +44,7 @@ xkb_symbols "graphene" {
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,               Up ] };
     key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,             Down ] };
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,            Right ] };
-    key <RTRL> { [        comma,     question ] };
+    key <BKSL> { [        comma,     question ] };
     // Caps-Lock ↔ Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [  Caps_Lock ] };
@@ -83,8 +82,7 @@ xkb_symbols "graphene" {
     
     // — Right —
     
-    // Alt → AltGr
+    // Right Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
 };
-
