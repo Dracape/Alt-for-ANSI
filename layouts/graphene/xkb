@@ -31,7 +31,7 @@ xkb_symbols "graphene" {
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [            j,            J,            grave ] };
     key <AD12> { [    semicolon,        colon ] };
-    key <BKSL> { [ NoSymbol ] }
+    key <BKSL> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [ Return ] }
 
     // -- Home Row --
     key <AC01> { [            n,            N,                1 ] };
