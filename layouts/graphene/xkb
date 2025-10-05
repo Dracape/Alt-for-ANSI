@@ -30,11 +30,12 @@ xkb_symbols "graphene" {
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [            j,            J,            grave ] };
-    key <AD12> { [    colon,       asciitilde ] };
+    key <AD12> { [    semicolon,        colon ] };
+    key <BKSL> { [ NoSymbol ] }
 
     // -- Home Row --
     key <AC01> { [            n,            N,                1 ] };
-    key <AC02> { [            r,            R,        semicolon ] };
+    key <AC02> { [            r,            R,       asciitilde ] };
     key <AC03> { [            t,            T,           Return ] };
     key <AC04> { [            s,            S,                0 ] };
     key <AC05> { [            g,            G,        ampersand ] };
@@ -44,7 +45,7 @@ xkb_symbols "graphene" {
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,               Up ] };
     key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,             Down ] };
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,            Right ] };
-    key <BKSL> { [        comma,     question ] };
+    key <RTRL> { [        comma,     question ] };
     // Caps-Lock ↔ Backspace
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [  Caps_Lock ] };
@@ -82,7 +83,8 @@ xkb_symbols "graphene" {
     
     // — Right —
     
-    // Right Alt → AltGr
+    // Alt → AltGr
     key <RALT> { [ ISO_Level3_Shift ] };
     modifier_map Mod5 { <RALT> };
 };
+
