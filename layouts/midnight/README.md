@@ -24,7 +24,7 @@
 ### Base
 | | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
+| Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Enter |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , | |
 | | Shift (Left) | v | j | d | z\|x | End | ' | w | / | - | Shift (Right) | | |
 | Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward | |
@@ -35,7 +35,7 @@ The top row is made keeping stretches in mind
 ### Shift
 | | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | B | F | L | K | Q | Menu | P | G | O | U | ? | ~ | Insert |
+| Tab | B | F | L | K | Q | Menu | P | G | O | U | ? | ~ | Enter |
 | BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | < | | |
 | | **Shift** (Left) | V | J | D | Z\|X | End | " | W | > | : | **Shift** (Right) | | |
 | Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
@@ -43,8 +43,8 @@ The top row is made keeping stretches in mind
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | ! | { | [ | # | = | Menu | ^ | @ | ( | $ | ` | | Insert |
-| Delete | 1 | ; | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 | |
+| Tab | ! | { | [ | # | = | Menu | ^ | @ | ( | $ | ` | | |
+| Delete | 1 | ; | Enter | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 | |
 | | Shift (Left) | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | Shift (Right) | | |
 | Back | Alt | | | | | | Space | **AltGr** | Alt | | | Forward | |
 #### Unusual brackets
