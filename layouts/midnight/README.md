@@ -22,7 +22,7 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| | ← | → | Alt | % | – | | | | — | Alt | \| | • |
+| | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , | |
@@ -33,7 +33,7 @@ The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| | | | Alt | | | | | | ] | Alt | ) | |
+| | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | F | L | K | Q | Menu | P | G | O | U | ? | ~ | Insert |
 | BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | < | | |
@@ -41,7 +41,7 @@ The top row is made keeping stretches in mind
 | Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
-| | | | Alt | } | | | | | ] | Alt | ) | |
+| | | | Alt | } | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Menu | ^ | @ | ( | $ | ` | | Insert |
 | Delete | 1 | ; | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 | |
