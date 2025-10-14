@@ -54,8 +54,15 @@ add_layout_symbols() {
 }
 
 load_on_vconsole() {
+    read -p "Do you want to automatically load the keymap on console boot? (y/N): " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]
+    then
+        return 0
+    fi
+
 	mkdir /etc/fish/conf.d/
-	mv ${AUTO_LOAD_kEYS} /etc/fish/conf.d/midnight-vconsole.fish
+	mv ${AUTO_LOAD_KEYS} /etc/fish/conf.d/midnight-vconsole.fish
 }
 
 add_map_virtual_console() {
