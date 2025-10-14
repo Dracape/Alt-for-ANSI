@@ -5,6 +5,7 @@ set -e
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 LAYOUT_FILE=${SCRIPT_DIR}/../xkb
+MAP_FILE=${SCRIPT_DIR}/../map
 XSLT_FILE=${SCRIPT_DIR}/xml.xslt
 XKB_DIR=/usr/share/X11/xkb
 SYMBOLS_DIR=${XKB_DIR}/symbols
@@ -50,9 +51,14 @@ add_layout_symbols() {
     fi
 }
 
+add_map_to_virtual_console() {
+	mv ${MAP_FILE} /usr/share/kbd/keymaps/midnight.map
+}
+
 install_layout() {
     add_layout_symbols
     add_layout_to_registry
+    add_map_to_virtual_console
 }
 
 uninstall_layout() {
