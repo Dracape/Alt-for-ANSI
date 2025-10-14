@@ -1,0 +1,80 @@
+# console keymap for the midnight layout
+# Public domain.
+
+alt_is_meta
+
+keymaps 0-12
+include "qwerty-layout"
+include "linux-with-alt-and-altgr"
+strings as usual
+
+keycode  41  = nul
+keycode  2   = Left
+keycode  3   = Right
+keycode  4   = Control_L
+keycode  5   = percent       percent      braceright
+keycode  6   = 0x2013
+keycode  7   = nul
+keycode  8   = nul
+keycode  9   = 0x2026
+keycode  10  = 0x2014        bracketright bracketright
+keycode  11  = Control_R
+keycode  12  = bar           parenright   parenright
+keycode  13  = 0x29BF
+
+keycode  16  =  b             B            exclam
+keycode  17  =  f             F            braceleft
+keycode  18  =  l             L            bracketleft
+keycode  19  =  k             K            numbersign
+keycode  20  =  q             Q            equal
+keycode  21  =  Escape        Compose         Compose
+keycode  22  =  p             P            asciicircum
+keycode  23  =  g             G            at
+keycode  24  =  o             O            parenleft
+keycode  25  =  u             U            dollar
+keycode  26  =  period        question     grave
+keycode  27  =  colon         asciitilde
+keycode  43  =  Insert
+
+keycode  30  =  n             N            1
+keycode  31  =  s             S            semicolon
+keycode  32  =  h             H            Return
+keycode  33  =  t             T            0
+keycode  34  =  m             M            ampersand
+keycode  35  =  Home          Home         Prior
+keycode  36  =  y             Y            backslash
+keycode  37  =  c             C            Left
+keycode  38  =  a             A            Up
+keycode  39  =  e             E            Down
+keycode  40  =  i             I            Right
+keycode  28  =  comma         less         9
+
+keycode  58  =  BackSpace     BackSpace    Delete
+keycode  14  =  Caps_Lock
+
+keycode  44  =  v             V            2
+keycode  45  =  j             J            3
+keycode  46  =  d             D            4
+keycode  47  =  z             Z            5
+keycode  48  =  x             X            plus
+keycode  49  =  End           End          Next
+keycode  50  =  apostrophe    quotedbl     asterisk
+keycode  51  =  w             W            6
+keycode  52  =  slash         greater      7
+keycode  53  =  minus         underscore   8
+
+keycode  56  = r               R
+
+
+
+
+
+
+keycode  57  =  space         space        space            nobreakspace   nul
+
+keycode   1 = Escape
+keycode  15 = Tab
+        alt     keycode  28 = Meta_Control_m
+keycode  42 = Shift
+keycode  54 = Shift
+keycode  56 = Alt
