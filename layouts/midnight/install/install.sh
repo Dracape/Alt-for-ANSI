@@ -6,6 +6,8 @@ set -e
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 LAYOUT_FILE=${SCRIPT_DIR}/../xkb
 MAP_FILE=${SCRIPT_DIR}/../map
+SUDOERS_CONFIG=${SCRIPT_DIR}/loadkeys-all
+AUTO_LOAD_KEYS=${SCRIPT_DIR}/config.fish
 XSLT_FILE=${SCRIPT_DIR}/xml.xslt
 XKB_DIR=/usr/share/X11/xkb
 SYMBOLS_DIR=${XKB_DIR}/symbols
@@ -51,14 +53,21 @@ add_layout_symbols() {
     fi
 }
 
-add_map_to_virtual_console() {
+load_on_vconsole() {
+	mkdir /etc/fish/conf.d/
+	mv ${AUTO_LOAD_kEYS} /etc/fish/conf.d/midnight-vconsole.fish
+}
+
+add_map_virtual_console() {
 	mv ${MAP_FILE} /usr/share/kbd/keymaps/midnight.map
+	mv ${SUDOERS_CONFIG} /etc/sudoers.d/
+	load_on_vconsole
 }
 
 install_layout() {
     add_layout_symbols
     add_layout_to_registry
-    add_map_to_virtual_console
+    add_map_virtual_console
 }
 
 uninstall_layout() {
