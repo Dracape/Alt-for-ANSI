@@ -11,14 +11,14 @@ strings as usual
 keycode  41  = nul
 keycode  2   = Left
 keycode  3   = Right
-keycode  4   = Control_L
+keycode  4   = Control
 keycode  5   = percent       percent      braceright
 keycode  6   = 0x2013
 keycode  7   = nul
 keycode  8   = nul
 keycode  9   = 0x2026
 keycode  10  = 0x2014        bracketright bracketright
-keycode  11  = Control_R
+keycode  11  = Control
 keycode  12  = bar           parenright   parenright
 keycode  13  = 0x29BF
 
@@ -64,12 +64,6 @@ keycode  52  =  slash         greater      7
 keycode  53  =  minus         underscore   8
 
 keycode  56  = r               R
-
-
-
-
-
-
 keycode  57  =  space         space        space            nobreakspace   nul
 
 keycode   1 = Escape
@@ -77,4 +71,4 @@ keycode  15 = Tab
         alt     keycode  28 = Meta_Control_m
 keycode  42 = Shift
 keycode  54 = Shift
-keycode  56 = Alt
+keycode 125 = Alt
