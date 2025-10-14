@@ -21,7 +21,7 @@ keyboard layouts, that are implementations of the 2 highest rated keyboard layou
 
 # Installation (*Linux*)
 ## Initial
-The layouts for user sessions can be installed by running  
+The layouts can be installed by running  
 `bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/Alt-for-ANSI/main/install.sh)"`
 
 ## Further
