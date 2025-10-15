@@ -22,11 +22,11 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
+| Shift (Left) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Enter |
-| BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , | |
-| | Shift (Left) | v | j | d | z\|x | End | ' | w | / | - | Shift (Right) | | |
+| Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
+| BackSpace | n | r | t | s | g | Home | y | h | a | e | i | ? | |
+| | x | v | j | d | z | End | ' | w | / | - | , | | |
 | Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward | |
 #### Top row usage
 The top row is made keeping stretches in mind
@@ -35,18 +35,22 @@ The top row is made keeping stretches in mind
 ### Shift
 | | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | B | F | L | K | Q | Menu | P | G | O | U | ? | ~ | Enter |
-| BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | < | | |
-| | **Shift** (Left) | V | J | D | Z\|X | End | " | W | > | : | **Shift** (Right) | | |
+| Tab | B | F | L | K | Q | Menu | P | G | O | U | | ~ | |
+| BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | | | |
+| | X | V | J | D | Z | End | " | W | > | : | < | | |
 | Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Menu | ^ | @ | ( | $ | ` | | |
-| Delete | 1 | ; | Enter | 0 | & | Page Up | \ | Left | Up | Down | Right | 9 | |
-| | Shift (Left) | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | Shift (Right) | | |
-| Back | Alt | | | | | | Space | **AltGr** | Alt | | | Forward | |
+| Delete | 1 | ; | Enter | 0 | & | Page Up | \ | Left | Up | Down | Right | | |
+| | 2 | 3 | 4 | 5 | + | | * | 6 | 7 | 8 | 9 | | |
+| Back | Alt | R | | | | | Space | **AltGr** | Alt | | | Forward | |
+
+> [!TIP]
+> Use [Input-Remapper](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) to make `r` act like *Shift* when held
+
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
 ##### Closing bracket layer usage
