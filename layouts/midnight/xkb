@@ -7,7 +7,7 @@ xkb_symbols "midnight" {
 
     // -- Top Row --
     modifier_map Shift { <TLDE> }; // (Backup for use without thumb-shift on r)
-    key <TLDE> { [ Shift_L ] };    // (Backup for use withotu thumb-shift on r)
+    key <TLDE> { [ Shift_R ] };    // (Backup for use withotu thumb-shift on r)
     key <AE01> { [ leftarrow  ] };
     key <AE02> { [ rightarrow ] };
     replace key <AE03> { [ Control_L ] };
