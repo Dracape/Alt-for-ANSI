@@ -22,23 +22,23 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| Shift (Left) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
+| Shift (Right) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
 | BackSpace | n | r | t | s | g | Home | y | h | a | e | i | ? | |
 | | x | v | j | d | z | End | ' | w | / | - | , | | |
-| Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward | |
+| Back | Alt | r/Shift (Left) | | | | | Space | AltGr | Super (Left) | | | Forward | |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| | | | Alt | | | | | | ] | Alt | ) | | |
+| **Shift** (Right) | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | F | L | K | Q | Menu | P | G | O | U | | ~ | |
 | BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | | | |
 | | X | V | J | D | Z | End | " | W | > | : | < | | |
-| Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
+| Back | Alt | **Shift** (Left) | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | | |
