@@ -25,7 +25,7 @@
 | Shift (Left) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
-| BackSpace | n | r | t | s | g | Enter | y | h | a | e | i | ? | |
+| BackSpace | n | s | h | t | m | Enter | y | c | a | e | i | ? | |
 | | x | v | j | d | z | Home | End | ' | w | / | - | , | |
 | Back | Alt | r/Shift (Left) | | | | | Space | AltGr | Super (Left) | | | Forward | |
 #### Top row usage
