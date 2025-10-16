@@ -25,8 +25,8 @@
 | Shift (Left) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
-| BackSpace | n | r | t | s | g | Home | y | h | a | e | i | ? | |
-| | x | v | j | d | z | End | ' | w | / | - | , | | |
+| BackSpace | n | r | t | s | g | Enter | y | h | a | e | i | ? | |
+| x | v | j | d | z | Home | End | ' | w | / | - | , | | |
 | Back | Alt | r/Shift (Left) | | | | | Space | AltGr | Super (Left) | | | Forward | |
 #### Top row usage
 The top row is made keeping stretches in mind
@@ -36,16 +36,16 @@ The top row is made keeping stretches in mind
 | **Shift** (Left) | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | F | L | K | Q | Menu | P | G | O | U | | ~ | |
-| BackSpace | N | S | H | T | M | Home | Y | C | A | E | I | | | |
-| | X | V | J | D | Z | End | " | W | > | : | < | | |
+| BackSpace | N | S | H | T | M | | Y | C | A | E | I | | | |
+| X | V | J | D | Z | Home | End | " | W | > | : | < | | |
 | Back | Alt | **Shift** (Left) | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Menu | ^ | @ | ( | $ | ` | | |
-| Delete | 1 | ; | Enter | 0 | & | Page Up | \ | Left | Up | Down | Right | | |
-| | 2 | 3 | 4 | 5 | + | | * | 6 | 7 | 8 | 9 | | |
+| Delete | 1 | ; | Enter | 0 | & | | \ | Left | Up | Down | Right | | |
+| 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 | | |
 | Back | Alt | R | | | | | Space | **AltGr** | Alt | | | Forward | |
 
 > [!TIP]
