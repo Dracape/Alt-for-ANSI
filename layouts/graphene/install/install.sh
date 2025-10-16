@@ -9,18 +9,22 @@ XSLT_FILE=${SCRIPT_DIR}/xml.xslt
 XKB_DIR=/usr/share/X11/xkb
 SYMBOLS_DIR=${XKB_DIR}/symbols
 RULES_DIR=${XKB_DIR}/rules
-EVDEV_XML=${RULES_DIR}/base.xml
+BASE_XML=${RULES_DIR}/base.xml
+EVDEV_XML=${RULES_DIR}/evdev.xml
 
 add_layout_to_registry() {
-    # Backup the system's xkb base.xml file if we haven't already, just in case
-    if ! test -f ${EVDEV_XML}.bak; then
+    # Backup the system's xkb files if we haven't already, just in case
+    if ! test -f ${BASE_XML}.bak; then
         echo "Backing up base.xml file"
+        cp ${BASE_XML} ${BASE_XML}.bak
+    fi
+    if ! test -f ${EVDEV_XML}.bak; then
+        echo "Backing up evdev.xml file"
         cp ${EVDEV_XML} ${EVDEV_XML}.bak
     fi
 
-    # Add the layout to base.xml and store the result in /tmp/base.xml
+    # Add the layout to base.xml and store the result in a temporary file
     TMP_FILE=$(mktemp -q /tmp/base.XXXXXX)
-    #echo "Modifying xkb base.xml file and storing temporarily at ${TMP_FILE}"
     pushd ${RULES_DIR} >/dev/null
     xsltproc --nodtdattr -o ${TMP_FILE} ${XSLT_FILE} base.xml
     if ! [ "$?" == "0" ]; then
@@ -31,11 +35,30 @@ add_layout_to_registry() {
     popd >/dev/null
 
     # Now copy it over the top of the system's xkb base file
-    cp ${TMP_FILE} ${EVDEV_XML}
+    cp ${TMP_FILE} ${BASE_XML}
     rm ${TMP_FILE}
-    echo "Updated xkb registry"
+    echo "Updated xkb registry (base)"
     if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/base.lst; then
         sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/X11/xkb/rules/base.lst
+    fi
+
+    # Add the layout to evdev.xml and store the result in a temporary file
+    TMP_FILE=$(mktemp -q /tmp/evdev.XXXXXX)
+    pushd ${RULES_DIR} >/dev/null
+    xsltproc --nodtdattr -o ${TMP_FILE} ${XSLT_FILE} evdev.xml
+    if ! [ "$?" == "0" ]; then
+        echo "Failed to update the xkb registry";
+        popd
+        exit 1
+    fi
+    popd >/dev/null
+
+    # Now copy it over the top of the system's xkb evdev file
+    cp ${TMP_FILE} ${EVDEV_XML}
+    rm ${TMP_FILE}
+    echo "Updated xkb registry (evdev)"
+    if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
+        sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/X11/xkb/rules/evdev.lst
     fi
 }
 
@@ -60,11 +83,17 @@ uninstall_layout() {
 	if grep -q "//---GRAPHENE BEGIN---" "${SYMBOLS_DIR}/us"; then
 		sed -i '/^\/\/---GRAPHENE BEGIN---/,/^\/\/---GRAPHENE END---/d' "${SYMBOLS_DIR}/us"
 	fi
+	if grep -q "GRAPHENE BEGIN" "${BASE_XML}"; then
+		sed -i '/GRAPHENE BEGIN/,/GRAPHENE END/d' "${BASE_XML}"
+	fi
 	if grep -q "GRAPHENE BEGIN" "${EVDEV_XML}"; then
 		sed -i '/GRAPHENE BEGIN/,/GRAPHENE END/d' "${EVDEV_XML}"
 	fi
 	if grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/base.lst; then
 		sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/base.lst
+	fi
+	if grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
+		sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/evdev.lst
 	fi
 }
 
