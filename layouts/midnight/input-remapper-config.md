@@ -32,11 +32,6 @@ ISO_Level3_Shift + apostrophe
 ISO_Level3_Shift + o + bar + Left
 ```
 
-7. r shift:
-```
-mod_tap(r, Shift_L)
-```
-
 8. apostrophe:
 ```
 if_single(
