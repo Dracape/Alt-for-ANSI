@@ -22,10 +22,10 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| Shift (Left) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
+| Shift (Right) | ← | → | Alt | % | – | | | | — | Alt | \| | • | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | b | f | l | k | q | Escape | p | g | o | u | . | : | Insert |
-| BackSpace | n | s | h | t | m | Enter | y | c | a | e | i | ? | |
+| BackSpace | n | s | h | t | m | Shift (Left) | y | c | a | e | i | ? | |
 | | x | v | j | d | z | Home | End | ' | w | / | - | , | |
 | Back | Alt | r/Shift (Left) | | | | | Space | AltGr | Super (Left) | | | Forward | |
 #### Top row usage
@@ -33,20 +33,20 @@ The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| **Shift** (Left) | | | Alt | | | | | | ] | Alt | ) | | |
+| **Shift** (Right) | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | F | L | K | Q | Menu | P | G | O | U | | ~ | |
-| BackSpace | N | S | H | T | M | | Y | C | A | E | I | | | |
+| BackSpace | N | S | H | T | M | **Shift** (Left) | Y | C | A | E | I | | | |
 | | X | V | J | D | Z | Home | End | " | W | > | _ | < | |
-| Back | Alt | **Shift** (Left) | | | | | Space | AltGr | Alt | | | | Forward |
+| Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | ! | { | [ | # | = | Menu | ^ | @ | ( | $ | ` | | |
-| Delete | 1 | ; | Enter | 0 | & | | \ | Left | Up | Down | Right | | |
+| Delete | 1 | ; | Enter | 0 | & | Shift (Left) | \ | Left | Up | Down | Right | | |
 | | 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 | |
-| Back | Alt | R | | | | | Space | **AltGr** | Alt | | | Forward | |
+| Back | Alt | | | | | | Space | **AltGr** | Alt | | | Forward | |
 
 > [!TIP]
 > Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) to make `r` act like *Shift* when held
