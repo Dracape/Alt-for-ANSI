@@ -32,7 +32,7 @@ xkb_symbols "midnight" {
     key <AD08> { [            g,            G,               at ] };
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
-    key <AD11> { [       period,       peroid,            grave ] };
+    key <AD11> { [       period,       period,            grave ] };
     key <AD12> { [        colon,   asciitilde ] };
     key <BKSL> { [ Insert ] };
 
