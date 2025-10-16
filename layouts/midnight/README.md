@@ -37,7 +37,7 @@ The top row is made keeping stretches in mind
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | B | F | L | K | Q | Menu | P | G | O | U | | ~ | |
 | BackSpace | N | S | H | T | M | | Y | C | A | E | I | | | |
-| | X | V | J | D | Z | Home | End | " | W | > | : | < | |
+| | X | V | J | D | Z | Home | End | " | W | > | _ | < | |
 | Back | Alt | **Shift** (Left) | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
