@@ -19,11 +19,11 @@ add_layout_to_registry() {
     # Backup the system's xkb files if we haven't already, just in case
     if ! test -f ${BASE_XML}.bak; then
         echo "Backing up base.xml file"
-        cp ${BASE_XML} ${BASE_XML}.bak
+        install --mode 644 ${BASE_XML} ${BASE_XML}.bak
     fi
     if ! test -f ${EVDEV_XML}.bak; then
         echo "Backing up evdev.xml file"
-        cp ${EVDEV_XML} ${EVDEV_XML}.bak
+        install --mode 644 ${EVDEV_XML} ${EVDEV_XML}.bak
     fi
 
     # Add the layout to base.xml and store the result in a temporary file
@@ -38,7 +38,7 @@ add_layout_to_registry() {
     popd >/dev/null
 
     # Now copy it over the top of the system's xkb base file
-    cp ${TMP_FILE} ${BASE_XML}
+    install --mode 644 ${TMP_FILE} ${BASE_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry (base)"
     if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/base.lst; then
@@ -57,7 +57,7 @@ add_layout_to_registry() {
     popd >/dev/null
 
     # Now copy it over the top of the system's xkb evdev file
-    cp ${TMP_FILE} ${EVDEV_XML}
+    install --mode 644 ${TMP_FILE} ${EVDEV_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry (evdev)"
     if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/evdev.lst; then
