@@ -61,7 +61,7 @@ load_on_vconsole() {
         return 0
     fi
 
-	mkdir /etc/fish/conf.d/
+	mkdir -p /etc/fish/conf.d/
 	mv ${AUTO_LOAD_KEYS} /etc/fish/conf.d/midnight-vconsole.fish
 }
 
