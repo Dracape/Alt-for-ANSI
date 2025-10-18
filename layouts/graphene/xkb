@@ -46,9 +46,9 @@ xkb_symbols "graphene" {
     key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,             Down ] };
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,            Right ] };
     key <RTRN> { [        comma,     question ] };
-    // Caps-Lock ↔ Backspace
+    // BackSpace ↔ Caps-Lock ↔ Shift-Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
-    key <BKSP> { [  Caps_Lock ] };
+    key <BKSP> { [  Shift_Lock,     Shift_Lock,      Caps_Lock ] };
     modifier_map Lock { <BKSP> };
 
     // -- Bottom Row --
