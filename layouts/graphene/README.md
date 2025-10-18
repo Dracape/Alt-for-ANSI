@@ -5,15 +5,16 @@
 
 # Features added
 - **Mods**
-  - Angle
-  - Wide
+    * Angle
+    * Wide
+
 - **Swaps**
-  - *Caps Lock* ⟷ *BackSpace*
-  - **Mods**: The position of mods are significantly changed, which can be reviewed better using the [preview](#preview)
+    * *Caps Lock* ⟷ *Lock* (Base: *Shift*)
+    * **Mods**: The position of mods are significantly changed, which can be reviewed better using the [preview](#preview)
 - 3rd Layer
-  - **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout")**: Improved and highly optimised for [*Graphite*][graphite]
-    - Navigation support
-    - More symbols
+    * **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout")**: Improved and highly optimised for [*Graphite*][graphite]
+        - Navigation support
+        - More symbols
 - Minor optimisations in the layout for these improvements
 
 ---
@@ -25,31 +26,31 @@
 > [!NOTE]
 > Empty space in the upper layers generally[^unpreserved-layer-keys/weird-layer-distro] mean—keys from the *Base* layer are used  
 ### Base
-| | ← | → | Alt | % | – | | | | — | Alt | \| | • |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | b | l | d | w | z | Esc | ' | f | o | u | j | : |
-| BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , |
-| | Ctrl | x | m | c | q\|v | End | k | p | . | - | / | |
-| | Super | Shift | | | | | Space | AltGr | | | | |
+| | ← | → | Alt | % | – | | | | — | Alt | \| | • | Shift-Lock |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Tab | b | l | d | w | z | Esc | ' | f | o | u | j | : | |
+| BackSpace | n | r | t | s | g | Home | y | h | a | e | i | , | |
+| | Ctrl | x | m | c | q\|v | End | k | p | . | - | / | | |
+| | Super | Shift | | | | | Space | AltGr | | | | | |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| | | | Alt | | | | | | ] | Alt | ) | |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | B | L | D | W | Z | | " | F | O | U | J | ~ |
-| BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? | |
-| | Ctrl | X | M | C | Q\|V | Page Down | K | P | > | _ | < | |
-| | Super | **Shift** | | | | | Space | AltGr | | | | |
+| | | | Alt | | | | | | ] | Alt | ) | | **Shift-Lock** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Tab | B | L | D | W | Z | | " | F | O | U | J | ~ | |
+| BackSpace | N | R | T | S | G | | Y | H | A | E | I | ? | | |
+| | Ctrl | X | M | C | Q\|V | Page Down | K | P | > | _ | < | | |
+| | Super | **Shift** | | | | | Space | AltGr | | | | | |
 
 ### Symbol (AltGr)
-| | | | Alt | } | | | | | ] | Alt | ) | |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | |
-| Delete | 1 | ; | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | |
-| | Ctrl | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | 9 | |
-| | Super | Shift | | | | | Space | **AltGr** | | | | |
+| | | | Alt | } | | | | | ] | Alt | ) | Caps_Lock |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Tab | ! | { | [ | # | = | Insert | ^ | @ | ( | $ | ` | | |
+| Delete | 1 | ; | Return | 0 | & | Page Up | \ | Left | Up | Down | Right | | |
+| | Ctrl | 2 | 3 | 4 | 5\|+ | | * | 6 | 7 | 8 | 9 | | |
+| | Super | Shift | | | | | Space | **AltGr** | | | | | |
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
 ##### Closing bracket layer usage
