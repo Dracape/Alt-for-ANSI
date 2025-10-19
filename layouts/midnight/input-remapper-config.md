@@ -27,7 +27,14 @@ modify(Shift_L, key(apostrophe))
 ISO_Level3_Shift + apostrophe
 ```
 
-6. Parenthesis:
+6. Double-Asterisks with r
+```
+modify(ISO_Level3_Shift, key(apostrophe)).
+key(Left).
+modify(ISO_Level3_Shift, key(apostrophe))
+```
+
+7. Parenthesis:
 ```
 ISO_Level3_Shift + o + bar + Left
 ```
