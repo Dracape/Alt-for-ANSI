@@ -89,8 +89,8 @@ load_on_vconsole() {
 }
 
 add_map_virtual_console() {
-	mv ${MAP_FILE} /usr/share/kbd/keymaps/midnight.map
-	mv ${SUDOERS_CONFIG} /etc/sudoers.d/
+	install -m 644 ${MAP_FILE} /usr/share/kbd/keymaps/midnight.map
+	install -m 644 ${SUDOERS_CONFIG} /etc/sudoers.d/
 	load_on_vconsole
 }
 
