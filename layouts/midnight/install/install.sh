@@ -85,7 +85,7 @@ load_on_vconsole() {
     fi
 
 	mkdir -p /etc/fish/conf.d/
-	mv ${AUTO_LOAD_KEYS} /etc/fish/conf.d/midnight-vconsole.fish
+	install -m 644 ${AUTO_LOAD_KEYS} /etc/fish/conf.d/midnight-vconsole.fish
 }
 
 add_map_virtual_console() {
