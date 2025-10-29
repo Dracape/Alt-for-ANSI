@@ -9,7 +9,7 @@ MAP_FILE=${SCRIPT_DIR}/../map
 SUDOERS_CONFIG=${SCRIPT_DIR}/loadkeys-all
 AUTO_LOAD_KEYS=${SCRIPT_DIR}/config.fish
 XSLT_FILE=${SCRIPT_DIR}/xml.xslt
-XKB_DIR=/usr/share/X11/xkb
+XKB_DIR=/usr/share/xkeyboard-config-2
 SYMBOLS_DIR=${XKB_DIR}/symbols
 RULES_DIR=${XKB_DIR}/rules
 BASE_XML=${RULES_DIR}/base.xml
@@ -41,8 +41,8 @@ add_layout_to_registry() {
     install --mode 644 ${TMP_FILE} ${BASE_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry (base)"
-    if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/base.lst; then
-        sed -i '/^! variant/a \  midnight        us: English (Mid-Night)' /usr/share/X11/xkb/rules/base.lst
+    if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/xkeyboard-config-2/rules/base.lst; then
+        sed -i '/^! variant/a \  midnight        us: English (Mid-Night)' /usr/share/xkeyboard-config-2/rules/base.lst
     fi
 
     # Add the layout to evdev.xml and store the result in a temporary file
@@ -60,8 +60,8 @@ add_layout_to_registry() {
     install --mode 644 ${TMP_FILE} ${EVDEV_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry (evdev)"
-    if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/evdev.lst; then
-        sed -i '/^! variant/a \  midnight        us: English (Mid-Night)' /usr/share/X11/xkb/rules/evdev.lst
+    if ! grep -q "midnight        us: English (Mid-Night)" /usr/share/xkeyboard-config-2/rules/evdev.lst; then
+        sed -i '/^! variant/a \  midnight        us: English (Mid-Night)' /usr/share/xkeyboard-config-2/rules/evdev.lst
     fi
 }
 
@@ -110,11 +110,11 @@ uninstall_layout() {
 	if grep -q "MIDNIGHT BEGIN" "${EVDEV_XML}"; then
 		sed -i '/MIDNIGHT BEGIN/,/MIDNIGHT END/d' "${EVDEV_XML}"
 	fi
-	if grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/base.lst; then
-		sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/X11/xkb/rules/base.lst
+	if grep -q "midnight        us: English (Mid-Night)" /usr/share/xkeyboard-config-2/rules/base.lst; then
+		sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/xkeyboard-config-2/rules/base.lst
 	fi
-	if grep -q "midnight        us: English (Mid-Night)" /usr/share/X11/xkb/rules/evdev.lst; then
-		sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/X11/xkb/rules/evdev.lst
+	if grep -q "midnight        us: English (Mid-Night)" /usr/share/xkeyboard-config-2/rules/evdev.lst; then
+		sed -i '/midnight        us: English (Mid-Night)/d' /usr/share/xkeyboard-config-2/rules/evdev.lst
 	fi
 }
 
