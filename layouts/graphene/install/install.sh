@@ -6,7 +6,7 @@ set -e
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 LAYOUT_FILE=${SCRIPT_DIR}/../xkb
 XSLT_FILE=${SCRIPT_DIR}/xml.xslt
-XKB_DIR=/usr/share/X11/xkb
+XKB_DIR=/usr/share/xkeyboard-config-2
 SYMBOLS_DIR=${XKB_DIR}/symbols
 RULES_DIR=${XKB_DIR}/rules
 BASE_XML=${RULES_DIR}/base.xml
@@ -38,8 +38,8 @@ add_layout_to_registry() {
     install --mode 644 ${TMP_FILE} ${BASE_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry (base)"
-    if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/base.lst; then
-        sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/X11/xkb/rules/base.lst
+    if ! grep -q "graphene        us: English (Graphene)" /usr/share/xkeyboard-config-2/rules/base.lst; then
+        sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/xkeyboard-config-2/rules/base.lst
     fi
 
     # Add the layout to evdev.xml and store the result in a temporary file
@@ -57,8 +57,8 @@ add_layout_to_registry() {
     install --mode 644 ${TMP_FILE} ${EVDEV_XML}
     rm ${TMP_FILE}
     echo "Updated xkb registry (evdev)"
-    if ! grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
-        sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/X11/xkb/rules/evdev.lst
+    if ! grep -q "graphene        us: English (Graphene)" /usr/share/xkeyboard-config-2/rules/evdev.lst; then
+        sed -i '/^! variant/a \  graphene        us: English (Graphene)' /usr/share/xkeyboard-config-2/rules/evdev.lst
     fi
 }
 
@@ -89,11 +89,11 @@ uninstall_layout() {
 	if grep -q "GRAPHENE BEGIN" "${EVDEV_XML}"; then
 		sed -i '/GRAPHENE BEGIN/,/GRAPHENE END/d' "${EVDEV_XML}"
 	fi
-	if grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/base.lst; then
-		sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/base.lst
+	if grep -q "graphene        us: English (Graphene)" /usr/share/xkeyboard-config-2/rules/base.lst; then
+		sed -i '/graphene        us: English (Graphene)/d' /usr/share/xkeyboard-config-2/rules/base.lst
 	fi
-	if grep -q "graphene        us: English (Graphene)" /usr/share/X11/xkb/rules/evdev.lst; then
-		sed -i '/graphene        us: English (Graphene)/d' /usr/share/X11/xkb/rules/evdev.lst
+	if grep -q "graphene        us: English (Graphene)" /usr/share/xkeyboard-config-2/rules/evdev.lst; then
+		sed -i '/graphene        us: English (Graphene)/d' /usr/share/xkeyboard-config-2/rules/evdev.lst
 	fi
 }
 

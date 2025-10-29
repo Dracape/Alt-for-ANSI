@@ -29,7 +29,7 @@ cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
 sudo ./install.sh
 
 # Shift Preservation types
-EXTRA_PATH="/usr/share/X11/xkb/types/extra"
+EXTRA_PATH="/usr/share/xkeyboard-config-2/types/extra"
 TYPE_NAME="FOUR_LEVEL_SHIFT_PRESERVE"
 ## Symbols layer
 TYPE_DEFINITION='
