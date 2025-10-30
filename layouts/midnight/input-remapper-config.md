@@ -42,6 +42,7 @@ ISO_Level3_Shift + o + bar + Left
 8. Apostrophe:
 ```
 if_single(
+    key(period).key(BackSpace).
 	parallel(
 		repeat(2, key(apostrophe)),
 		key(Left)
