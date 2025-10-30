@@ -17,9 +17,9 @@ ISO_Level3_Shift + l + emdash + Left
 
 4. Double-Quotes:
 ```
-modify(Shift_L, key(apostrophe)).
+modify(Shift_R, key(apostrophe)).
 key(Left).
-modify(Shift_L, key(apostrophe))
+modify(Shift_R, key(apostrophe))
 ```
 
 5. Normalize Asterisk:

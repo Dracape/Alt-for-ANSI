@@ -41,7 +41,7 @@ xkb_symbols "midnight" {
     key <AC03> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            h,            H,       Return ] };
     key <AC04> { [            t,            T,            0 ] };
     key <AC05> { [            m,            M,    ampersand ] };
-    key <AC06> { [ Shift_L ] };
+    key <AC06> { [ ISO_Level2_Latch ] };
     key <AC07> { [            y,            Y,    backslash ] };
     key <AC08> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            c,            C,         Left ] };
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,           Up ] };
