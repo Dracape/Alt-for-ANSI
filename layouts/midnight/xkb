@@ -49,9 +49,9 @@ xkb_symbols "midnight" {
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,        Right ] };
     key <RTRN> { [ question ] };
     replace key <RTSH> { [        comma,         less,            9 ] };
-    // BackSpace ↔ Caps-Lock ↔ Shift-Lock
+    // BackSpace ↔ Caps-Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
-    key <BKSP> { [  Shift_Lock,     Shift_Lock,      Caps_Lock ] };
+    key <BKSP> { [ Caps_Lock ] };
     modifier_map Lock    { <BKSP> };
 
     // -- Bottom Row --
