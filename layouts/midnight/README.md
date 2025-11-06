@@ -24,7 +24,7 @@
 ### Base
 | Shift (Right) | ← | → | Alt | % | – | | | | — | Alt | \| | • | Caps-Lock |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | q | b | f | l | k | Escape | p | g | o | u | . | : | Insert |
+| Tab | q\|b | f | l | k | | Escape | p | g | o | u | . | : | Insert |
 | BackSpace | n | s | h | t | m | Shift (Left) | y | c | a | e | i | ? | |
 | | x | v | j | d | z | Home | End | ' | w | / | - | , | |
 | Back | Alt | r/Shift (Left) | | | | | Space | AltGr | Super (Left) | | | Forward | |
@@ -35,7 +35,7 @@ The top row is made keeping stretches in mind
 ### Shift
 | **Shift** (Right) | | | Alt | | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | Q | B | F | L | K | Menu | P | G | O | U | | ~ | |
+| Tab | Q\|B | F | L | K | | Menu | P | G | O | U | | ~ | |
 | BackSpace | N | S | H | T | M | **Shift** (Left) | Y | C | A | E | I | | | |
 | | X | V | J | D | Z | Home | End | " | W | > | _ | < | |
 | Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
@@ -43,7 +43,7 @@ The top row is made keeping stretches in mind
 ### Symbol (AltGr)
 | | | | Alt | } | | | | | ] | Alt | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | ! | @ | {} | [] | = | Menu | ^ | # | () | $ | ` | | |
+| Tab | !\|@ | {} | [] | = | | Menu | ^ | # | () | $ | ` | | |
 | Delete | 1 | ; | Enter | 0 | & | Shift (Left) | \ | Left | Up | Down | Right | | |
 | | 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 | |
 | Back | Alt | | | | | | Space | **AltGr** | Alt | | | Forward | |
