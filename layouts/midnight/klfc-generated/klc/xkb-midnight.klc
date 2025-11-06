@@ -24,11 +24,11 @@ LAYOUT
 0b	0	0	// QWERTY 0
 0c	OEM_MINUS	0	007c	0029	0029	// QWERTY -: |, ), )
 0d	OEM_PLUS	0	// QWERTY +
-10	B	1	b	B	0021	// QWERTY Q: b, B, !
-11	F	1	f	F	007b	// QWERTY W: f, F, {
-12	L	1	l	L	005b	// QWERTY E: l, L, [
-13	K	1	k	K	0023	// QWERTY R: k, K, #
-14	Q	1	q	Q	003d	// QWERTY T: q, Q, =
+10	Q	1	q	Q	0021	// QWERTY Q: q, Q, !
+11	B	1	b	B	007b	// QWERTY W: b, B, {
+12	F	1	f	F	005b	// QWERTY E: f, F, [
+13	L	1	l	L	0023	// QWERTY R: l, L, #
+14	K	1	k	K	003d	// QWERTY T: k, K, =
 15	Y	0	// QWERTY Y
 16	P	1	p	P	005e	// QWERTY U: p, P, ^
 17	G	1	g	G	0040	// QWERTY I: g, G, @
