@@ -305,7 +305,7 @@ if not GetKeyState("CapsLock", "T") {
   Send {Blind}{U+0062} ; b
 }
 Return
->!<^SC011::Send {Blind}{U+007b} ; {
+>!<^SC011::Send {Blind}{U+0040} ; @
 
 ; QWERTY E
 #if
@@ -323,7 +323,7 @@ if not GetKeyState("CapsLock", "T") {
   Send {Blind}{U+0066} ; f
 }
 Return
->!<^SC012::Send {Blind}{U+005b} ; [
+>!<^SC012::Send {Blind}{U+007b} ; {
 
 ; QWERTY R
 #if
@@ -341,7 +341,7 @@ if not GetKeyState("CapsLock", "T") {
   Send {Blind}{U+006c} ; l
 }
 Return
->!<^SC013::Send {Blind}{U+0023} ; #
+>!<^SC013::Send {Blind}{U+005b} ; [
 
 ; QWERTY T
 #if
@@ -401,7 +401,7 @@ if not GetKeyState("CapsLock", "T") {
   Send {Blind}{U+0067} ; g
 }
 Return
->!<^SC017::Send {Blind}{U+0040} ; @
+>!<^SC017::Send {Blind}{U+0023} ; #
 
 ; QWERTY O
 #if
