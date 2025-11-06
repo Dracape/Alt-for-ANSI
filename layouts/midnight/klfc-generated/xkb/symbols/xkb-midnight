@@ -19,11 +19,11 @@ xkb_symbols "basic" {
                  actions[Group1] = [ SetMods(mods=Control) ] };
     key <AE11> { [          bar,   parenright,   parenright ] };
     key <AE12> { [] };
-    key <AD01> { [            b,            B,       exclam ] };
-    key <AD02> { [            f,            F,    braceleft ] };
-    key <AD03> { [            l,            L,  bracketleft ] };
-    key <AD04> { [            k,            K,   numbersign ] };
-    key <AD05> { [            q,            Q,        equal ] };
+    key <AD01> { [            q,            Q,       exclam ] };
+    key <AD02> { [            b,            B,    braceleft ] };
+    key <AD03> { [            f,            F,  bracketleft ] };
+    key <AD04> { [            l,            L,   numbersign ] };
+    key <AD05> { [            k,            K,        equal ] };
     key <AD06> { [       Escape,         Menu,         Menu ] };
     key <AD07> { [            p,            P,  asciicircum ] };
     key <AD08> { [            g,            G,           at ] };
