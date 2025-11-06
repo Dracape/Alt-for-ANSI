@@ -22,10 +22,10 @@ xkb_symbols "midnight" {
 
     // -- First Row --
     key <AD01> { [            b,            B,           exclam ] };
-    key <AD02> { [            f,            F,        braceleft ] };
-    key <AD03> { [            l,            L,      bracketleft ] };
-    key <AD04> { [            k,            K,       numbersign ] };
-    key <AD05> { [            q,            Q,            equal ] };
+    key <AD02> { [            q,            Q,        braceleft ] };
+    key <AD03> { [            f,            F,      bracketleft ] };
+    key <AD04> { [            l,            L,       numbersign ] };
+    key <AD05> { [            k,            K,            equal ] };
     key <AD06> { [       Escape,         Menu,             Menu ] };
     key <AD07> { [            p,            P,      asciicircum ] };
     key <AD08> { [            g,            G,               at ] };
