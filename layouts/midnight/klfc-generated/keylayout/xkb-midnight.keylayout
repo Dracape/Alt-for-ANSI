@@ -37,11 +37,11 @@
       <key code="28" output="…" />
       <key code="25" output="—" />
       <key code="27" output="|" />
-      <key code="12" output="b" />
-      <key code="13" output="f" />
-      <key code="14" output="l" />
-      <key code="15" output="k" />
-      <key code="17" output="q" />
+      <key code="12" output="q" />
+      <key code="13" output="b" />
+      <key code="14" output="f" />
+      <key code="15" output="l" />
+      <key code="17" output="k" />
       <key code="16" output="&#27;" />
       <key code="32" output="p" />
       <key code="34" output="g" />
@@ -126,11 +126,11 @@
       <key code="28" output="…" />
       <key code="25" output="—" />
       <key code="27" output="|" />
-      <key code="12" output="B" />
-      <key code="13" output="F" />
-      <key code="14" output="L" />
-      <key code="15" output="K" />
-      <key code="17" output="Q" />
+      <key code="12" output="Q" />
+      <key code="13" output="B" />
+      <key code="14" output="F" />
+      <key code="15" output="L" />
+      <key code="17" output="K" />
       <key code="16" output="&#27;" />
       <key code="32" output="P" />
       <key code="34" output="G" />
@@ -215,11 +215,11 @@
       <key code="28" output="…" />
       <key code="25" output="]" />
       <key code="27" output=")" />
-      <key code="12" output="B" />
-      <key code="13" output="F" />
-      <key code="14" output="L" />
-      <key code="15" output="K" />
-      <key code="17" output="Q" />
+      <key code="12" output="Q" />
+      <key code="13" output="B" />
+      <key code="14" output="F" />
+      <key code="15" output="L" />
+      <key code="17" output="K" />
       <key code="32" output="P" />
       <key code="34" output="G" />
       <key code="31" output="O" />
@@ -387,11 +387,11 @@
       <key code="28" output="…" />
       <key code="25" output="]" />
       <key code="27" output=")" />
-      <key code="12" output="b" />
-      <key code="13" output="f" />
-      <key code="14" output="l" />
-      <key code="15" output="k" />
-      <key code="17" output="q" />
+      <key code="12" output="q" />
+      <key code="13" output="b" />
+      <key code="14" output="f" />
+      <key code="15" output="l" />
+      <key code="17" output="k" />
       <key code="32" output="p" />
       <key code="34" output="g" />
       <key code="31" output="o" />

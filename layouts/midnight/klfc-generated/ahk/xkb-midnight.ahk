@@ -104,16 +104,16 @@ Return
 *SC00c up::Send {Blind}{VKbdSC00c Up}
 *SC00d::Send {Blind}{VKbbSC00d DownR} ; QWERTY +: +
 *SC00d up::Send {Blind}{VKbbSC00d Up}
-*SC010::Send {Blind}{VK42SC010 DownR} ; QWERTY Q: B
-*SC010 up::Send {Blind}{VK42SC010 Up}
-*SC011::Send {Blind}{VK46SC011 DownR} ; QWERTY W: F
-*SC011 up::Send {Blind}{VK46SC011 Up}
-*SC012::Send {Blind}{VK4cSC012 DownR} ; QWERTY E: L
-*SC012 up::Send {Blind}{VK4cSC012 Up}
-*SC013::Send {Blind}{VK4bSC013 DownR} ; QWERTY R: K
-*SC013 up::Send {Blind}{VK4bSC013 Up}
-*SC014::Send {Blind}{VK51SC014 DownR} ; QWERTY T: Q
-*SC014 up::Send {Blind}{VK51SC014 Up}
+*SC010::Send {Blind}{VK51SC010 DownR} ; QWERTY Q: Q
+*SC010 up::Send {Blind}{VK51SC010 Up}
+*SC011::Send {Blind}{VK42SC011 DownR} ; QWERTY W: B
+*SC011 up::Send {Blind}{VK42SC011 Up}
+*SC012::Send {Blind}{VK46SC012 DownR} ; QWERTY E: F
+*SC012 up::Send {Blind}{VK46SC012 Up}
+*SC013::Send {Blind}{VK4cSC013 DownR} ; QWERTY R: L
+*SC013 up::Send {Blind}{VK4cSC013 Up}
+*SC014::Send {Blind}{VK4bSC014 DownR} ; QWERTY T: K
+*SC014 up::Send {Blind}{VK4bSC014 Up}
 *SC015::Send {Blind}{VK59SC015 DownR} ; QWERTY Y: Y
 *SC015 up::Send {Blind}{VK59SC015 Up}
 *SC016::Send {Blind}{VK50SC016 DownR} ; QWERTY U: P
@@ -275,16 +275,16 @@ SC00c::Send {Blind}{U+007c} ; |
 #if
 SC010::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+0062} ; b
+  Send {Blind}{U+0071} ; q
 } else {
-  Send {Blind}{U+0042} ; B
+  Send {Blind}{U+0051} ; Q
 }
 Return
 +SC010::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+0042} ; B
+  Send {Blind}{U+0051} ; Q
 } else {
-  Send {Blind}{U+0062} ; b
+  Send {Blind}{U+0071} ; q
 }
 Return
 >!<^SC010::Send {Blind}{U+0021} ; !
@@ -293,16 +293,16 @@ Return
 #if
 SC011::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+0066} ; f
+  Send {Blind}{U+0062} ; b
 } else {
-  Send {Blind}{U+0046} ; F
+  Send {Blind}{U+0042} ; B
 }
 Return
 +SC011::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+0046} ; F
+  Send {Blind}{U+0042} ; B
 } else {
-  Send {Blind}{U+0066} ; f
+  Send {Blind}{U+0062} ; b
 }
 Return
 >!<^SC011::Send {Blind}{U+007b} ; {
@@ -311,16 +311,16 @@ Return
 #if
 SC012::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+006c} ; l
+  Send {Blind}{U+0066} ; f
 } else {
-  Send {Blind}{U+004c} ; L
+  Send {Blind}{U+0046} ; F
 }
 Return
 +SC012::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+004c} ; L
+  Send {Blind}{U+0046} ; F
 } else {
-  Send {Blind}{U+006c} ; l
+  Send {Blind}{U+0066} ; f
 }
 Return
 >!<^SC012::Send {Blind}{U+005b} ; [
@@ -329,16 +329,16 @@ Return
 #if
 SC013::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+006b} ; k
+  Send {Blind}{U+006c} ; l
 } else {
-  Send {Blind}{U+004b} ; K
+  Send {Blind}{U+004c} ; L
 }
 Return
 +SC013::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+004b} ; K
+  Send {Blind}{U+004c} ; L
 } else {
-  Send {Blind}{U+006b} ; k
+  Send {Blind}{U+006c} ; l
 }
 Return
 >!<^SC013::Send {Blind}{U+0023} ; #
@@ -347,16 +347,16 @@ Return
 #if
 SC014::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+0071} ; q
+  Send {Blind}{U+006b} ; k
 } else {
-  Send {Blind}{U+0051} ; Q
+  Send {Blind}{U+004b} ; K
 }
 Return
 +SC014::
 if not GetKeyState("CapsLock", "T") {
-  Send {Blind}{U+0051} ; Q
+  Send {Blind}{U+004b} ; K
 } else {
-  Send {Blind}{U+0071} ; q
+  Send {Blind}{U+006b} ; k
 }
 Return
 >!<^SC014::Send {Blind}{U+003d} ; =
