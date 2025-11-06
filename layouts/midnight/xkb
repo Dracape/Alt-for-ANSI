@@ -22,13 +22,13 @@ xkb_symbols "midnight" {
 
     // -- First Row --
     key <AD01> { [            q,            Q,           exclam ] };
-    key <AD02> { [            b,            B,        braceleft ] };
-    key <AD03> { [            f,            F,      bracketleft ] };
-    key <AD04> { [            l,            L,       numbersign ] };
+    key <AD02> { [            b,            B,               at ] };
+    key <AD03> { [            f,            F,        braceleft ] };
+    key <AD04> { [            l,            L,      bracketleft ] };
     key <AD05> { [            k,            K,            equal ] };
     key <AD06> { [       Escape,         Menu,             Menu ] };
     key <AD07> { [            p,            P,      asciicircum ] };
-    key <AD08> { [            g,            G,               at ] };
+    key <AD08> { [            g,            G,       numbersign ] };
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [       period,       period,            grave ] };

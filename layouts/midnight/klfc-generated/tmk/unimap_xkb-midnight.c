@@ -19,10 +19,10 @@ enum macro_id {
     LIG__braceright_,
     LIG__parenright_,
     LIG__exclam_,
-    LIG__braceleft_,
-    LIG__numbersign_,
-    LIG__asciicircum_,
     LIG__at_,
+    LIG__braceleft_,
+    LIG__asciicircum_,
+    LIG__numbersign_,
     LIG__parenleft_,
     LIG__dollar_,
     LIG__ampersand_,
@@ -48,10 +48,10 @@ enum modifier_id {
 #define AC_FN8 ACTION_MACRO(LIG__braceright_)
 #define AC_FN9 ACTION_MACRO(LIG__parenright_)
 #define AC_FN10 ACTION_MACRO(LIG__exclam_)
-#define AC_FN11 ACTION_MACRO(LIG__braceleft_)
-#define AC_FN12 ACTION_MACRO(LIG__numbersign_)
+#define AC_FN11 ACTION_MACRO(LIG__at_)
+#define AC_FN12 ACTION_MACRO(LIG__braceleft_)
 #define AC_FN13 ACTION_MACRO(LIG__asciicircum_)
-#define AC_FN14 ACTION_MACRO(LIG__at_)
+#define AC_FN14 ACTION_MACRO(LIG__numbersign_)
 #define AC_FN15 ACTION_MACRO(LIG__parenleft_)
 #define AC_FN16 ACTION_MACRO(LIG__dollar_)
 #define AC_FN17 ACTION_MACRO(LIG__ampersand_)
@@ -88,7 +88,7 @@ const action_t actionmaps[][UNIMAP_ROWS][UNIMAP_COLS] PROGMEM = {
               TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
     TRNS,     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS,TRNS,         TRNS,TRNS,TRNS,
     TRNS,TRNS,TRNS,TRNS, FN8,TRNS,TRNS,TRNS,TRNS,RBRC,TRNS, FN9,TRNS,TRNS,TRNS,     TRNS,TRNS,TRNS,    TRNS,TRNS,TRNS,TRNS,
-    TRNS,FN10,FN11,LBRC,FN12, EQL, APP,FN13,FN14,FN15,FN16, GRV,TRNS,     TRNS,     TRNS,TRNS,TRNS,    TRNS,TRNS,TRNS,TRNS,
+    TRNS,FN10,FN11,FN12,LBRC, EQL, APP,FN13,FN14,FN15,FN16, GRV,TRNS,     TRNS,     TRNS,TRNS,TRNS,    TRNS,TRNS,TRNS,TRNS,
      DEL,   1,SCLN, ENT,   0,FN17,TRNS,BSLS,LEFT,  UP,DOWN,RGHT,     TRNS,TRNS,                        TRNS,TRNS,TRNS,TRNS,
        2,TRNS,   3,   4,   5,FN18,PGUP,PGDN,FN19,   6,   7,   8,     TRNS,   9,          TRNS,         TRNS,TRNS,TRNS,TRNS,
     TRNS,TRNS,TRNS,TRNS,          TRNS,          TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS,TRNS,TRNS,    TRNS,     TRNS,TRNS
@@ -133,21 +133,21 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
             return record->event.pressed ?
                    MACRO(SM(), CM(), D(LSFT), T(1), U(LSFT), RM(), END) :
                    MACRO_NONE;
+        case LIG__at_:
+            return record->event.pressed ?
+                   MACRO(SM(), CM(), D(LSFT), T(2), U(LSFT), RM(), END) :
+                   MACRO_NONE;
         case LIG__braceleft_:
             return record->event.pressed ?
                    MACRO(SM(), CM(), D(LSFT), T(LBRC), U(LSFT), RM(), END) :
-                   MACRO_NONE;
-        case LIG__numbersign_:
-            return record->event.pressed ?
-                   MACRO(SM(), CM(), D(LSFT), T(3), U(LSFT), RM(), END) :
                    MACRO_NONE;
         case LIG__asciicircum_:
             return record->event.pressed ?
                    MACRO(SM(), CM(), D(LSFT), T(6), U(LSFT), RM(), END) :
                    MACRO_NONE;
-        case LIG__at_:
+        case LIG__numbersign_:
             return record->event.pressed ?
-                   MACRO(SM(), CM(), D(LSFT), T(2), U(LSFT), RM(), END) :
+                   MACRO(SM(), CM(), D(LSFT), T(3), U(LSFT), RM(), END) :
                    MACRO_NONE;
         case LIG__parenleft_:
             return record->event.pressed ?

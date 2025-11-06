@@ -304,12 +304,12 @@
       <key code="25" output="]" />
       <key code="27" output=")" />
       <key code="12" output="!" />
-      <key code="13" output="{" />
-      <key code="14" output="[" />
-      <key code="15" output="#" />
+      <key code="13" output="@" />
+      <key code="14" output="{" />
+      <key code="15" output="[" />
       <key code="17" output="=" />
       <key code="32" output="^" />
-      <key code="34" output="@" />
+      <key code="34" output="#" />
       <key code="31" output="(" />
       <key code="35" output="$" />
       <key code="33" output="`" />
@@ -476,12 +476,12 @@
       <key code="25" output="]" />
       <key code="27" output=")" />
       <key code="12" output="!" />
-      <key code="13" output="{" />
-      <key code="14" output="[" />
-      <key code="15" output="#" />
+      <key code="13" output="@" />
+      <key code="14" output="{" />
+      <key code="15" output="[" />
       <key code="17" output="=" />
       <key code="32" output="^" />
-      <key code="34" output="@" />
+      <key code="34" output="#" />
       <key code="31" output="(" />
       <key code="35" output="$" />
       <key code="33" output="`" />
