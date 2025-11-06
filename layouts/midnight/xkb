@@ -21,8 +21,8 @@ xkb_symbols "midnight" {
     key <AE12> { [ enfilledcircbullet ] }; // For where formatting isn't supported
 
     // -- First Row --
-    key <AD01> { [            b,            B,           exclam ] };
-    key <AD02> { [            q,            Q,        braceleft ] };
+    key <AD01> { [            q,            Q,           exclam ] };
+    key <AD02> { [            b,            B,        braceleft ] };
     key <AD03> { [            f,            F,      bracketleft ] };
     key <AD04> { [            l,            L,       numbersign ] };
     key <AD05> { [            k,            K,            equal ] };
