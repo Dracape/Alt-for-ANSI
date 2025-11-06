@@ -22,7 +22,7 @@ keyboard layouts, that are implementations of the 2 highest rated keyboard layou
 # Installation (*Linux*)
 ## Initial
 The layouts can be installed by running  
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/Dracape/Alt-for-ANSI/main/install.sh)"`
+`curl -fsSL https://raw.githubusercontent.com/Dracape/Alt-for-ANSI/main/install.sh | bash`
 
 ## Further
 ##### Set the layout as the default for any new users created (optional)
