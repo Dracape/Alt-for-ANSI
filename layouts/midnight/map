@@ -22,8 +22,8 @@ keycode  11  = Control
 keycode  12  = bar           parenright   parenright
 keycode  13  = 0x29BF
 
-keycode  16  =  b             B            exclam
-keycode  17  =  q             Q            braceleft
+keycode  16  =  q             Q            exclam
+keycode  17  =  b             B            braceleft
 keycode  18  =  f             F            bracketleft
 keycode  19  =  l             L            numbersign
 keycode  20  =  k             K            equal
