@@ -23,10 +23,10 @@ keycode  12  = bar           parenright   parenright
 keycode  13  = 0x29BF
 
 keycode  16  =  b             B            exclam
-keycode  17  =  f             F            braceleft
-keycode  18  =  l             L            bracketleft
-keycode  19  =  k             K            numbersign
-keycode  20  =  q             Q            equal
+keycode  17  =  q             Q            braceleft
+keycode  18  =  f             F            bracketleft
+keycode  19  =  l             L            numbersign
+keycode  20  =  k             K            equal
 keycode  21  =  Escape        Compose         Compose
 keycode  22  =  p             P            asciicircum
 keycode  23  =  g             G            at
