@@ -5,15 +5,17 @@
 
 # Features added
 - **Mods**
-    * Angle
+    * Angle (first & bottom row)
     * Wide
+    * Sticky (one-shot) shift
 - **Swaps**
     * *BackSpace* ⟷ *Lock* (Base: *Shift*)
     * **Mods**: The position of mods are significantly changed, which can be reviewed better using the [preview](#preview)
 - 3rd Layer
-    * **[*Arensito* symbol layer](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout")**: Improved and highly optimised
+    * [***Arensito* symbol layer**](https://www.pvv.org/~hakonhal/main.cgi/keyboard "The homepage for the *Arensito* layout"): Improved and highly optimised
         - Navigation support
         - More symbols
+- Non-standard symbols on top row
 
 --- 
 
@@ -22,29 +24,29 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| Shift (Right) | ← | → | Alt | % | – | | | | — | Alt | \| | • | Caps-Lock |
+| Shift (Right) | ← | → | Control | % | – | | | | — | Control | \| | • | Caps-Lock |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | q\|b | f | l | k | | Escape | p | g | o | u | . | : | Insert |
-| BackSpace | n | s | h | t | m | Shift (Left) | y | c | a | e | i | ? | |
+| BackSpace | n | s | h | t | m | Sticky Shift | y | c | a | e | i | ? | |
 | | x | v | j | d | z | Home | End | ' | w | / | - | , | |
-| Back | Alt | r/Shift (Left) | | | | | Space | AltGr | Super (Left) | | | Forward | |
+| Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward | |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| **Shift** (Right) | | | Alt | | | | | | ] | Alt | ) | | |
+| **Shift** (Right) | | | Control | | | | | | ] | Control | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | Q\|B | F | L | K | | Menu | P | G | O | U | | ~ | |
-| BackSpace | N | S | H | T | M | **Shift** (Left) | Y | C | A | E | I | | | |
+| BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I | | | |
 | | X | V | J | D | Z | Home | End | " | W | > | _ | < | |
 | Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
 
 ### Symbol (AltGr)
-| | | | Alt | } | | | | | ] | Alt | ) | | |
+| | | | Control | } | | | | | ] | Control | ) | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | !\|@ | {} | [] | = | | Menu | ^ | # | () | $ | ` | | |
-| Delete | 1 | ; | Enter | 0 | & | Shift (Left) | \ | Left | Up | Down | Right | | |
+| Delete | 1 | ; | Enter | 0 | & | Sticky Shift | \ | Left | Up | Down | Right | | |
 | | 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 | |
 | Back | Alt | | | | | | Space | **AltGr** | Alt | | | Forward | |
 
