@@ -4,7 +4,7 @@ xkb_symbols "graphene" {
     name[Group1]= "English (Graphene)";
 
     // -- Top Row --
-    key <TLDE> { [ NoSymbol ] };
+    key <TLDE> { [ Shift_R ] };
     key <AE01> { [ leftarrow  ] };
     key <AE02> { [ rightarrow ] };
     replace key <AE03> { [  Alt_L,         Meta_L ] };
@@ -19,14 +19,14 @@ xkb_symbols "graphene" {
     key <AE12> { [ enfilledcircbullet ] }; // For where formatting isn't supported
 
     // -- First Row --
-    key <AD01> { [            b,            B,           exclam ] };
-    key <AD02> { [            l,            L,        braceleft ] };
-    key <AD03> { [            d,            D,      bracketleft ] };
-    key <AD04> { [            w,            W,       numbersign ] };
-    key <AD05> { [            z,            Z,            equal ] };
+    key <AD01> { [            z,            Z,           exclam ] };
+    key <AD02> { [            b,            B,               at ] };
+    key <AD03> { [            l,            L,        braceleft ] };
+    key <AD04> { [            d,            D,      bracketleft ] };
+    key <AD05> { [            w,            W,            equal ] };
     key <AD06> { [       Escape,       	 Menu,             Menu ] };
     key <AD07> { [   apostrophe,     quotedbl,      asciicircum ] };
-    key <AD08> { [            f,            F,               at ] };
+    key <AD08> { [            f,            F,       numbersign ] };
     key <AD09> { [            o,            O,        parenleft ] };
     key <AD10> { [            u,            U,           dollar ] };
     key <AD11> { [            j,            J,            grave ] };
