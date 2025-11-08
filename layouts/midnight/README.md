@@ -40,7 +40,7 @@ The top row is made keeping stretches in mind
 | Tab | Q\|B | F | L | K | | Menu | P | G | O | U | | ~ | |
 | BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I | | | |
 | | X | V | J | D | Z | Home | End | " | W | > | _ | < | |
-| Back | Alt | R | | | | | Space | AltGr | Alt | | | | Forward |
+| Back | Alt | R | | | | | Space | AltGr | Super | | | | Forward |
 
 ### Symbol (AltGr)
 | | | | Control | } | | | | | ] | Control | ) | | |
@@ -48,7 +48,7 @@ The top row is made keeping stretches in mind
 | Tab | !\|@ | {} | [] | = | | Menu | ^ | # | () | $ | ` | | |
 | Delete | 1 | ; | Enter | 0 | & | Sticky Shift | \ | Left | Up | Down | Right | | |
 | | 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 | |
-| Back | Alt | | | | | | Space | **AltGr** | Alt | | | Forward | |
+| Back | Alt | | | | | | Space | **AltGr** | Super | | | Forward | |
 
 > [!TIP]
 > Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) to make `r` act like *Shift* when held
