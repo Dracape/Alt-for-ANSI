@@ -24,31 +24,31 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| Shift (Right) | ← | → | Control | – | % | | | | — | Control | \| | • | Caps-Lock |
+| <font color="#98FB98">Shift (Right)</font> | <font color="#98FB98">→</font> | <font color="#ADD8E6">→</font> | <font color="#ADD8E6">Control</font> | <font color="#ADD8E6">–</font> | <font color="#FFC0CB">%</font> |  |  |  | <font color="#FFC0CB">—</font> | <font color="#ADD8E6">Control</font> | <font color="#ADD8E6">\|</font> | <font color="#98FB98">•</font> | <font color="#ADD8E6">Caps-Lock</font> |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | q\|b | f | l | k | | Escape | p | g | o | u | . | : | Insert |
-| BackSpace | n | s | h | t | m | Sticky Shift | y | c | a | e | i | ? | |
-| | x | v | j | d | z | Home | End | ' | w | / | - | , | |
-| Back | Alt | r | | | | | Space | AltGr | Super (Left) | | | Forward | |
+| <font color="#98FB98">Tab</font> | <font color="#98FB98">q\|b</font> | <font color="#ADD8E6">f</font> | <font color="#FFC0CB">l</font> | <font color="#FFDAB9">k</font> |  | <font color="#FFDAB9">Escape</font> | <font color="#FFE4C4">p</font> | <font color="#FFE4C4">g</font> | <font color="#FFC0CB">o</font> | <font color="#ADD8E6">u</font> | <font color="#98FB98">.</font> | <font color="#98FB98">:</font> | <font color="#98FB98">Insert</font> |
+| <font color="#98FB98">BackSpace</font> | <font color="#98FB98">n</font> | <font color="#ADD8E6">s</font> | <font color="#FFC0CB">h</font> | <font color="#FFDAB9">t</font> | <font color="#FFDAB9">m</font> | <font color="#FFA07A">Sticky Shift</font> | <font color="#FFE4C4">y</font> | <font color="#FFE4C4">c</font> | <font color="#FFC0CB">a</font> | <font color="#ADD8E6">e</font> | <font color="#98FB98">i</font> | <font color="#98FB98">?</font> |  |
+|  | <font color="#98FB98">x</font> | <font color="#ADD8E6">v</font> | <font color="#FFC0CB">j</font> | <font color="#FFDAB9">d</font> | <font color="#FFDAB9">z</font> | <font color="#FFDAB9">Home</font> | <font color="#FFE4C4">End</font> | <font color="#FFE4C4">'</font> | <font color="#FFE4C4">w</font> | <font color="#FFC0CB">/</font> | <font color="#ADD8E6">-</font> | <font color="#98FB98">,</font> |  |
+| <font color="#98FB98">Back</font> | <font color="#FFFFFF">Alt</font> | <font color="#FFFFFF">r</font> |  |  |  |  | <font color="#FFFFFF">Space</font> | <font color="#FFFFFF">AltGr</font> | <font color="#FFFFFF">Super (Left)</font> |  |  | <font color="#98FB98">Forward</font> |  |
 #### Top row usage
 The top row is made keeping stretches in mind
 - normally, you are only expected to use the keys here not available in the symbols layer
 - The other keys are only meant to be used when you are using numpad/mouse, and *AltGr* ins't accessible
 ### Shift
-| **Shift** (Right) | | | Control | | | | | | ] | Control | ) | | |
+| <font color="#98FB98">**Shift** (Right)</font> |  |  | <font color="#ADD8E6">Control</font> |  |  |  |  |  | <font color="#FFC0CB">]</font> | <font color="#ADD8E6">Control</font> | <font color="#ADD8E6">)</font> |  |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | Q\|B | F | L | K | | Menu | P | G | O | U | | ~ | |
-| BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I | | | |
-| | X | V | J | D | Z | Home | End | " | W | > | _ | < | |
-| Back | Alt | R | | | | | Space | AltGr | Super | | | | Forward |
+| <font color="#98FB98">Tab</font> | <font color="#98FB98">Q\|B</font> | <font color="#ADD8E6">F</font> | <font color="#FFC0CB">L</font> | <font color="#FFDAB9">K</font> |  | <font color="#FFDAB9">Menu</font> | <font color="#FFE4C4">P</font> | <font color="#FFE4C4">G</font> | <font color="#FFC0CB">O</font> | <font color="#ADD8E6">U</font> |  | <font color="#98FB98">~</font> |  |
+| <font color="#98FB98">BackSpace</font> | <font color="#98FB98">N</font> | <font color="#ADD8E6">S</font> | <font color="#FFC0CB">H</font> | <font color="#FFDAB9">T</font> | <font color="#FFDAB9">M</font> | <font color="#FFA07A">**Sticky Shift**</font> | <font color="#FFE4C4">Y</font> | <font color="#FFE4C4">C</font> | <font color="#FFC0CB">A</font> | <font color="#ADD8E6">E</font> | <font color="#98FB98">I</font> |  |  |
+|  | <font color="#98FB98">X</font> | <font color="#ADD8E6">V</font> | <font color="#FFC0CB">J</font> | <font color="#FFDAB9">D</font> | <font color="#FFDAB9">Z</font> | <font color="#FFDAB9">Home</font> | <font color="#FFE4C4">End</font> | <font color="#FFE4C4">"</font> | <font color="#FFE4C4">W</font> | <font color="#FFC0CB">></font> | <font color="#ADD8E6">_</font> | <font color="#98FB98"><</font> |  |
+| <font color="#98FB98">Back</font> | <font color="#FFFFFF">Alt</font> | <font color="#FFFFFF">R</font> |  |  |  |  | <font color="#FFFFFF">Space</font> | <font color="#FFFFFF">AltGr</font> | <font color="#FFFFFF">Super</font> |  |  | <font color="#98FB98">Forward</font> |  |
 
 ### Symbol (AltGr)
-| | | | Control | } | | | | | ] | Control | ) | | |
+|  |  |  | <font color="#ADD8E6">Control</font> | <font color="#ADD8E6">}</font> |  |  |  |  | <font color="#FFC0CB">]</font> | <font color="#ADD8E6">Control</font> | <font color="#ADD8E6">)</font> |  |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Tab | !\|@ | {} | [] | = | | Menu | ^ | # | () | $ | ` | | |
-| Delete | 1 | ; | Enter | 0 | & | Sticky Shift | \ | Left | Up | Down | Right | | |
-| | 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 | |
-| Back | Alt | | | | | | Space | **AltGr** | Super | | | Forward | |
+| <font color="#98FB98">Tab</font> | <font color="#98FB98">!\|@</font> | <font color="#ADD8E6">{}</font> | <font color="#FFC0CB">[]</font> | <font color="#FFDAB9">=</font> |  | <font color="#FFDAB9">Menu</font> | <font color="#FFE4C4">^</font> | <font color="#FFE4C4">#</font> | <font color="#FFC0CB">()</font> | <font color="#ADD8E6">$</font> | <font color="#98FB98">`</font> |  |  |
+| <font color="#98FB98">Delete</font> | <font color="#98FB98">1</font> | <font color="#ADD8E6">;</font> | <font color="#FFC0CB">Enter</font> | <font color="#FFDAB9">0</font> | <font color="#FFDAB9">&</font> | <font color="#FFA07A">Sticky Shift</font> | <font color="#FFE4C4">\</font> | <font color="#FFE4C4">Left</font> | <font color="#FFC0CB">Up</font> | <font color="#ADD8E6">Down</font> | <font color="#98FB98">Right</font> |  |  |
+|  | <font color="#98FB98">2</font> | <font color="#ADD8E6">3</font> | <font color="#FFC0CB">4</font> | <font color="#FFDAB9">5</font> | <font color="#FFDAB9">+</font> | <font color="#FFDAB9">Page Up</font> | <font color="#FFE4C4">Page Down</font> | <font color="#FFE4C4">*</font> | <font color="#FFE4C4">6</font> | <font color="#FFC0CB">7</font> | <font color="#ADD8E6">8</font> | <font color="#98FB98">9</font> |  |
+| <font color="#98FB98">Back</font> | <font color="#FFFFFF">Alt</font> |  |  |  |  |  | <font color="#FFFFFF">Space</font> | <font color="#FFFFFF">**AltGr**</font> | <font color="#FFFFFF">Super</font> |  |  | <font color="#98FB98">Forward</font> |  |
 
 > [!TIP]
 > Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) to make `r` act like *Shift* when held
