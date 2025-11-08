@@ -8,8 +8,8 @@ xkb_symbols "graphene" {
     key <AE01> { [ leftarrow  ] };
     key <AE02> { [ rightarrow ] };
     replace key <AE03> { [  Alt_L,         Meta_L ] };
-    key <AE04> { [        percent,        percent,      braceright ] };
-    key <AE05> { [ endash ] };
+    key <AE04> { [ endash ] };
+    key <AE05> { [        percent,        percent,      braceright ] };
     key <AE06> { [ NoSymbol ] };
     key <AE07> { [ NoSymbol ] };
     key <AE08> { [ ellipsis ] };
