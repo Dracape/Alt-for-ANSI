@@ -24,7 +24,7 @@
 > Only the keys that are expected to be used are shown  
 
 ### Base
-| Shift (Right) | ← | → | Control | % | – | | | | — | Control | \| | • | Caps-Lock |
+| Shift (Right) | ← | → | Control | – | % | | | | — | Control | \| | • | Caps-Lock |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | q\|b | f | l | k | | Escape | p | g | o | u | . | : | Insert |
 | BackSpace | n | s | h | t | m | Sticky Shift | y | c | a | e | i | ? | |
