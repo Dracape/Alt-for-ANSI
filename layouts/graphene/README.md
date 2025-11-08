@@ -26,6 +26,10 @@
 
 > [!NOTE]
 > Empty space in the upper layers generally[^unpreserved-layer-keys/weird-layer-distro] mean—keys from the *Base* layer are used  
+
+> [!NOTE]
+> Color in tables is not supported on *GitHub*, use some other renderer (e.g. [*Apostrophe*](https://apps.gnome.org/Apostrophe/)) to view it colors that indicate the finger assigned to each key
+
 ### Base
 | <font color="#98FB98">Shift (Right)</font> | <font color="#98FB98">←</font> | <font color="#ADD8E6">→</font> | <font color="#ADD8E6">Alt</font> | <font color="#ADD8E6">–</font> | <font color="#FFC0CB">%</font> | | | | <font color="#FFC0CB">—</font> | <font color="#ADD8E6">Alt</font> | <font color="#ADD8E6">\|</font> | <font color="#98FB98">•</font> | <font color="#ADD8E6">Shift-Lock</font> |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
