@@ -84,11 +84,17 @@ load_on_vconsole() {
         return 0
     fi
 
-	if mkdir -p /etc/fish/conf.d/
-	then
-		echo 'Made directory for configuration'
-	fi
-	install -m 644 ${AUTO_LOAD_KEYS} /etc/fish/conf.d/midnight-vconsole.fish
+    echo "DEBUG: Checking /etc and /etc/fish"
+    ls -ld /etc /etc/fish || echo "DEBUG: /etc/fish does not exist"
+
+    echo "DEBUG: Attempting to create /etc/fish/conf.d/"
+    mkdir -v -p /etc/fish/conf.d/ || true
+
+    echo "DEBUG: Checking directory status"
+    ls -ld /etc/fish/conf.d/
+
+    echo "DEBUG: Now attempting to install the file"
+    install -v -m 644 "${AUTO_LOAD_KEYS}" /etc/fish/conf.d/midnight-vconsole.fish
 }
 
 add_map_virtual_console() {
