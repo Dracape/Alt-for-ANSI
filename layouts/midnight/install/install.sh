@@ -84,7 +84,9 @@ load_on_vconsole() {
         return 0
     fi
 
-	mkdir -p /etc/fish/conf.d/
+	if mkdir -p /etc/fish/conf.d/
+		echo 'Made directory for configuration'
+	fi
 	install -m 644 ${AUTO_LOAD_KEYS} /etc/fish/conf.d/midnight-vconsole.fish
 }
 
