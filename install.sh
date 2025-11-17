@@ -92,7 +92,7 @@ echo 'Select a layout to activate:'
 echo '1) Mid-Night'
 echo '2) Graphene'
 
-read -p 'Enter your choice (1 or 2): ' choice -n 1 -r
+read -p 'Enter your choice (1 or 2): ' -n 1 -r choice
 
 case $choice in
     1)
