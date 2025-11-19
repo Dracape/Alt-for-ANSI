@@ -54,7 +54,7 @@ The top row is made keeping stretches in mind
 | <font color="#98FB98">Back</font> | <font color="#FFFFFF">Alt</font> |  |  |  |  |  | <font color="#FFFFFF">Space</font> | <font color="#FFFFFF">**AltGr**</font> | <font color="#FFFFFF">Super</font> |  |  | <font color="#98FB98">Forward</font> |  |
 
 > [!TIP]
-> Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) to make `r` act like *Shift* when held
+> Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) for auto-pairing
 
 #### Unusual brackets
 It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
