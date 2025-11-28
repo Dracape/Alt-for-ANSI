@@ -55,9 +55,3 @@ The top row is made keeping stretches in mind
 
 > [!TIP]
 > Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) for auto-pairing
-
-#### Unusual brackets
-It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
-##### Closing bracket layer usage
-- **Symbol**: When used together; close pair with the same modifier
-- **Shift**: When used dispersed; alterate the pair with different modifiers
