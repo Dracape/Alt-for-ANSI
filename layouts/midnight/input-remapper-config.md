@@ -50,3 +50,8 @@ if_single(
 	key(apostrophe)
 )
 ```
+
+9. Triple period (`.`)
+```
+repeat(2,key(period))
+```
