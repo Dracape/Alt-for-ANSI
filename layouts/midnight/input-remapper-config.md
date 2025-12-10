@@ -55,8 +55,3 @@ if_single(
 ```
 repeat(2,key(period))
 ```
-
-10. Repeat `s` (`r` + `s`)
-```
-s
-```
