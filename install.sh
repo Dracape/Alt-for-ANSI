@@ -9,7 +9,7 @@ case $1 in
 	*)
 		REPONAME='Alt-for-ANSI'
 		MAIN_DIR="$(mktemp --directory "${TMPDIR:-/tmp}"'/'"$REPONAME"'-XXXXXXXXXXX')"
-		git clone https://github.com/Dracape/"$REPONAME".git "$MAIN_DIR"
+		git clone --filter=blob:none https://github.com/Dracape/"$REPONAME".git "$MAIN_DIR"
 		;;
 esac
 
