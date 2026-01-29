@@ -29,59 +29,19 @@ cd "$MIDNIGHT_INSTALL_SCRIPT_DIR"
 sudo ./install.sh
 
 # Shift Preservation types
-EXTRA_PATH="/usr/share/xkeyboard-config-2/types/extra"
-TYPE_NAME="FOUR_LEVEL_SHIFT_PRESERVE"
-## Symbols layer
-TYPE_DEFINITION='
-    type "FOUR_LEVEL_SHIFT_PRESERVE" {
-	modifiers = Shift + LevelThree;
-	map[None] = Level1;
-	map[Shift] = Level2;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level3;
-	preserve[Shift+LevelThree] = Shift;
-	level_name[Level1] = "Base";
-	level_name[Level2] = "Shift";
-	level_name[Level3] = "AltGr";
-	level_name[Level4] = "Shift AltGr";
-    };
-'
+sudo mv "$MAIN_DIR"/types /usr/share/xkeyboard-config-2/types/alt-for-ansi && echo "Successfully wrote the new types"
 
-if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
-  TMP_FILE=$(mktemp)
-  awk -v def="$TYPE_DEFINITION" '/^};/ {print def} {print}' "$EXTRA_PATH" > "$TMP_FILE"
-  sudo tee "$EXTRA_PATH" < "$TMP_FILE" > "/dev/null"
-  rm "$TMP_FILE"
-  echo "Successfully added the $TYPE_NAME type."
+COMPLETE_PATH="/usr/share/xkeyboard-config-2/types/complete"
+INCLUDE_STATEMENT='    include "alt-for-ansi"'
+
+if ! grep -q "$INCLUDE_STATEMENT" "$COMPLETE_PATH"; then
+    TMP_FILE=$(mktemp)
+    awk -v inc="$INCLUDE_STATEMENT" '/^};/ {print inc} {print}' "$COMPLETE_PATH" > "$TMP_FILE"
+    sudo tee "$COMPLETE_PATH" < "$TMP_FILE" > /dev/null
+    rm "$TMP_FILE"
+    echo "Successfully added include statement to $COMPLETE_PATH"
 else
-  echo "The $TYPE_NAME type already exists. No changes made."
-fi
-
-## Base layer
-TYPE_NAME="SHIFT_PRESERVES_LEVEL1"
-TYPE_DEFINITION='
-    type "SHIFT_PRESERVES_LEVEL1" {
-	modifiers = Shift + LevelThree;
-	map[None] = Level1;
-	map[Shift] = Level1;
-	map[LevelThree] = Level3;
-	map[Shift+LevelThree] = Level4;
-	preserve[Shift] = Shift;
-	level_name[Level1] = "Base";
-	level_name[Level2] = "Shift";
-	level_name[Level3] = "AltGr";
-	level_name[Level4] = "Shift AltGr";
-    };
-'
-
-if ! grep -q "$TYPE_NAME" "$EXTRA_PATH"; then
-  TMP_FILE=$(mktemp)
-  awk -v def="$TYPE_DEFINITION" '/^};/ {print def} {print}' "$EXTRA_PATH" > "$TMP_FILE"
-  sudo tee "$EXTRA_PATH" < "$TMP_FILE" > /dev/null
-  rm "$TMP_FILE"
-  echo "Successfully added the $TYPE_NAME type."
-else
-  echo "The $TYPE_NAME type already exists. No changes made."
+    echo "Include statement already exists in $COMPLETE_PATH. No changes made."
 fi
 
 echo ''

@@ -1,0 +1,27 @@
+default partial xkb_types "alt-for-ansi" {
+    type "FOUR_LEVEL_SHIFT_PRESERVE" {
+	modifiers = Shift + LevelThree;
+	map[None] = Level1;
+	map[Shift] = Level2;
+	map[LevelThree] = Level3;
+	map[Shift+LevelThree] = Level3;
+	preserve[Shift+LevelThree] = Shift;
+	level_name[Level1] = "Base";
+	level_name[Level2] = "Shift";
+	level_name[Level3] = "AltGr";
+	level_name[Level4] = "Shift AltGr";
+    };
+
+    type "SHIFT_PRESERVES_LEVEL1" {
+	modifiers = Shift + LevelThree;
+	map[None] = Level1;
+	map[Shift] = Level1;
+	map[LevelThree] = Level3;
+	map[Shift+LevelThree] = Level4;
+	preserve[Shift] = Shift;
+	level_name[Level1] = "Base";
+	level_name[Level2] = "Shift";
+	level_name[Level3] = "AltGr";
+	level_name[Level4] = "Shift AltGr";
+    };
+};
