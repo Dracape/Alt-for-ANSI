@@ -56,12 +56,16 @@ The top row is made keeping stretches in mind
 | <font color="#98FB98">Delete</font> | <font color="#98FB98">1</font> | <font color="#ADD8E6">;</font> | <font color="#FFC0CB">Return</font> | <font color="#FFDAB9">0</font> | <font color="#FFDAB9">&</font> | <font color="#FFA07A">Page Up</font> | <font color="#E6E6FA">\\</font> | <font color="#E6E6FA">Left</font> | <font color="#FFC0CB">Up</font> | <font color="#ADD8E6">Down</font> | <font color="#98FB98">Right</font> | | |
 | | <font color="#98FB98">Ctrl</font> | <font color="#ADD8E6">2</font> | <font color="#FFC0CB">3</font> | <font color="#FFDAB9">4</font> | <font color="#FFDAB9">5\|+</font> | | <font color="#E6E6FA">*</font> | <font color="#E6E6FA">6</font> | <font color="#E6E6FA">7</font> | <font color="#FFC0CB">8</font> | <font color="#ADD8E6">9</font> | | |
 | | <font color="#FFFFFF">Super</font> | <font color="#FFFFFF">Sticky Shift</font> | | | | | <font color="#FFFFFF">Space</font> | <font color="#FFFFFF">**AltGr**</font> | | | | | |
-#### Unusual brackets
-It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row
-##### Closing bracket layer usage
+
+# Unusual things
+### Unusual brackets
+It is assumed that your typing program automatically paires the brackets; if it doesn't, the closing keys are provided in the top row.
+> [!TIP]
+> Use [*Input-Remapper*](https://github.com/sezanzeb/input-remapper)—along with [this configuration](./input-remapper-config.md) for auto-pairing
+#### Closing bracket layer usage
 - **Symbol**: When used together; close pair with the same modifier
 - **Shift**: When used dispersed; alterate the pair with different modifiers 
-#### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
+### Page up and Page down in different layers[^unpreserved-layer-keys/weird-layer-distro]
 
 
 [^unpreserved-layer-keys/weird-layer-distro]: This layout treats *Shift* and *AltGr* as modifiers that are assigned to a thumb on each hand instead of layer switchers; Sometimes some keys are at uncomfortable positions and thus, don't have a third key assigned to them.  
