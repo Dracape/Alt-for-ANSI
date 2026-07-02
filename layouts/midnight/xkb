@@ -7,7 +7,7 @@ xkb_symbols "midnight" {
 
     // -- Top Row --
     key <TLDE> { [ Shift_R ] };
-    key <AE01> { [ leftarrow  ] };
+    key <AE01> { [ leftdoublequotemark  ] };
     key <AE02> { [ rightarrow ] };
     replace key <AE03> { [ Control_L ] };
     key <AE04> { [ endash ] };
@@ -18,7 +18,7 @@ xkb_symbols "midnight" {
     key <AE09> { [         emdash,   bracketright,     bracketright ] };
     replace key <AE10> { [ Control_R ] };
     key <AE11> { [            bar,     parenright,       parenright ] };
-    key <AE12> { [ enfilledcircbullet ] }; // For where formatting isn't supported
+    key <AE12> { [ rightdoublequotemark ] };
 
     // -- First Row --
     key <AD01> { [            q,            Q,           exclam ] };
@@ -47,7 +47,7 @@ xkb_symbols "midnight" {
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,           Up ] };
     key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,         Down ] };
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,        Right ] };
-    key <RTRN> { [ question ] };
+    key <RTRN> { [  question, leftarrow, enfilledcircbullet ] };
     replace key <RTSH> { [        comma,         less,            9 ] };
     // BackSpace ↔ Caps-Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };

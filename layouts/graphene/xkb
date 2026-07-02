@@ -5,7 +5,7 @@ xkb_symbols "graphene" {
 
     // -- Top Row --
     key <TLDE> { [ Shift_R ] };
-    key <AE01> { [ leftarrow  ] };
+    key <AE01> { [ leftdoublequotemark  ] };
     key <AE02> { [ rightarrow ] };
     replace key <AE03> { [  Alt_L,         Meta_L ] };
     key <AE04> { [ endash ] };
@@ -16,7 +16,7 @@ xkb_symbols "graphene" {
     key <AE09> { [         emdash,   bracketright,     bracketright ] };
     replace key <AE10> { [  Alt_R,         Meta_R ] };
     key <AE11> { [            bar,     parenright,       parenright ] };
-    key <AE12> { [ enfilledcircbullet ] }; // For where formatting isn't supported
+    key <AE12> { [ rightdoublequotemark ] };
 
     // -- First Row --
     key <AD01> { [            z,            Z,           exclam ] };
@@ -45,7 +45,7 @@ xkb_symbols "graphene" {
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,               Up ] };
     key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,             Down ] };
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,            Right ] };
-    key <RTRN> { [        comma,     question ] };
+    key <RTRN> { [        comma,     question, leftarrow ] };
     // BackSpace ↔ Caps-Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
     key <BKSP> { [ Caps_Lock ] };

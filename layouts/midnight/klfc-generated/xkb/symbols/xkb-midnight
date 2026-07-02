@@ -5,7 +5,7 @@ default
 xkb_symbols "basic" {
     key <TLDE> { [      Shift_R ],
                  actions[Group1] = [ SetMods(mods=Shift) ] };
-    key <AE01> { [    leftarrow ] };
+    key <AE01> { [    leftdoublequotemark ] };
     key <AE02> { [   rightarrow ] };
     key <AE03> { [    Control_L ],
                  actions[Group1] = [ SetMods(mods=Control) ] };
