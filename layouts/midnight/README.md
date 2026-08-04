@@ -41,7 +41,7 @@ The top row is made keeping stretches in mind
 | **Shift** (Right) |  |  | Control |  |  |  |  |  | ] | Control | ) |  |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | Q\|B | F | L | K |  | Menu | P | G | O | U |  | ~ |  |
-| BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I | ← | • |
+| BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I | ⸮ | |
 |  | X | V | J | D | Z | Home | End | " | W | > | _ | < |  |
 | Back | Alt |  |  |  |  |  | Space | AltGr | Super |  |  | Forward |  |
 
@@ -49,7 +49,7 @@ The top row is made keeping stretches in mind
 |  |  |  | Control | } |  |  |  |  | ] | Control | ) |  |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | !\|@ | {} | [] | = |  | Menu | ^ | # | () | $ | ` |  |  |
-| Delete | 1 | ; | Enter | 0 | & | Sticky Shift | \\ | Left | Up | Down | Right |  |  |
+| Delete | 1 | ; | Enter | 0 | & | Sticky Shift | \\ | Left | Up | Down | Right | ← |  |
 |  | 2 | 3 | 4 | 5 | + | Page Up | Page Down | * | 6 | 7 | 8 | 9 |  |
 | Back | Alt |  |  |  |  |  | Space | **AltGr** | Super |  |  | Forward |  |
 

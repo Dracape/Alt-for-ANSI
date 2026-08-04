@@ -47,7 +47,7 @@ xkb_symbols "midnight" {
     key <AC09> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            a,            A,           Up ] };
     key <AC10> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            e,            E,         Down ] };
     key <AC11> { type= "FOUR_LEVEL_SHIFT_PRESERVE", [            i,            I,        Right ] };
-    key <RTRN> { [  question, leftarrow, enfilledcircbullet ] };
+    key <RTRN> { [  question, U2E2E, leftarrow ] };
     replace key <RTSH> { [        comma,         less,            9 ] };
     // BackSpace ↔ Caps-Lock
     key <CAPS> { [  BackSpace,      BackSpace,       Delete ] };
