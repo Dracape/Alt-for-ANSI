@@ -41,7 +41,7 @@ The top row is made keeping stretches in mind
 | **Shift** (Right) |  |  | Control |  |  |  |  |  | ] | Control | ) |  |  |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Tab | Q\|B | F | L | K |  | Menu | P | G | O | U |  | ~ |  |
-| BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I |  |  |
+| BackSpace | N | S | H | T | M | **Sticky Shift** | Y | C | A | E | I | ← | • |
 |  | X | V | J | D | Z | Home | End | " | W | > | _ | < |  |
 | Back | Alt |  |  |  |  |  | Space | AltGr | Super |  |  | Forward |  |
 
